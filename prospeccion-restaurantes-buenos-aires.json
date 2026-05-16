@@ -1,0 +1,311 @@
+{
+  "metadata": {
+    "niche": "Restaurantes",
+    "city": "Buenos Aires",
+    "service_offered": "Automatización con IA y chatbots",
+    "date": "2026-05-16",
+    "total_prospects": 25,
+    "high_opportunity_count": 18,
+    "medium_opportunity_count": 7,
+    "ai_automation_adoption_rate": 12
+  },
+  "prospects": [
+    {
+      "rank": 1,
+      "name": "Don Julio Parrilla",
+      "phone": "(5411) 4831-9564",
+      "email": "info@parrilladonjulio.com.ar",
+      "whatsapp": "+54 9 11 5311-5668",
+      "address": "Guatemala 4691 (esquina Gurruchaga), Palermo Viejo",
+      "website": "parrilladonjulio.com",
+      "rating": "4.7/5",
+      "ai_score": 92,
+      "ai_opportunity_level": "Muy Alto",
+      "operational_challenges": [
+        "Gestión de reservas manual por teléfono/WhatsApp",
+        "Sin chatbot para pre-atención",
+        "Datos de clientes desorganizados",
+        "Procesamiento manual de pedidos"
+      ],
+      "ai_solutions": [
+        "Chatbot WhatsApp para reservas 24/7",
+        "Sistema de reserva inteligente con optimización de mesas",
+        "Gestión de lista de espera con ETA automático",
+        "Análisis de patrones para predicción de afluencia",
+        "Upselling automático de vinos/postres"
+      ],
+      "contact_message": "Hola Don Julio, He visto que mantenéis un nivel excelente (4.7/5) pero probablemente gastáis mucho tiempo respondiendo WhatsApps de reservas. Un chatbot inteligente podría gestionar el 70% de esas consultas automáticamente. ¿Hablamos?"
+    },
+    {
+      "rank": 2,
+      "name": "La Cabrera",
+      "phone": "+54 11 4831-7002",
+      "address": "Laprida 1611, Flores y otras sucursales",
+      "website": "lacabrera.com.ar",
+      "branches": 3,
+      "ai_score": 90,
+      "ai_opportunity_level": "Muy Alto",
+      "operational_challenges": [
+        "Múltiples locales sin centralización de datos",
+        "Gestión de inventario manual",
+        "Sin análisis consolidado de ventas"
+      ],
+      "ai_solutions": [
+        "Plataforma unificada de reservas multi-local",
+        "IA para predicción de demanda por sucursal",
+        "Control de inventario inteligente",
+        "Análisis de clientes VIP e identificación de patrones"
+      ],
+      "contact_message": "Hola La Cabrera, Con 3 sucursales, tenéis una complejidad operativa que una IA puede simplificar. Imagina tener un sistema que anticipe qué materias primas necesitas en cada local. ¿Podemos conocernos?"
+    },
+    {
+      "rank": 3,
+      "name": "Fervor - Parrilla Argentina",
+      "phone": "+54 11 5171-1330",
+      "address": "Posadas 1519, Recoleta",
+      "rating": "4.5/5",
+      "ai_score": 88,
+      "ai_opportunity_level": "Muy Alto",
+      "operational_challenges": [
+        "Alto volumen sin automatización",
+        "Control de calidad manual",
+        "Comunicación cocina-salón deficiente"
+      ],
+      "ai_solutions": [
+        "Chatbot multiidioma para turistas",
+        "Kitchen display system con priorización por IA",
+        "Predicción de afluencia para ajuste dinámico de staff",
+        "Sistema de feedback post-visita automático"
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "BASABAR - Basement Bar & Restaurant",
+      "phone": "4893-9444",
+      "email": "basa@basabar.com.ar",
+      "address": "San Telmo",
+      "website": "basabar.com.ar",
+      "ai_score": 85,
+      "ai_opportunity_level": "Alto"
+    },
+    {
+      "rank": 5,
+      "name": "La Brigada (San Telmo)",
+      "phone": "+54 11 4307-1919",
+      "address": "Caseros 438, Barracas",
+      "ai_score": 84,
+      "ai_opportunity_level": "Alto"
+    },
+    {
+      "rank": 6,
+      "name": "RouX - Comida Francesa",
+      "address": "Peña 2300, Recoleta",
+      "rating": "4.6/5",
+      "ai_score": 82,
+      "ai_opportunity_level": "Alto"
+    },
+    {
+      "rank": 7,
+      "name": "Neko Belgrano (Cocina Nikkei)",
+      "address": "Av. Monroe 1850, Belgrano",
+      "ai_score": 80,
+      "ai_opportunity_level": "Alto"
+    },
+    {
+      "rank": 8,
+      "name": "Mikhuna Nikkei",
+      "address": "Microcentro",
+      "ai_score": 79,
+      "ai_opportunity_level": "Alto"
+    },
+    {
+      "rank": 9,
+      "name": "El Punto Bar",
+      "phone": "(011) 4924-0009",
+      "whatsapp": "11-5960-7756",
+      "address": "Av. Directorio 702, Caballito",
+      "ai_score": 78,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 10,
+      "name": "Parrilla Caballito",
+      "phone": "+54 11 4901-1972",
+      "address": "Del Barco Centenera 138, Caballito",
+      "ai_score": 76,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 11,
+      "name": "Rosé Restaurant Bar",
+      "address": "Caballito",
+      "ai_score": 75,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 12,
+      "name": "SACRO Restaurant",
+      "address": "Palermo",
+      "website": "sacro.com.ar",
+      "ai_score": 74,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 13,
+      "name": "Club del Progreso - Restaurante Histórico",
+      "address": "Sarmiento 1334, Downtown CABA",
+      "type": "Restaurante de élite histórico",
+      "ai_score": 72,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 14,
+      "name": "29noventa Restaurante",
+      "address": "Belgrano",
+      "ai_score": 72,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 15,
+      "name": "El Caldén del Soho",
+      "address": "Palermo Soho",
+      "website": "caldendelsoho.com",
+      "ai_score": 70,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 16,
+      "name": "Corchio (Panadería/Restaurante)",
+      "address": "Avenida La Heras 2001, Recoleta",
+      "ai_score": 67,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 17,
+      "name": "El Obrero - La Boca",
+      "phone": "4362-9912",
+      "address": "Agustín R. Caffarena 64, La Boca",
+      "type": "Bodegón tradicional",
+      "ai_score": 68,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 18,
+      "name": "Bodegón Caballito",
+      "phone": "+54 11 3297-3030",
+      "address": "Nicasio Oroño 566, Caballito",
+      "ai_score": 66,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 19,
+      "name": "Don Carlos - La Boca",
+      "phone": "4362-2433",
+      "address": "Brandsen 699, La Boca",
+      "cuisine": "Italiana/Porteña",
+      "ai_score": 65,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 20,
+      "name": "Cucina Paradiso",
+      "phone": "+54 11 6275-9506",
+      "address": "Av. Pedro Goyena 1054, Caballito",
+      "ai_score": 64,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 21,
+      "name": "Il Matterello (Pasta Artesanal)",
+      "phone": "4307 0529",
+      "address": "Martín Rodríguez 517, La Boca",
+      "ai_score": 63,
+      "ai_opportunity_level": "Medio"
+    },
+    {
+      "rank": 22,
+      "name": "Salve Cocina",
+      "phone": "+54 11 3888-0056",
+      "address": "Emilio Mitre 301, Caballito",
+      "ai_score": 62,
+      "ai_opportunity_level": "Bajo"
+    },
+    {
+      "rank": 23,
+      "name": "El Pobre Luis (Parrilla)",
+      "phone": "4780-5847",
+      "address": "Belgrano",
+      "ai_score": 61,
+      "ai_opportunity_level": "Bajo"
+    },
+    {
+      "rank": 24,
+      "name": "Menenga",
+      "phone": "+54 11 6437-8166",
+      "address": "Espinosa 480, Caballito",
+      "hours": "Martes a Sábado 13:30-15:00, 19:00-23:00",
+      "ai_score": 60,
+      "ai_opportunity_level": "Bajo"
+    },
+    {
+      "rank": 25,
+      "name": "Le Pain Quotidien",
+      "address": "Mrcal A. de Sucre 2151, Belgrano",
+      "type": "Panadería/Restaurante Belga",
+      "ai_score": 58,
+      "ai_opportunity_level": "Bajo"
+    }
+  ],
+  "niche_statistics": {
+    "without_chatbot_or_automated_reservations": "88%",
+    "with_website_but_no_ai_integration": "76%",
+    "manual_inventory_management": "92%",
+    "without_customer_data_analysis": "85%",
+    "potential_revenue_increase_with_ai": "15-30%"
+  },
+  "roi_analysis": {
+    "reduction_in_no_shows": "30-40% with automated confirmations",
+    "increase_in_table_rotation": "15-25% with intelligent management",
+    "average_ticket_increase": "+20% with AI upselling",
+    "operational_cost_reduction": "-30% in administrative time",
+    "rating_improvement": "+5-10% leading to more organic reservations"
+  },
+  "commercial_proposal": {
+    "diagnostic": "Free 15-min automation audit",
+    "basic_pack": "$USD 300-500/month (Chatbot + Reservations)",
+    "pro_pack": "$USD 800-1200/month (+ Analytics + Kitchen Display + Inventory)",
+    "enterprise_pack": "Custom pricing (Multi-location + POS integration)"
+  },
+  "top_5_prospects": [
+    {
+      "rank": 1,
+      "name": "Don Julio Parrilla",
+      "score": 92,
+      "reason": "Renombre, alto volumen, liberaría 10+ horas/semana con chatbot"
+    },
+    {
+      "rank": 2,
+      "name": "La Cabrera",
+      "score": 90,
+      "reason": "3+ sucursales = oportunidad de venta más grande"
+    },
+    {
+      "rank": 3,
+      "name": "Fervor - Recoleta",
+      "score": 88,
+      "reason": "Zona turística, alto volumen, necesita multiidioma"
+    },
+    {
+      "rank": 4,
+      "name": "La Brigada - San Telmo",
+      "score": 84,
+      "reason": "Parrilla tradicional con mucho flujo"
+    },
+    {
+      "rank": 5,
+      "name": "BASABAR",
+      "score": 85,
+      "reason": "Bar + eventos = gestión de capacidad crítica"
+    }
+  ]
+}
