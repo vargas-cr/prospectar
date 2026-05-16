@@ -1,0 +1,322 @@
+========================================================================================
+📧 PLANTILLAS DE EMAIL - PROSPECCIÓN IA PARA RESTAURANTES
+========================================================================================
+
+NOTA: Personaliza cada email con el nombre del gerente, restaurante específico y detalles
+que hayas investigado. Los mejores emails son específicos, no genéricos.
+
+========================================================================================
+EMAIL 1: CONTACTO INICIAL - TOP PROSPECTS (Don Julio, La Cabrera, BASABAR)
+========================================================================================
+
+ASUNTO: Una idea para reducir tus reservas manuales en 70% [Don Julio]
+
+Hola [Nombre del Gerente/Dueño],
+
+Viendo que Don Julio tiene un excelente nivel (4.7/5 estrellas), probablemente gastáis
+mucho tiempo respondiendo WhatsApps de reservas, cancelaciones, cambios de hora...
+
+Acabo de trabajar con [nombre de otro restaurante similar] y logramos automatizar todo eso
+con un chatbot inteligente. El resultado: liberaron 10+ horas/semana del equipo y las
+no-shows bajaron 35%.
+
+¿Quieren una consulta rápida (15 min) para ver si es aplicable a Don Julio?
+Es gratis y sin compromiso. Vemos dónde están los cuellos de botella en tu operación.
+
+¿Os viene bien un call el [Día/Hora sugerida]?
+
+Un saludo,
+[Tu nombre]
+[Tu teléfono]
+[Tu LinkedIn]
+
+---
+
+========================================================================================
+EMAIL 2: SEGUIMIENTO (Si no responden en 3-5 días)
+========================================================================================
+
+ASUNTO: Re: Una idea para reducir tus reservas manuales (2 min de lectura)
+
+Hola [Nombre],
+
+No sé si viste mi email anterior, así que te lo repito rápido:
+
+**El problema:** Cada día perdéis tiempo respondiendo reservas por WhatsApp que podrían
+ser 100% automáticas.
+
+**La solución:** Un chatbot que:
+- Reciba reservas 24/7
+- Confirme automáticamente (reduce no-shows 35%)
+- Maneje cambios y cancelaciones
+- Libere a tu equipo para lo que realmente suma
+
+**El costo:** Es mucho menos de lo que gastáis en no-shows + tiempo administrativo.
+
+Si te interesa aunque sea charlar, avísame. De lo contrario, no te molesto más.
+
+Un saludo,
+[Tu nombre]
+
+---
+
+========================================================================================
+EMAIL 3: CONTACTO PARA LA CABRERA (Oportunidad multi-local)
+========================================================================================
+
+ASUNTO: Aumentar ingresos en 3 locales sin aumentar personal [La Cabrera]
+
+Hola [Nombre],
+
+He analizado La Cabrera y veo una oportunidad clara: 3 locales sin sistema centralizado.
+
+Esto significa:
+❌ Cada local maneja sus reservas por separado
+❌ El inventario es un caos (un plato falta en Flores, otro en Caballito)
+❌ No tenéis datos consolidados de clientes VIP
+❌ Estáis dejando dinero sobre la mesa
+
+Lo que propongo: Una plataforma IA que:
+✅ Centraliza reservas de los 3 locales
+✅ Predice demanda por sucursal (mejor gestión de compras)
+✅ Optimiza rotación de mesas (15-25% más cubiertos sin ampliar)
+✅ Identifica clientes VIP automáticamente
+
+Resultado esperado: +20-30% en ingresos sin aumentar costos fijos.
+
+¿Una call de 20 min para explorar esto?
+
+Un saludo,
+[Tu nombre]
+
+---
+
+========================================================================================
+EMAIL 4: CONTACTO PARA FERVOR / BASABAR (Experiencia de cliente)
+========================================================================================
+
+ASUNTO: Chatbot multiidioma para Fervor: Turistas sin esperar respuesta
+
+Hola [Nombre],
+
+Fervor está en Recoleta = turistas + locales 24/7.
+
+Apuesto a que recibís consultas como:
+- "¿Tienen mesa a las 20:30?"
+- "¿Hacen reservas?"
+- "¿Aceptan tarjeta?"
+
+... En inglés, portugués, a las 3 AM.
+
+Mi solución: Un chatbot que responde todo eso automáticamente, en el idioma del cliente.
+
+Beneficio: Los turistas se sienten atendidos, tus reservas se confirman, tu equipo respira.
+
+¿Te interesa probar 15 días gratis?
+
+Un saludo,
+[Tu nombre]
+
+---
+
+========================================================================================
+EMAIL 5: CONTACTO PARA RESTAURANTES DE CABALLITO (Bundle inicial)
+========================================================================================
+
+ASUNTO: Automatizar tu operación a un precio accesible
+
+Hola [Nombre],
+
+Vi que [Restaurante] está creciendo en Caballito. Buen movimiento.
+
+Ahora viene la pregunta: ¿Cómo manejáis las reservas/pedidos sin gastar más en personal?
+
+Tengo un pack que empieza en $300/mes (lejos de lo que cuesta un empleado extra):
+- Chatbot para reservas y consultas
+- Confirmaciones automáticas (reduce no-shows)
+- Dashboard básico de reservas
+
+Sin complicaciones, sin setup de 3 meses.
+
+¿Te interesa saber más?
+
+Un saludo,
+[Tu nombre]
+
+---
+
+========================================================================================
+EMAIL 6: REACTIVACIÓN / "DORMIDOS"
+========================================================================================
+
+ASUNTO: ¿Sigues perdiendo 10+ horas/semana en reservas manuales?
+
+Hola [Nombre],
+
+Hace un tiempo te escribí sobre automatizar tus reservas en [Restaurante].
+
+No sé si fue mal timing o simplemente no era prioridad en ese momento.
+
+Pero hoy quería recordarte: si esto sigue siendo un problema (tiempo en reservas,
+no-shows, clientes insatisfechos), tenemos una solución.
+
+Y es mucho más accesible de lo que probablemente pienses.
+
+¿Una llamada de 15 min para explorar?
+
+Un saludo,
+[Tu nombre]
+
+---
+
+========================================================================================
+EMAIL 7: PROPUESTA DESPUÉS DE CALL / REUNIÓN
+========================================================================================
+
+ASUNTO: Propuesta customizada - [Restaurante]
+
+Hola [Nombre],
+
+Gracias por el tiempo en la call de hoy. Aquí está la propuesta que comentamos:
+
+**DIAGNÓSTICO:**
+✓ Sistema de reservas manual (gastáis ~8 horas/semana)
+✓ No-shows: ~15% de reservas
+✓ Sin análisis de clientes VIP
+✓ Kitchen display system desconectado del front
+
+**SOLUCIÓN PROPUESTA - PACK PRO ($900/mes):**
+✓ Chatbot WhatsApp + reservas automáticas
+✓ Kitchen display system integrado
+✓ Análisis de clientes + VIP detection
+✓ Confirmaciones automáticas (reduce no-shows a 5%)
+✓ Dashboard en tiempo real
+
+**RESULTADOS ESPERADOS (en 3 meses):**
+→ Liberación de 8 horas/semana
+→ Reducción de no-shows: 10% → 5% (+ingresos)
+→ +15% en rotación de mesas
+→ ROI: Se paga solo en 2.5 meses
+
+**PRÓXIMOS PASOS:**
+1. Confirmáis Pack Pro
+2. Setup (2-3 días)
+3. Training al equipo (1 día)
+4. Go live + optimizaciones
+
+¿Os cuadra proceder?
+
+Un saludo,
+[Tu nombre]
+
+---
+
+========================================================================================
+EMAIL 8: CIERRE / ÚLTIMA INSTANCIA
+========================================================================================
+
+ASUNTO: Última propuesta - [Restaurante]
+
+Hola [Nombre],
+
+He estado esperando tu respuesta sobre la propuesta de automatización.
+
+Entiendo que hay mucho en la agenda. Pero no quería dejar pasar sin intentarlo una vez más:
+
+Si os importa reducir carga operativa y aumentar ingresos, podemos hacerlo.
+Si no, simplemente dime "no gracias" y no te molesto más.
+
+¿Cuál es?
+
+Un saludo,
+[Tu nombre]
+
+---
+
+========================================================================================
+CADENCIA RECOMENDADA DE EMAILS
+========================================================================================
+
+DÍA 1:   Email 1 (Contacto inicial)
+DÍA 5:   Email 2 (Seguimiento si no responden)
+DÍA 10:  Email 3/4/5 (Versión personalizada adicional)
+DÍA 15:  Llamada telefónica
+DÍA 20:  Email 6 (Reactivación suave)
+DÍA 30:  Email 8 (Última instancia)
+
+NOTA: Si responden en cualquier momento, pasa a Email 7 (Propuesta).
+
+---
+
+========================================================================================
+TIPS DE COPYWRITING PARA MEJORAR TUS EMAILS
+========================================================================================
+
+✅ HAZLO PERSONAL:
+   MAL:   "Hola, somos especialistas en automatización..."
+   BIEN:  "Vi que Don Julio tiene 4.7/5 en Google, excelente nivel..."
+
+✅ SACA BENEFICIOS, NO CARACTERÍSTICAS:
+   MAL:   "Ofrecemos un chatbot con NLP integrado..."
+   BIEN:  "Liberamos 10 horas/semana de tu equipo"
+
+✅ USA NÚMEROS ESPECÍFICOS:
+   MAL:   "Muchos clientes vieron buenos resultados"
+   BIEN:  "Redujeron no-shows de 15% a 5% en 3 meses"
+
+✅ GUARDA EL CALL-TO-ACTION PARA EL FINAL:
+   MAL:   Muchos párrafos + CTA perdido en el medio
+   BIEN:  Párrafos cortos + CTA al final claro
+
+✅ PRUEBA A/B:
+   - A: Subject line largo vs corto
+   - B: Dato de no-shows vs tiempo ahorrado
+   - Manda ambos a 5 restaurantes, mira cuál tiene mejor tasa de apertura
+
+---
+
+========================================================================================
+PLANTILLA EXCEL/GOOGLE SHEETS PARA TRACKING
+========================================================================================
+
+Crea una hoja con estos campos:
+
+Restaurante | Email | Teléfono | Estado | Último Email | Fecha Última Acción | Score | Notas
+Don Julio | info@... | 54-11-4831 | Enviado | Email 1 | 2024-05-16 | 92 | Contactar mañana
+La Cabrera | ... | ... | Pendiente | - | - | 90 | Multi-local, oportunidad grande
+BASABAR | ... | ... | Seguimiento | Email 2 | 2024-05-18 | 85 | Responden lento
+...
+
+Estados posibles:
+- Pendiente: Aún no contactado
+- Enviado: Email 1 enviado
+- Seguimiento: Email 2+
+- Llamada: Se hizo follow-up telefónico
+- Propuesta: Se envió propuesta
+- Negociación: En conversaciones
+- Cerrado: Sí/No
+
+---
+
+========================================================================================
+ESTRUCTURA PARA LINKEDIN (Si quieres atractivos allá)
+========================================================================================
+
+Opción 1: Post educativo
+"88% de restaurantes en Buenos Aires todavía maneja reservas por WhatsApp.
+Eso son horas de trabajo que podrían ser automáticas.
+Un chatbot inteligente + sistema de reservas puede:
+✓ Liberar 8-10 horas/semana
+✓ Reducir no-shows en 60%
+✓ Aumentar ingresos sin ampliar
+¿Tu restaurante sigue haciendo esto manualmente?"
+
+Opción 2: Case study (después de cerrar 1-2 clientes)
+"Caso de éxito: [Restaurante X] logró 25% más cubiertos sin ampliar local.
+¿Cómo? Optimizando rotación de mesas con IA.
+De 12 a 15 cubiertos/mesa por noche = +$X,XXX/mes"
+
+---
+
+FIN DE PLANTILLAS
+========================================================================================

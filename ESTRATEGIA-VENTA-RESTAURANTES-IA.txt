@@ -1,0 +1,332 @@
+========================================================================================
+💼 ESTRATEGIA DE VENTA - AUTOMATIZACIÓN IA PARA RESTAURANTES
+========================================================================================
+
+Este documento es tu guía para vender soluciones de IA a restaurantes.
+Incluye: pitch elevator, propuestas, objeciones comunes y cierre.
+
+========================================================================================
+FASE 1: INVESTIGACIÓN & PERFILADO (Antes de cualquier contacto)
+========================================================================================
+
+Qué investigar de cada restaurante (15 min por prospect):
+
+1. UBICACIÓN & COMPETENCIA
+   - ¿Está en zona turística o de locales?
+   - ¿Cuántos restaurantes similares hay cerca?
+   - ¿Rating en Google? (más de 4.3/5 = cliente bueno)
+
+2. PRESENCIA DIGITAL
+   - ¿Tienen website? ¿Es moderno?
+   - ¿Instagram activo o muerto?
+   - ¿Cómo manejan reservas? (teléfono, email, plataforma)
+
+3. VOLUMEN & TIPO DE CLIENTE
+   - ¿Parrilla de barrio vs upscale?
+   - ¿Turistas o locales?
+   - ¿Hora pico estimada?
+
+4. PAIN POINTS OBSERVABLES
+   - Si responden WhatsApp: pesada gestión de reservas
+   - Si no tienen web: pierden clientes que buscan online
+   - Si tienen 3+ locales: definitivamente hay ineficiencias
+
+POR QUÉ: Esto te permite hacer emails/calls personalizados. "Vi que Don Julio maneja
+reservas por WhatsApp" es infinitamente mejor que "Nos especializamos en IA".
+
+========================================================================================
+FASE 2: PITCH ELEVATOR (30 segundos)
+========================================================================================
+
+Cuando llames o tengas el primer contacto, usa esto:
+
+"Hola [Nombre], me llamo [Tu nombre]. Vi que [Restaurante] tiene excelente nivel
+(4.7/5 en Google), y probablemente pases mucho tiempo respondiendo reservas por
+WhatsApp. Tengo una idea que podría liberar ese tiempo y aumentar tus ingresos.
+¿Te viene bien una llamada rápida de 15 minutos?"
+
+PUNTOS CLAVE:
+- Haces la tarea (investigaste)
+- Reconoces su éxito (rating)
+- Identificas el problema específico
+- Prometes beneficio claro (menos tiempo = más dinero)
+- Pides poco: solo 15 min
+
+========================================================================================
+FASE 3: CALL / REUNIÓN (15-20 minutos)
+========================================================================================
+
+GUION PARA LA LLAMADA:
+
+[1] APERTURA (1 min)
+"Gracias por el tiempo. Mira, no vengo a venderte nada. Solo quiero entender cómo
+funcionan hoy tus reservas y si hay oportunidad para mejorar."
+
+[2] PREGUNTAS DIAGNÓSTICAS (5-7 min)
+Hazle preguntas, escucha. NO hables de tu solución aún.
+
+- "¿Cuántas reservas recibís por día?"
+- "¿Cómo manejas esas reservas hoy? ¿Teléfono? ¿WhatsApp?"
+- "¿Cuánto tiempo gasta tu equipo respondiendo esos pedidos?"
+- "¿Qué pasa cuando no confirmas una reserva? ¿Muchos no-shows?"
+- "¿Tenés una lista de clientes VIP? ¿Cómo la manejas?"
+- "¿Cómo comunican cocina y front-of-house hoy?"
+
+[3] SÍNTESIS (1-2 min)
+"Entiendo. Entonces básicamente:
+- Recibís [X] reservas/día en WhatsApp
+- Eso te cuesta [Y] horas de trabajo
+- Y tenés [Z]% de no-shows que te cuesta plata"
+
+[4] PROPUESTA (3-5 min)
+"Tengo una solución que podría resolver esto. Es un chatbot inteligente que:
+- Recibe reservas 24/7 (no necesitas estar)
+- Confirma automáticamente (reduce no-shows)
+- Integra con tu cocina (kitchen display)
+- Te da datos de clientes VIP
+
+Resultado: Liberás tiempo + aumentás ingresos."
+
+[5] CIERRE (1-2 min)
+"¿Esto te parece valioso?"
+Si dice sí → "Perfecto, te envío una propuesta"
+Si dice "quizás" → "¿Qué te gustaría ver para considerarlo?"
+Si dice "ahora no" → "Entiendo. ¿Puedo chequear en 3 meses?"
+
+========================================================================================
+FASE 4: PROPUESTA COMERCIAL
+========================================================================================
+
+ESTRUCTURA DE PROPUESTA (formato email + PDF):
+
+---
+
+Hola [Nombre],
+
+Basándome en nuestra call, aquí está mi diagnóstico y propuesta:
+
+**SITUACIÓN ACTUAL:**
+✓ 40 reservas/día en WhatsApp
+✓ 5 horas/semana en responder (1 persona)
+✓ 12% de no-shows (cuesta ~$XXX/mes en mesas vacías)
+✓ Sin datos de clientes VIP (pierdes oportunidad de upselling)
+
+**MI PROPUESTA: PACK PRO - $950/mes**
+
+Incluye:
+✓ Chatbot WhatsApp inteligente
+✓ Sistema de reservas automático
+✓ Kitchen display system
+✓ Confirmaciones automáticas
+✓ Dashboard de clientes VIP
+✓ Soporte 24/7
+
+**RESULTADOS ESPERADOS (3 meses):**
+→ 5 horas/semana de tu equipo liberadas
+→ No-shows: 12% → 5% (+$XXX/mes en ingresos)
+→ Rotación de mesas: +15% (predicción de tiempo de permanencia)
+→ Cliente VIP detection (upselling automático)
+
+**ROI:**
+Pack cuesta: $950/mes
+Beneficio conservador: $1,200/mes (solo en reducción de no-shows)
+Breakeven: 2.5 meses
+Ganancia neta año 1: $3,200
+
+**PRÓXIMOS PASOS:**
+1. Confirmás que te interesa
+2. Setup (48 horas)
+3. Training (1 día)
+4. Go live + optimizaciones
+
+¿Procedemos?
+
+Un saludo,
+[Tu nombre]
+[Tu teléfono]
+
+---
+
+NOTAS SOBRE PRECIOS:
+
+No valores por horas = error. Valora por resultados.
+
+Ejemplo MALO:
+"Tenemos un chatbot que te costará $XXX porque tiene X features"
+
+Ejemplo BUENO:
+"Por $950/mes, liberas 5 horas/semana = $1,200 en costos de personal ahorrados.
+Además reducís no-shows = $XXX más. ROI en 2.5 meses"
+
+========================================================================================
+FASE 5: OBJECIONES COMUNES (y cómo responder)
+========================================================================================
+
+OBJECIÓN 1: "Es muy caro"
+RESPUESTA: "¿Más caro que qué? Una persona a medio tiempo te cuesta $1,200+/mes.
+Este sistema hace el trabajo de esa persona. Pero además, reduce no-shows y aumenta
+rotación. Básicamente, se paga solo."
+
+OBJECIÓN 2: "Nuestros clientes son viejos, no usan WhatsApp"
+RESPUESTA: "Correcto. Pero el chatbot también va en tu website. Y los clientes más
+jóvenes (que son los que buscan online) prefieren chatbot > esperar telefono. Te
+sirve para atraer clientela nueva."
+
+OBJECIÓN 3: "Mi gente se va a oponer, no quiere cambios"
+RESPUESTA: "Normal. Por eso es que el training lo hago yo. Y la realidad es que
+una vez que lo vean funcionando, van a ver que es un aliado, no un enemigo.
+La gente realmente no quiere responder mensajes a las 11 PM."
+
+OBJECIÓN 4: "Tenemos un sistema viejo, no sabemos si es compatible"
+RESPUESTA: "Afortunadamente, nuestro chatbot es agnóstico. Integra con lo que uses.
+Si tenés POS, email, lo que sea, lo conectamos. Es simple."
+
+OBJECIÓN 5: "Otros me ofrecieron algo parecido pero me arrepentí"
+RESPUESTA: "Válido. ¿Qué salió mal? [Escucha]. Mira, eso no es mi culpa, pero
+entiendo que seas desconfiado. Por eso te ofrezco 2 semanas free trial. Sin
+compromiso. Ves si funciona, y si no, no hay cargo."
+
+OBJECIÓN 6: "Espera, necesito pensarlo"
+RESPUESTA: "Claro. ¿Qué información te falta? ¿Qué necesitarías ver para estar
+seguro?" [Si no hay nada concreto, cierra]: "Dale, pensalo. Yo te escribo en 1
+semana para ver si hay novedades. ¿Te jode?"
+
+========================================================================================
+FASE 6: CIERRE & SEGUIMIENTO
+========================================================================================
+
+REGLA DE ORO: La primera reunión rara vez cierra. Necesitás 3-5 touchpoints.
+
+Touchpoint 1: Primer email / call
+Touchpoint 2: Email 2 (si no responden)
+Touchpoint 3: Propuesta enviada
+Touchpoint 4: Call de seguimiento
+Touchpoint 5: Email final (última instancia)
+
+CUANDO CIERRA:
+- Envía onboarding doc (pasos, timeline, responsabilidades de ambos lados)
+- Prepara setup (2-3 días)
+- Haz training con su equipo (crucial para adoption)
+- Primeros 30 días: close follow-up (está todo bien? Necesitas algo?)
+
+MÉTRICA: Mide NPS (Net Promoter Score) a los 30 días.
+Si está arriba de 50, está bien.
+Abajo de 50, hay que mejorar algo.
+
+========================================================================================
+FASE 7: CASE STUDIES & REFERENCIAS
+========================================================================================
+
+Una vez cierres el PRIMER cliente, haz esto:
+
+[1] DOCUMENTA LOS RESULTADOS
+Toma screenshot de:
+- Antes (no-shows, tiempo en reservas)
+- Después (3 meses después)
+
+[2] CREA UN CASE STUDY
+"Caso de éxito: Don Julio Parrilla logró +25% en cubiertos sin ampliar local.
+Cómo? Optimizando rotación de mesas con IA."
+
+[3] PIDE PERMISO PARA REFERENCIAR
+"¿Puedo mencionar Don Julio cuando hablo con otros restaurantes?"
+(Casi siempre dicen que sí)
+
+[4] AHORA CADA EMAIL ES MÁS PODEROSO
+"He trabajado con Don Julio Parrilla y logramos X"
+≠
+"Ofrecemos soluciones de IA"
+
+La diferencia es de 10x en tasa de conversión.
+
+========================================================================================
+ESTRATEGIA COMERCIAL POR TIPO DE CLIENTE
+========================================================================================
+
+CLIENTE TIPO 1: Don Julio / La Cabrera (HIGH VALUE)
+- Score: 85-92
+- Estrategia: Personal. Call al dueño. Pitch en 2 días.
+- Propuesta: Custom, con números específicos para su caso
+- Precio: $1,000-1,500/mes (margen más alto, complejidad justificada)
+- Tiempo de cierre: 2-3 semanas
+
+CLIENTE TIPO 2: Fervor / BASABAR (MEDIUM VALUE)
+- Score: 78-88
+- Estrategia: Email + call. Menos personalizado pero igual profesional.
+- Propuesta: Template con pequeñas customizaciones
+- Precio: $600-1,000/mes
+- Tiempo de cierre: 3-4 semanas
+
+CLIENTE TIPO 3: Caballito / Belgrano (VOLUME)
+- Score: 58-76
+- Estrategia: Email simple, propuesta en Pack Básico ($300-500)
+- Propuesta: Estándar
+- Precio: Fijo, no negocia
+- Tiempo de cierre: 1-2 semanas
+- Volumen: Apuntás a cerrar 3-5 para compensar margen menor
+
+========================================================================================
+MÉTRICAS QUE IMPORTAN
+========================================================================================
+
+Mide esto para saber qué está funcionando:
+
+PROSPECCIÓN:
+- Tasa de apertura de emails (apuntá a >25%)
+- Tasa de respuesta (apuntá a >5%)
+- Tasa de call/meeting (apuntá a >30% de respondidos)
+
+CONVERSIÓN:
+- % de propuestas convertidas (apuntá a >40%)
+- Tiempo promedio de cierre (apuntá a <30 días)
+- Ticket promedio (apuntá a >$700/mes)
+
+RETENCIÓN:
+- NPS a 30 días (apuntá a >50)
+- Churn (apuntá a <5%)
+- Upsells (después de 6 meses, propón Pack Enterprise)
+
+========================================================================================
+SCRIPT PARA LLAMADAS TELEFÓNICAS
+========================================================================================
+
+Llama a don Julio. Te atiende recepción/gerente.
+
+RECEPTORA: "Hola, ¿en qué te puedo ayudar?"
+TÚ: "Hola, mi nombre es [Tu nombre]. ¿Está [Gerente]? Es sobre una oportunidad
+para Don Julio."
+
+[Esperas]
+
+GERENTE: "¿Sí? ¿Quién es?"
+TÚ: "Hola [Nombre], me llamo [Tu nombre]. Vi que Don Julio tiene excelente nivel
+(4.7/5), y tengo una idea sobre cómo podrías liberar el tiempo que gasta tu equipo
+en reservas. ¿Te viene bien charlar 15 minutos?"
+
+GERENTE: [Opción A: "Sí, claro"]
+TÚ: "Perfecto. Rápido: hoy ¿cuántas reservas recibís por día?"
+
+GERENTE: [Opción B: "No tengo tiempo"]
+TÚ: "Entiendo. ¿Qué día/hora te viene mejor? Cualquier momento funciona."
+
+GERENTE: [Opción C: "No me interesa"]
+TÚ: "Fair enough. Solo una cosa: ¿los no-shows son un problema para vos?"
+[Casi siempre dicen que sí]
+TÚ: "Mira, tengo una idea para eso. 5 minutos de call y ves si te interesa. ¿El
+jueves a las 3?"
+
+========================================================================================
+FIN DE ESTRATEGIA
+========================================================================================
+
+Resumen ejecutivo:
+1. Investiga bien antes de contactar
+2. Pitch específico (no genérico)
+3. Call = descubrir problema, no vender
+4. Propuesta = valor claro + números
+5. Seguimiento = consistencia
+6. Cierre = despacio pero seguro
+
+Éxito depende de 80% de investigación y 20% de pitch.
+
+¡A por esos restaurantes!
