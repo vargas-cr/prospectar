@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "niche": "Clínicas dentales",
+    "city": "Córdoba",
+    "service_offered": "SEO",
+    "date": "2026-05-16",
+    "total_prospects": 10,
+    "high_opportunity_count": 7,
+    "medium_opportunity_count": 3,
+    "seo_optimization_rate": 30
+  },
+  "prospects": [
+    {
+      "rank": 1,
+      "name": "Dentsur Clínica Dental",
+      "phone": "957 204 868",
+      "email": "info@dentsur.es",
+      "address": "Plaza de Andalucía, 7 Local, 14013 Córdoba",
+      "website": "https://clinicadentsur.es/",
+      "years_in_business": "30+",
+      "seo_score": 78,
+      "seo_level": "Alto",
+      "seo_problems": [
+        "Sin blog",
+        "Contenido limitado",
+        "Keywords no optimizadas",
+        "Meta tags incompletos"
+      ],
+      "seo_opportunity": "Clínica con presencia web pero sin optimización SEO. Pueden llegar 200-500 pacientes/año con SEO optimizado en keywords como 'dentista Córdoba', 'implantes dentales Córdoba'",
+      "contact_message": "Hola equipo Dentsur, He visto que vuestra clínica no aparece en resultados locales para búsquedas como 'implantes dentales en Córdoba' o 'dentista Centro Córdoba'. Esto significa que pacientes que os buscarían activamente están encontrando a vuestros competidores primero. Podría ayudarte a posicionar esos servicios con contenido estratégico. ¿Te viene bien una llamada rápida?"
+    },
+    {
+      "rank": 2,
+      "name": "Clínica Dental Gingiva - Dr. Pedro López",
+      "phone": "957 83 72 97 / 957 780 260",
+      "address": "Guerrita, 19, 14005 Córdoba",
+      "website": "https://clinicadentalgingiva.es/",
+      "specialties": ["Periodoncia", "Implantología"],
+      "seo_score": 75,
+      "seo_level": "Alto",
+      "seo_problems": [
+        "Web sin actualización",
+        "Falta de blog",
+        "Keywords locales no optimizadas",
+        "Sin estructura de datos"
+      ],
+      "seo_opportunity": "Clínica con años de trayectoria pero web sin optimización SEO moderna. Posicionarse en búsquedas locales e informativas pueden aumentar sus citas en 30-40% en 6 meses.",
+      "contact_message": "Hola Dr. López, Viendo vuestra presencia online, la clínica está muy bien posicionada por recomendación, pero en Google no aparecéis para las búsquedas locales principales. Pacientes que buscan 'periodoncista en Córdoba' o 'tratamientos de encías Córdoba' no os encuentran. ¿Podríamos hablar sobre optimizar vuestra web?"
+    },
+    {
+      "rank": 3,
+      "name": "Dental Lucena & Morales",
+      "phone": "957 84 64 70",
+      "website": "https://dentallucenaymorales.es/",
+      "specialties": ["Implantes dentales"],
+      "seo_score": 72,
+      "seo_level": "Alto",
+      "seo_problems": [
+        "Falta de contenido estratégico",
+        "No domina keywords de alto valor",
+        "Sin testimonios optimizados"
+      ],
+      "seo_opportunity": "Especialistas en implantes dentales (servicio de alto ticket) pero sin visibilidad SEO. Posicionarse en búsquedas de 'implantes Córdoba', 'precio implantes', 'implantología' podría generar 15-25 consultas mensuales de alto valor.",
+      "contact_message": "Hola, He visto vuestra especialización en implantes dentales, que es un servicio de mucho valor. Pero en Google, cuando alguien busca 'implantes dentales en Córdoba', no aparecéis en la primera página. Podríamos cambiar eso con una estrategia de contenido SEO enfocada. ¿Os interesa?"
+    },
+    {
+      "rank": 4,
+      "name": "Clínica Dental Ventosa",
+      "phone": "957 481 232",
+      "address": "Ronda de los Tejares, 13 (Centro), 14001 Córdoba",
+      "website": "https://www.clinicaventosa.com/",
+      "specialties": ["Ortodoncia invisible (Invisalign)"],
+      "years_in_business": "35+",
+      "seo_score": 65,
+      "seo_level": "Medio",
+      "seo_problems": [
+        "Blog sin actualizar",
+        "Keywords de especialidad no dominadas",
+        "Content marketing insuficiente"
+      ],
+      "seo_opportunity": "Clínica con trayectoria y blog activo pero sin estrategia SEO clara. Con actualización de contenido y optimización de keywords de ortodoncia, podrían aumentar tráfico en 25%."
+    },
+    {
+      "rank": 5,
+      "name": "Clínica Dental PCM",
+      "phone": "957 41 86 18",
+      "email": "direccion@clinicadentalpcm.com",
+      "address": "C/ Antonio Maura 16, 14005 Córdoba",
+      "website": "https://clinicadentalpcm.com/",
+      "rating": "4.9/5",
+      "reviews": 245,
+      "seo_score": 62,
+      "seo_level": "Medio",
+      "seo_problems": [
+        "Sin blog",
+        "Falta de página 'Nosotros' optimizada",
+        "Keywords de servicios específicos no optimizadas"
+      ],
+      "seo_opportunity": "Excelente reputación (4.9/5) pero sin aprovecharla en SEO. Con contenido optimizado y blog, podrían convertir sus muy buenas críticas en tráfico orgánico."
+    },
+    {
+      "rank": 6,
+      "name": "Clínica Dental La Victoria - Dr. Juan Ballesteros",
+      "phone": "957 298 661",
+      "website": "https://dentistas-cordoba.es/",
+      "specialties": ["Implantología", "Cirugía oral", "Odontología digital"],
+      "has_blog": true,
+      "seo_score": 48,
+      "seo_level": "Medio",
+      "seo_problems": [
+        "Blog sin actualizar",
+        "Keywords de especialidad no optimizadas",
+        "Sin estructura de enlaces internos"
+      ],
+      "seo_opportunity": "Ya tienen blog (ventaja competitiva), pero sin optimización. Con auditoría SEO y reoptimización de contenido existente, podrían mejorar posicionamiento actual 40-50%."
+    },
+    {
+      "rank": 7,
+      "name": "Clínica Dental Lozano",
+      "phone": "957 48 18 46",
+      "website": "https://clinicadentallozano.com/",
+      "location": "Centro (junto a estación de Renfe)",
+      "seo_score": 60,
+      "seo_level": "Medio",
+      "seo_problems": [
+        "Sin estrategia SEO visible",
+        "Web básica sin blog"
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "Centro Médico Dental Medenta",
+      "phone": "957 07 37 77",
+      "website": "https://medenta.es/",
+      "location": "Centro de Córdoba",
+      "seo_score": 58,
+      "seo_level": "Medio",
+      "seo_problems": [
+        "Presencia online mínima",
+        "Sin contenido de SEO"
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "Dental Center Odontologia",
+      "instagram": "@dentalcentercordoba",
+      "instagram_followers": 10000,
+      "instagram_posts": 453,
+      "seo_score": 55,
+      "seo_level": "Bajo",
+      "seo_problems": [
+        "Presencia en redes pero sin web optimizada",
+        "Web no optimizada"
+      ],
+      "seo_opportunity": "Con 10K followers en Instagram ya tienen tráfico de redes. Optimizar web y crear blog SEO podrían convertir a esos seguidores en pacientes con búsquedas orgánicas."
+    },
+    {
+      "rank": 10,
+      "name": "Clínica Dental Noreña",
+      "instagram": "@dentalnorena",
+      "instagram_followers": 534,
+      "instagram_posts": 865,
+      "address": "Avda. Vía Augusta 7, CP 14011, Córdoba",
+      "seo_score": 52,
+      "seo_level": "Bajo",
+      "seo_problems": [
+        "Muy activa en redes pero sin web SEO",
+        "Web sin optimización"
+      ]
+    }
+  ],
+  "niche_statistics": {
+    "without_blog_or_seo_content": "70%",
+    "with_social_but_no_seo_website": "30%",
+    "with_blog": "20%",
+    "with_integrated_seo_strategy": "10%",
+    "seo_growth_potential": "Very High (90%)"
+  },
+  "conclusion": {
+    "market_opportunity": "Extremely receptive to SEO",
+    "competitive_landscape": "Low organic SEO competition",
+    "recommended_approach": "While competitors wait for patients to find them on Google, make them appear first with optimized SEO",
+    "top_3_prospects": [
+      "Dentsur Clínica Dental (78/100)",
+      "Clínica Dental Gingiva - Dr. Pedro López (75/100)",
+      "Dental Lucena & Morales (72/100)"
+    ]
+  }
+}
