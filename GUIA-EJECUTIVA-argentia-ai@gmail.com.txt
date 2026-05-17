@@ -1,0 +1,713 @@
+========================================================================================
+🎯 GUIA PASO A PASO - HUBSPOT SETUP PARA argentia.ai@gmail.com
+========================================================================================
+
+Esta guía es para que hagas TODO en tiempo real. Sigue cada paso exacto.
+Si algo no cuadra, lee el TROUBLESHOOTING al final.
+
+Tiempo estimado: 2.5 horas para todo completo.
+
+========================================================================================
+PARTE 1: CREAR CUENTA HUBSPOT (10 minutos)
+========================================================================================
+
+PASO 1.1: Ir a HubSpot
+URL: https://www.hubspot.com/
+Click: "Get HubSpot free" (botón azul arriba a la derecha)
+
+PASO 1.2: Registrarse con tu email
+Email: argentia.ai@gmail.com
+Password: [Elige algo seguro]
+Nombre: [Tu nombre]
+Empresa: [Tu empresa/nombre]
+Teléfono: [Tu número]
+Click: "Get started"
+
+PASO 1.3: Verificar email
+HubSpot te envía un email a argentia.ai@gmail.com
+Click en el link de verificación
+Se abre HubSpot automáticamente
+
+PASO 1.4: Configuración inicial
+HubSpot te pide algunos datos:
+- Industria: "Marketing/Sales"
+- Qué quieres hacer: "Manage leads"
+- Cuántos usuarios: "Just me"
+Click: "Continue"
+
+RESULTADO: Estás dentro de HubSpot, en el Dashboard principal.
+
+---
+
+========================================================================================
+PARTE 2: IMPORTAR LOS 25 RESTAURANTES (15 minutos)
+========================================================================================
+
+PASO 2.1: Ir a CONTACTS (Contactos)
+En el menú izquierdo, click en: CONTACTS → Contacts
+
+PASO 2.2: Click en IMPORT
+Arriba a la derecha, ves un botón azul que dice "Import"
+Click en él
+
+PASO 2.3: Seleccionar archivo
+Una ventana se abre: "Choose how you'd like to upload your contacts"
+Selecciona: "Upload a file"
+Click: "Select file"
+
+PASO 2.4: Buscar el archivo CSV
+En tu computadora, busca: restaurantes-buenos-aires-hubspot.csv
+(Está en /home/user/prospectar/)
+Click "Open"
+
+PASO 2.5: Preview de datos
+HubSpot muestra una previsualización de los datos:
+- Columna 1: Nombre (Nombre del restaurante)
+- Columna 2: Teléfono
+- etc.
+
+Verifica que se ve bien (25 filas, todos los restaurantes)
+
+PASO 2.6: MAPEO DE CAMPOS (IMPORTANTE)
+Abajo dice: "Map the columns"
+
+HubSpot te muestra:
+┌─────────────────────────────────────────────────────┐
+│ Nombre        → Company Name                        │
+│ Teléfono      → Phone Number                        │
+│ Email         → Email Address                       │
+│ Dirección     → Street Address                      │
+│ Zona          → [No mapeado aún]                    │
+│ Website       → Website                             │
+│ Score         → [No mapeado aún]                    │
+│ Oportunidad   → [No mapeado aún]                    │
+│ Notas         → Notes                               │
+└─────────────────────────────────────────────────────┘
+
+Para los campos que no se mapean automáticamente:
+- Click en "Zona" → Selecciona "Create new property" → Name: "Zona" → Type: "Text" → Create
+- Click en "Score" → Selecciona "Create new property" → Name: "Restaurant_Score" → Type: "Number" → Create
+- Click en "Oportunidad" → Selecciona "Create new property" → Name: "Opportunity_Level" → Type: "Text" → Create
+
+PASO 2.7: Importar
+Todo mapeado. Click: "Import" (botón azul abajo)
+
+Se abre una pantalla de progreso...
+Espera 1-2 minutos.
+
+RESULTADO: Los 25 restaurantes están en tu base de datos.
+Verás un resumen: "Successfully imported 25 contacts"
+
+---
+
+========================================================================================
+PARTE 3: CREAR CUSTOM PROPERTIES (20 minutos)
+========================================================================================
+
+Estas propiedades sirven para rastrear en qué etapa está cada restaurante en la
+secuencia de emails.
+
+PASO 3.1: Ir a SETTINGS
+Arriba a la derecha, ves tu avatar/nombre.
+Click en él → Selecciona "Settings"
+
+PASO 3.2: Ir a Objects
+Menú izquierdo → "Objects" → "Contacts"
+
+PASO 3.3: Crear PROPIEDAD 1: Email_Sequence_Started
+Click: "+ Add property"
+
+Llena los campos:
+- Name: Email_Sequence_Started
+- Label: "Email Sequence Started"
+- Type: "Checkbox"
+- Descripción: "Marca si la secuencia de emails inició"
+- Visible: Checkbox activado
+Click: "Create"
+
+PASO 3.4: Crear PROPIEDAD 2: Email_Sequence_Stage
+Click: "+ Add property"
+
+Llena los campos:
+- Name: Email_Sequence_Stage
+- Label: "Email Sequence Stage"
+- Type: "Dropdown"
+- Descripción: "En qué etapa de la secuencia está el prospect"
+- Options (agregar cada uno):
+  * "Email 1 enviado"
+  * "Email 2 enviado"
+  * "Email 3 enviado"
+  * "Email 4 enviado"
+  * "Email 5 enviado"
+  * "Call realizado"
+  * "Propuesta enviada"
+  * "Negociación"
+  * "Cerrado"
+  * "No interesado"
+Click: "Create"
+
+PASO 3.5: Crear PROPIEDAD 3: Last_Email_Date
+Click: "+ Add property"
+
+Llena los campos:
+- Name: Last_Email_Date
+- Label: "Last Email Date"
+- Type: "Date"
+- Descripción: "Fecha del último email enviado"
+Click: "Create"
+
+PASO 3.6: Crear PROPIEDAD 4: IA_Automation_Notes
+Click: "+ Add property"
+
+Llena los campos:
+- Name: IA_Automation_Notes
+- Label: "IA Automation Notes"
+- Type: "Text"
+- Descripción: "Notas sobre el prospect y progreso"
+Click: "Create"
+
+RESULTADO: Tienes 4 propiedades personalizadas creadas.
+
+---
+
+========================================================================================
+PARTE 4: CREAR 5 EMAIL TEMPLATES (40 minutos)
+========================================================================================
+
+Vamos a crear los 5 emails que se enviarán automáticamente.
+
+PASO 4.1: Ir a MARKETING → EMAIL
+Menú izquierdo → "Marketing" → "Email"
+
+PASO 4.2: Crear EMAIL 1
+Click: "Create email"
+
+CONFIGURACIÓN:
+- Name: "Email_1_Initial_Contact_Restaurant"
+- Email subject: "Una idea para reducir tus reservas manuales en 70% [{{contact.company}}]"
+
+CUERPO DEL EMAIL:
+Copia/pega de TEMPLATES-EMAILS-HUBSPOT-LISTOS.txt → EMAIL 1
+
+[Ve a ese archivo, copia el BODY HTML completo, pégalo aquí]
+
+Click: "Save" (arriba a la derecha)
+
+PASO 4.3: Crear EMAIL 2
+Click: "Create email"
+
+- Name: "Email_2_Followup_Day5"
+- Email subject: "Re: Una idea para reducir tus reservas manuales - 2 min de lectura"
+
+CUERPO: Copia de EMAIL 2 en TEMPLATES-EMAILS-HUBSPOT-LISTOS.txt
+
+Click: "Save"
+
+PASO 4.4: Crear EMAIL 3
+Click: "Create email"
+
+- Name: "Email_3_ProposalValue_Day10"
+- Email subject: "{{contact.company}} | Cómo aumentar ingresos 20% sin ampliar local"
+
+CUERPO: Copia de EMAIL 3 en TEMPLATES-EMAILS-HUBSPOT-LISTOS.txt
+
+Click: "Save"
+
+PASO 4.5: Crear EMAIL 4
+Click: "Create email"
+
+- Name: "Email_4_Reactivation_Day15"
+- Email subject: "{{contact.company}} | Última propuesta antes de dejar esto"
+
+CUERPO: Copia de EMAIL 4 en TEMPLATES-EMAILS-HUBSPOT-LISTOS.txt
+
+Click: "Save"
+
+PASO 4.6: Crear EMAIL 5
+Click: "Create email"
+
+- Name: "Email_5_ExecutiveProposal_Day20"
+- Email subject: "Propuesta ejecutiva para {{contact.company}} - {{contact.firstname}}"
+
+CUERPO: Copia de EMAIL 5 en TEMPLATES-EMAILS-HUBSPOT-LISTOS.txt
+
+Click: "Save"
+
+RESULTADO: 5 emails creados y listos.
+
+---
+
+========================================================================================
+PARTE 5: CREAR WORKFLOWS (AUTOMATIZACIÓN) (60 minutos)
+========================================================================================
+
+Aquí es donde la magia ocurre. Los workflows disparan los emails automáticamente.
+
+PASO 5.1: Ir a AUTOMATION → WORKFLOWS
+Menú izquierdo → "Automation" → "Workflows"
+
+Click: "Create workflow"
+
+---
+
+WORKFLOW 1: EMAIL INICIAL (Día 1)
+========================================================================================
+
+PASO 5.1.1: Configurar básico
+- Name: "Restaurant_Sequence_1_Initial_Contact"
+- Choose what to do: "Start from blank"
+- Object: "Contact"
+Click: "Create"
+
+PASO 5.1.2: Agregar TRIGGER
+Click: "+ Add trigger"
+
+Trigger settings:
+- Contact property: "Restaurant_Score"
+- Operator: "is greater than or equal to"
+- Value: 80
+
+[Esto significa: se dispara cuando agregas un contacto con score ≥80]
+
+Click: "Set trigger"
+
+PASO 5.1.3: Agregar ACCIÓN 1 - DELAY
+Click: "+ Add action"
+
+- Action: "Delay"
+- Type: "Delay for a specific amount of time"
+- Value: 1
+- Unit: "day"
+
+[Espera 1 día antes de enviar]
+
+PASO 5.1.4: Agregar ACCIÓN 2 - SEND EMAIL
+Click: "+ Add action"
+
+- Action: "Send email"
+- Select template: "Email_1_Initial_Contact_Restaurant"
+
+PASO 5.1.5: Agregar ACCIÓN 3 - UPDATE PROPERTY
+Click: "+ Add action"
+
+- Action: "Update contact property"
+- Property: "Email_Sequence_Stage"
+- Value: "Email 1 enviado"
+
+PASO 5.1.6: PUBLICAR
+Arriba a la derecha, ves un toggle: "OFF"
+Click en él para: "ON"
+
+Se abre una confirmación:
+"Are you sure you want to enable this workflow?"
+Click: "Enable"
+
+RESULTADO: Workflow 1 activado ✓
+
+---
+
+WORKFLOW 2: EMAIL 2 (Día 5)
+========================================================================================
+
+Click: "Create workflow"
+
+PASO 5.2.1: Configurar básico
+- Name: "Restaurant_Sequence_2_FollowUp_Day5"
+- Choose: "Start from blank"
+- Object: "Contact"
+Click: "Create"
+
+PASO 5.2.2: Agregar TRIGGER
+Click: "+ Add trigger"
+
+- Contact property: "Email_Sequence_Stage"
+- Operator: "is equal to"
+- Value: "Email 1 enviado"
+
+PASO 5.2.3: Agregar ACCIÓN 1 - DELAY
+Click: "+ Add action"
+
+- Action: "Delay"
+- Type: "Delay for a specific amount of time"
+- Value: 5
+- Unit: "days"
+
+PASO 5.2.4: Agregar ACCIÓN 2 - SEND EMAIL
+Click: "+ Add action"
+
+- Action: "Send email"
+- Select template: "Email_2_Followup_Day5"
+
+PASO 5.2.5: Agregar ACCIÓN 3 - UPDATE PROPERTY
+Click: "+ Add action"
+
+- Action: "Update contact property"
+- Property: "Email_Sequence_Stage"
+- Value: "Email 2 enviado"
+
+PASO 5.2.6: PUBLICAR
+Toggle "OFF" → "ON"
+Click: "Enable"
+
+RESULTADO: Workflow 2 activado ✓
+
+---
+
+WORKFLOW 3: EMAIL 3 (Día 10)
+========================================================================================
+
+Click: "Create workflow"
+
+PASO 5.3.1: Configurar básico
+- Name: "Restaurant_Sequence_3_ProposalValue_Day10"
+- Choose: "Start from blank"
+- Object: "Contact"
+Click: "Create"
+
+PASO 5.3.2: Agregar TRIGGER
+- Contact property: "Email_Sequence_Stage"
+- Operator: "is equal to"
+- Value: "Email 2 enviado"
+
+PASO 5.3.3: Agregar ACCIÓN 1 - DELAY
+- Delay: 5 days
+
+PASO 5.3.4: Agregar ACCIÓN 2 - SEND EMAIL
+- Template: "Email_3_ProposalValue_Day10"
+
+PASO 5.3.5: Agregar ACCIÓN 3 - UPDATE PROPERTY
+- Property: "Email_Sequence_Stage"
+- Value: "Email 3 enviado"
+
+PASO 5.3.6: PUBLICAR
+Toggle ON → Enable
+
+RESULTADO: Workflow 3 activado ✓
+
+---
+
+WORKFLOW 4: EMAIL 4 (Día 15)
+========================================================================================
+
+Click: "Create workflow"
+
+PASO 5.4.1: Configurar básico
+- Name: "Restaurant_Sequence_4_Reactivation_Day15"
+- Choose: "Start from blank"
+- Object: "Contact"
+Click: "Create"
+
+PASO 5.4.2: Agregar TRIGGER
+- Contact property: "Email_Sequence_Stage"
+- Operator: "is equal to"
+- Value: "Email 3 enviado"
+
+PASO 5.4.3: Agregar ACCIÓN 1 - DELAY
+- Delay: 5 days
+
+PASO 5.4.4: Agregar ACCIÓN 2 - SEND EMAIL
+- Template: "Email_4_Reactivation_Day15"
+
+PASO 5.4.5: Agregar ACCIÓN 3 - UPDATE PROPERTY
+- Property: "Email_Sequence_Stage"
+- Value: "Email 4 enviado"
+
+PASO 5.4.6: PUBLICAR
+Toggle ON → Enable
+
+RESULTADO: Workflow 4 activado ✓
+
+---
+
+WORKFLOW 5: EMAIL 5 (Día 20)
+========================================================================================
+
+Click: "Create workflow"
+
+PASO 5.5.1: Configurar básico
+- Name: "Restaurant_Sequence_5_FinalProposal_Day20"
+- Choose: "Start from blank"
+- Object: "Contact"
+Click: "Create"
+
+PASO 5.5.2: Agregar TRIGGER
+- Contact property: "Email_Sequence_Stage"
+- Operator: "is equal to"
+- Value: "Email 4 enviado"
+
+PASO 5.5.3: Agregar ACCIÓN 1 - DELAY
+- Delay: 5 days
+
+PASO 5.5.4: Agregar ACCIÓN 2 - SEND EMAIL
+- Template: "Email_5_ExecutiveProposal_Day20"
+
+PASO 5.5.5: Agregar ACCIÓN 3 - UPDATE PROPERTY
+- Property: "Email_Sequence_Stage"
+- Value: "Propuesta enviada"
+
+PASO 5.5.6: PUBLICAR
+Toggle ON → Enable
+
+RESULTADO: Workflow 5 activado ✓
+
+---
+
+WORKFLOW BONUS: ENGAGEMENT DETECTION (Cuando responden)
+========================================================================================
+
+Click: "Create workflow"
+
+PASO 5.6.1: Configurar básico
+- Name: "Restaurant_Engagement_Reply_Detection"
+- Choose: "Start from blank"
+- Object: "Contact"
+Click: "Create"
+
+PASO 5.6.2: Agregar TRIGGER
+Click: "+ Add trigger"
+
+- Choose trigger type: "Email reply"
+- OR "Engagement event"
+
+[Si no ves esa opción, usa: "Contact property value changes" y
+selecciona una propiedad que se actualice cuando responden]
+
+PASO 5.6.3: Agregar ACCIÓN 1 - NOTIFICATION INTERNA
+Click: "+ Add action"
+
+- Action: "Send internal notification"
+- Message: "{{contact.company}} respondió un email. {{contact.firstname}} está interesado."
+
+PASO 5.6.4: Agregar ACCIÓN 2 - UPDATE PROPERTY
+Click: "+ Add action"
+
+- Action: "Update contact property"
+- Property: "Email_Sequence_Stage"
+- Value: "Engaged - Require followup"
+
+PASO 5.6.5: PUBLICAR
+Toggle ON → Enable
+
+RESULTADO: Workflow bonus activado ✓
+
+---
+
+========================================================================================
+PARTE 6: CREAR VISTA DE PIPELINE PARA MONITOREAR (15 minutos)
+========================================================================================
+
+Quieres ver TODO en un dashboard. Vamos a crear una vista personalizada.
+
+PASO 6.1: Ir a CONTACTS
+Menú izquierdo → "Contacts" → "Contacts"
+
+PASO 6.2: Crear una VISTA PERSONALIZADA
+Arriba a la derecha, ves: "Contacts" (dropdown)
+Click en él → "Create custom view"
+
+PASO 6.3: Nombrar la vista
+- Name: "Restaurant_Prospecting_Pipeline"
+Click: "Create"
+
+PASO 6.4: AGREGAR COLUMNAS
+Arriba, ves un botón: "Add column"
+
+Agrega estas columnas:
+1. Company (Nombre del restaurante)
+2. Email
+3. Phone
+4. Email_Sequence_Stage
+5. Restaurant_Score
+6. Last_Email_Date
+7. Status
+
+PASO 6.5: ORDENAR POR SCORE
+Click en la columna "Restaurant_Score"
+Selecciona: "Sort high to low"
+
+[Esto muestra los restaurantes de mayor a menor oportunidad]
+
+PASO 6.6: GUARDAR VISTA
+Click: "Save view"
+
+RESULTADO: Tienes una vista de pipeline personalizada.
+
+---
+
+========================================================================================
+PARTE 7: HACER UN TEST (Enviar email a ti mismo) (10 minutos)
+========================================================================================
+
+Antes de activar TODO, vamos a testear que funcione.
+
+PASO 7.1: Ir a CONTACTS
+Click en cualquier restaurante (ej: Don Julio)
+
+PASO 7.2: EDITAR CAMPOS
+En la derecha, edita:
+- Restaurant_Score: Cambia a 85 (≥80, se dispara el trigger)
+- Email: Cambia a argentia.ai@gmail.com (para que TÚ recibas el test)
+
+Click: "Save"
+
+PASO 7.3: VER SI EL EMAIL SALE
+Espera 1-2 minutos.
+
+Chequea tu email (argentia.ai@gmail.com) en SPAM o INBOX.
+
+Deberías recibir Email 1 con tu nombre y el nombre del restaurante.
+
+PASO 7.4: VERIFICAR PROPIEDADES
+Vuelve al contacto → Refresca la página (F5)
+
+Verifica que "Email_Sequence_Stage" cambió a "Email 1 enviado"
+
+✓ Si viste el email → Los workflows funcionan correctamente
+
+---
+
+========================================================================================
+PARTE 8: ACTIVAR TODO PARA LOS 25 RESTAURANTES (5 minutos)
+========================================================================================
+
+PASO 8.1: Actualizar propiedades de restaurantes
+Ve a: Contacts → Restaurant_Prospecting_Pipeline
+
+Para CADA restaurante (25 total):
+1. Click en el restaurante
+2. Edita Email_Sequence_Stage: Vacío (para que inicie en Workflow 1)
+3. Edita Restaurant_Score: El que corresponde (ya debería estar)
+4. Edita Email: Si cambió del test, restáuralo al email correcto
+5. Click: "Save"
+
+[O más rápido: Edita en lotes]
+
+PASO 8.2: VERIFICAR WORKFLOWS
+Ve a: Automation → Workflows
+
+Verifica que TODOS tienen toggle "ON" (verde):
+✓ Restaurant_Sequence_1_Initial_Contact
+✓ Restaurant_Sequence_2_FollowUp_Day5
+✓ Restaurant_Sequence_3_ProposalValue_Day10
+✓ Restaurant_Sequence_4_Reactivation_Day15
+✓ Restaurant_Sequence_5_FinalProposal_Day20
+✓ Restaurant_Engagement_Reply_Detection
+
+RESULTADO: TODO ESTÁ ACTIVO. Los emails salen automáticamente.
+
+---
+
+========================================================================================
+PARTE 9: MONITOREAR RESULTADOS (Diariamente)
+========================================================================================
+
+CADA DÍA:
+
+1. Ve a: Contacts → Restaurant_Prospecting_Pipeline
+   → Verifica qué restaurantes avanzaron de etapa
+
+2. Ve a: Automation → Workflows
+   → Click en cada workflow
+   → Ve "Enrollments" para ver quién recibió el email
+   → Mira "Performance" para ver open rates y clicks
+
+3. Ve a: Contacts
+   → Busca restaurantes con estado "Engaged"
+   → LLAMA A ESOS (esos son los calientes)
+
+---
+
+========================================================================================
+TROUBLESHOOTING
+========================================================================================
+
+PROBLEMA 1: "No veo los emails en mi bandeja de entrada"
+SOLUCIÓN:
+- Espera 2-3 minutos (los workflows no son instantáneos)
+- Revisa SPAM
+- Si nada, ve a Workflow → Click → "Test enrollment" para forzar envío
+
+PROBLEMA 2: "¿Cómo cambio el email de salida?"
+SOLUCIÓN:
+Ve a: Settings → Email → "Email sending"
+Ahí puedes cambiar la dirección de salida.
+
+PROBLEMA 3: "Alguien respondió pero no recibí notificación"
+SOLUCIÓN:
+Ve a: Automation → Workflows → "Restaurant_Engagement_Reply_Detection"
+Click "Enrollments" para ver quién respondió.
+
+PROBLEMA 4: "¿Puedo modificar un email después de enviarlo?"
+RESPUESTA: NO para emails ya enviados, PERO SÍ afecta futuros.
+Modifica el template en Marketing → Email.
+
+PROBLEMA 5: "Los restaurantes no tienen email"
+SOLUCIÓN:
+Ve al restaurante → Agrégale el email manualmente (guarda)
+Luego se incluyen en futuros workflows.
+
+PROBLEMA 6: "¿Cómo veo quién abrió cada email?"
+Ve a: Automation → Workflows → Click en cada workflow → "Performance"
+Ahí verás: Sent, Opened, Clicked.
+
+---
+
+========================================================================================
+CHECKLIST FINAL
+========================================================================================
+
+Antes de decir "LISTO", verifica:
+
+☐ Cuenta HubSpot creada con argentia.ai@gmail.com
+☐ 25 restaurantes importados desde CSV
+☐ 4 custom properties creadas
+☐ 5 email templates creados
+☐ 5 workflows creados y ACTIVADOS (toggle verde ON)
+☐ 1 workflow bonus de engagement activado
+☐ Vista de pipeline personalizada creada
+☐ TEST de email realizado (recibiste en argentia.ai@gmail.com)
+☐ Todos los restaurantes tienen Email_Sequence_Stage vacío (para que inicie)
+☐ Todos los restaurantes tienen Restaurant_Score ≥80
+
+SI TODOS LOS ☐ ESTÁN CHECKEADOS:
+→ SYSTEM IS LIVE ✓
+
+Los emails salen automáticamente.
+No necesitas hacer nada más.
+Solo monitorea y llama a los que responden.
+
+---
+
+========================================================================================
+SOPORTE TÉCNICO
+========================================================================================
+
+Si algo no funciona:
+
+1. Ve a Automation → Workflows
+2. Click en el workflow problemático
+3. Busca "Error log" o "Enrollments"
+4. Mira qué salió mal
+5. Ajusta (generalmente es un campo no mapeado)
+
+Para contactar a HubSpot: Settings → Help → Contact support
+
+Pero el 99% de problemas se resuelven re-haciendo el paso.
+
+========================================================================================
+¡ÉXITO!
+========================================================================================
+
+Cuando todo esté activo, los 25 restaurantes van a recibir:
+
+Día 1:  Email inicial (personalizado)
+Día 5:  Seguimiento
+Día 10: Propuesta de valor con ROI
+Día 15: Reactivación
+Día 20: Propuesta ejecutiva final
+
+SIN QUE HAGAS NADA.
+
+Tú solo enfocas en LLAMAR a los que responden.
+
+¡A por esos clientes! 🚀
