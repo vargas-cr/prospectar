@@ -1,0 +1,329 @@
+========================================================================================
+📧 TEMPLATES DE EMAILS LISTOS PARA COPIAR/PEGAR EN HUBSPOT
+========================================================================================
+
+Copia el contenido de cada email y pégalo directamente en HubSpot.
+
+Nota: Usa variables HubSpot así: {{contact.firstname}} {{contact.company}}
+HubSpot las reemplazará automáticamente por el nombre/empresa del contacto.
+
+========================================================================================
+EMAIL 1: CONTACTO INICIAL (Día 1)
+========================================================================================
+
+ASUNTO:
+Una idea para reducir tus reservas manuales en 70% [{{contact.company}}]
+
+BODY (HTML):
+<p>Hola {{contact.firstname}},</p>
+
+<p>Viendo que <strong>{{contact.company}}</strong> tiene excelente reputación, probablemente gastáis mucho tiempo respondiendo reservas por WhatsApp, cambios de horarios, cancelaciones...</p>
+
+<p>Acabo de trabajar con otros restaurantes y logramos automatizar todo eso con un chatbot inteligente.<br>
+<strong>Resultado:</strong> Liberaron 10+ horas/semana del equipo y los no-shows bajaron 35%.</p>
+
+<p>¿Quieren una consulta rápida (15 minutos) para ver si es aplicable a {{contact.company}}?<br>
+Es gratis y sin compromiso. Solo vemos dónde están los cuellos de botella en tu operación.</p>
+
+<p><strong>¿Os viene bien un call esta semana?</strong></p>
+
+<p>Un saludo,<br>
+[Tu nombre]<br>
+[Tu teléfono]<br>
+[Tu email]</p>
+
+---
+
+========================================================================================
+EMAIL 2: SEGUIMIENTO - SIN RESPUESTA (Día 5)
+========================================================================================
+
+ASUNTO:
+Re: Una idea para reducir tus reservas manuales - 2 min de lectura
+
+BODY (HTML):
+<p>Hola {{contact.firstname}},</p>
+
+<p>No sé si viste mi email anterior. Te lo repito rápido porque creo que es valioso para {{contact.company}}:</p>
+
+<p><strong>El problema:</strong><br>
+Cada día pierdes tiempo (varias horas) respondiendo reservas por WhatsApp que podrían ser 100% automáticas.</p>
+
+<p><strong>La solución:</strong><br>
+Un chatbot inteligente que:<br>
+✓ Reciba reservas 24/7 (mientras vos dormís)<br>
+✓ Confirme automáticamente (reduce no-shows 30-40%)<br>
+✓ Maneje cambios y cancelaciones automáticamente<br>
+✓ Libere a tu equipo para lo que realmente suma (cocina, clientes)</p>
+
+<p><strong>El costo:</strong> Es mucho menos de lo que gastás actualmente en no-shows + tiempo administrativo.</p>
+
+<p>Si te interesa aunque sea charlar 15 minutos, avísame.<br>
+De lo contrario, no te molesto más.</p>
+
+<p>[Tu teléfono]</p>
+
+<p>Un saludo,<br>
+[Tu nombre]</p>
+
+---
+
+========================================================================================
+EMAIL 3: PROPUESTA DE VALOR (Día 10)
+========================================================================================
+
+ASUNTO:
+{{contact.company}} | Cómo aumentar ingresos 20% sin ampliar local
+
+BODY (HTML):
+<p>Hola {{contact.firstname}},</p>
+
+<p>Seguí investigando {{contact.company}} y vi claramente la oportunidad:</p>
+
+<p>✓ Alto volumen de reservas → Alto potencial de automatización<br>
+✓ Excelentes ratings → Clientes satisfechos → Queremos retenerlos<br>
+✓ Zona con competencia → Necesitas diferenciarte digitalmente</p>
+
+<p><strong>Mi propuesta para {{contact.company}}:</strong></p>
+
+<p>Una plataforma IA que:<br>
+→ Gestiona reservas 24/7 (sin intervención humana)<br>
+→ Reduce no-shows 30-40% (dinero directo al resultado operativo)<br>
+→ Aumenta rotación de mesas 15-25% (más cubiertos, mismo espacio)<br>
+→ Analiza clientes VIP automáticamente (personalización)</p>
+
+<p><strong>Inversión:</strong> $900/mes<br>
+<strong>Beneficio conservador:</strong> +$1,200/mes en ingresos (solo reducción no-shows + rotación)<br>
+<strong>ROI:</strong> Se paga solo en 30 días. Luego es ganancia pura.</p>
+
+<p><strong>¿Cómo funciona?</strong><br>
+1. Confirmás que te interesa<br>
+2. Setup 48 horas<br>
+3. Training 1 día<br>
+4. Go live + optimizaciones<br>
+5. En 3 meses, medimos resultados reales</p>
+
+<p><strong>¿Nos juntamos para explorar esto?</strong> 20 minutos y ves si es para {{contact.company}}.</p>
+
+<p>[Tu teléfono]</p>
+
+<p>Un saludo,<br>
+[Tu nombre]</p>
+
+---
+
+========================================================================================
+EMAIL 4: REACTIVACIÓN - ÚLTIMA INSTANCIA (Día 15)
+========================================================================================
+
+ASUNTO:
+{{contact.company}} | Última propuesta antes de dejar esto
+
+BODY (HTML):
+<p>Hola {{contact.firstname}},</p>
+
+<p>He estado esperando tu respuesta sobre la propuesta de automatización.</p>
+
+<p>Entiendo que hay mucho en la agenda de un restaurante. Pero no quería dejar pasar sin intentarlo una vez más:</p>
+
+<p><strong>Si le importa reducir carga operativa y aumentar ingresos → podemos hacerlo.</strong><br>
+<strong>Si no → simplemente dime "no gracias" y no te molesto más.</strong></p>
+
+<p>¿Cuál es?</p>
+
+<p>[Tu teléfono]</p>
+
+<p>Un saludo,<br>
+[Tu nombre]</p>
+
+---
+
+========================================================================================
+EMAIL 5: PROPUESTA EJECUTIVA FINAL (Día 20)
+========================================================================================
+
+ASUNTO:
+Propuesta ejecutiva para {{contact.company}} - {{contact.firstname}}
+
+BODY (HTML):
+<p>Hola {{contact.firstname}},</p>
+
+<p>Basándome en nuestra investigación de {{contact.company}}, aquí va la propuesta formal:</p>
+
+<p><strong style="color: #c7254e;">SITUACIÓN ACTUAL:</strong><br>
+✗ Gestión de reservas manual (consume horas)<br>
+✗ Pérdida de ingresos por no-shows (15-20% de reservas)<br>
+✗ Sin análisis de datos de clientes (pierdes oportunidades de upsell)<br>
+✗ Comunicación cocina-salón improvisada (cuellos de botella en peak hours)</p>
+
+<p><strong style="color: #5cb85c;">SOLUCIÓN: PACK PRO - $900/mes</strong></p>
+
+<p>Incluye:<br>
+✓ Chatbot WhatsApp + sistema de reservas inteligente<br>
+✓ Kitchen display system integrado<br>
+✓ Análisis de clientes + VIP detection<br>
+✓ Confirmaciones automáticas (reduce no-shows a &lt;5%)<br>
+✓ Dashboard en tiempo real<br>
+✓ Soporte 24/7</p>
+
+<p><strong style="color: #5cb85c;">RESULTADOS ESPERADOS (3 meses):</strong></p>
+
+<p>→ <strong>Liberación de 8-10 horas/semana</strong> (tu equipo enfocado en lo importante)<br>
+→ <strong>Reducción de no-shows: 15% → 5%</strong> (+$300-500/mes en ingresos)<br>
+→ <strong>Aumento de rotación: +15%</strong> (+$400-600/mes sin ampliar local)<br>
+→ <strong>Mejor experiencia del cliente</strong> (ratings suben)<br>
+→ <strong>ROI: Se paga solo en 2 meses</strong></p>
+
+<p><strong style="color: #5cb85c;">PRÓXIMOS PASOS:</strong></p>
+
+<p>1. Confirmás "Sí, proceder con Pack Pro"<br>
+2. Setup técnico (48 horas)<br>
+3. Training al equipo (1 día)<br>
+4. Go live + primeros 30 días de optimizaciones<br>
+5. Medición de resultados</p>
+
+<p><strong>¿Procedemos?</strong> Confirmá y empezamos mañana.</p>
+
+<p>[Tu teléfono]<br>
+[Tu email]</p>
+
+<p>Un saludo,<br>
+[Tu nombre]</p>
+
+---
+
+========================================================================================
+VARIABLES HUBSPOT DISPONIBLES (Para personalizar más)
+========================================================================================
+
+Usa estas variables en cualquier parte del email:
+
+CONTACTO:
+{{contact.firstname}} = Nombre
+{{contact.lastname}} = Apellido
+{{contact.email}} = Email
+{{contact.phone}} = Teléfono
+
+EMPRESA:
+{{contact.company}} = Nombre restaurante
+{{contact.hs_lead_status}} = Estado (Lead, MQL, etc.)
+{{custom.Restaurant_Score}} = Score de oportunidad
+{{custom.Zona}} = Zona de la ciudad
+
+OTROS:
+{{#if contact.phone}} [incluir teléfono si existe] {{/if}}
+{{contact.lifecyclestage}} = Etapa en el funnel
+
+EJEMPLO:
+"Hola {{contact.firstname}}, vi que {{contact.company}} en {{custom.Zona}} tiene
+{{custom.Restaurant_Score}}/100 de score. Esto significa..."
+
+========================================================================================
+TIPS DE PERSONALIZACIÓN PARA AUMENTAR OPEN RATES
+========================================================================================
+
+TIP 1: Subject lines cortos y curiosos
+MAL:  "Propuesta de solución IA para automatización de procesos"
+BIEN: "Una idea para {{contact.company}}"
+
+TIP 2: Primeras líneas personalizadas
+MAL:  "Hola, somos especialistas en..."
+BIEN: "Viendo que {{contact.company}} tiene excelente rating..."
+
+TIP 3: Números específicos (no genéricos)
+MAL:  "Ahorro de tiempo significativo"
+BIEN: "Liberas 10+ horas/semana"
+
+TIP 4: Calls to action claros
+MAL:  "Contáctanos"
+BIEN: "¿Nos juntamos 20 minutos? [Tu teléfono]"
+
+TIP 5: Beneficios antes que features
+MAL:  "Chatbot con NLP, integración API, dashboard..."
+BIEN: "Menos tiempo en reservas, más dinero en tú bolsillo"
+
+========================================================================================
+A/B TESTING: CÓMO PROBAR QUÉ FUNCIONA
+========================================================================================
+
+Quieres saber cuál de dos subject lines tiene mejor open rate.
+
+EN HUBSPOT:
+
+1. Crea DOS versiones del Email 1:
+   - Email 1A: Subject "Una idea para {{contact.company}}"
+   - Email 1B: Subject "{{contact.company}} | Reducir reservas manuales en 70%"
+
+2. En el Workflow, usa "A/B Test"
+   - Opción: 50% reciben 1A, 50% reciben 1B
+   - Mira cuál tiene mejor open rate
+
+3. Para la siguiente campaña, usa el winner.
+
+MÉTRICAS QUE IMPORTAN:
+- Open rate (apunta a >25%)
+- Click rate (apunta a >5%)
+- Reply rate (apunta a >2%)
+
+Si open rate es bajo:
+→ Cambia el subject line
+
+Si click rate es bajo:
+→ Simplifica el CTA
+→ Personaliza más
+
+Si reply rate es bajo:
+→ El email no está convincente
+→ Revisa si el problema está bien identificado
+
+========================================================================================
+SEGURIDAD & COMPLIANCE
+========================================================================================
+
+IMPORTANTE: En algunos países (Argentina incluida), necesitas cumplir con:
+
+✓ Incluir tu nombre y datos de contacto reales
+✓ Incluir opción de "unsubscribe" (HubSpot lo hace automáticamente)
+✓ Respetar "Do not contact" si alguien pide
+
+EN HUBSPOT: Ve a Email → Manage Unsubscribes
+(Esto se configura automáticamente)
+
+No hagas spam. Si alguien dice "no me contactes", respeta eso.
+
+========================================================================================
+TROUBLESHOOTING
+========================================================================================
+
+PROBLEMA: "El email se ve feo en celular"
+SOLUCIÓN: HubSpot hace responsive automáticamente. Pero prueba
+"Preview" en el editor antes de publicar.
+
+PROBLEMA: "Las variables no se reemplazan (sigo viendo {{contact.firstname}})"
+SOLUCIÓN: Puede ser que el contacto no tenga ese dato cargado.
+Ve al contacto → completa sus datos → reintentar envío.
+
+PROBLEMA: "¿Puedo cambiar un email después de enviarlo?"
+RESPUESTA: NO. Los que ya se enviaron no cambian.
+PERO: Los próximos usos del template sí reflejarán cambios.
+
+PROBLEMA: "¿Cuántos emails puedo enviar con el plan gratuito?"
+RESPUESTA: HubSpot free plan: 1,000 contactos + unlimited emails.
+(Así que 25 restaurantes × 5 emails = 125 emails. Sobrado.)
+
+========================================================================================
+¡LISTO PARA COPIAR/PEGAR!
+========================================================================================
+
+Simplemente:
+1. Ve a HubSpot → Marketing → Email → Create email
+2. Copia/pega el contenido de arriba
+3. Personaliza [Tu nombre], [Tu teléfono], [Tu email]
+4. Click SAVE
+5. Repite para los 5 emails
+
+En 10 minutos tienes todos los templates listos.
+
+Luego vinculalos a los workflows y ¡automatización activa!
+
+Éxito 🚀

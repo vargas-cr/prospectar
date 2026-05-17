@@ -1,0 +1,615 @@
+========================================================================================
+🤖 GUÍA: CREAR SECUENCIAS DE EMAILS EN HUBSPOT PARA RESTAURANTES
+========================================================================================
+
+Esta guía te enseña a crear una secuencia automática de 5 emails que se disparan
+cuando agregas un restaurante a HubSpot. Sin hacer nada más, los emails salen solos.
+
+========================================================================================
+PASO 0: REQUISITOS PREVIOS
+========================================================================================
+
+1. Cuenta HubSpot (gratuita funciona)
+   → Ir a hubspot.com → Sign up gratuito
+
+2. Tener importados los 25 restaurantes en HubSpot
+   → Usarás el CSV que generamos: restaurantes-buenos-aires-hubspot.csv
+
+3. Tener configurado tu email de salida
+   → Settings → Email → verificar que puedas enviar desde tu email
+
+========================================================================================
+PASO 1: IMPORTAR LOS 25 RESTAURANTES A HUBSPOT
+========================================================================================
+
+1. Abre HubSpot
+2. Ve a CONTACTS (contactos)
+3. Click en "Import" (arriba a la derecha)
+4. Selecciona el archivo: restaurantes-buenos-aires-hubspot.csv
+5. HubSpot te mostrará un preview
+6. Mapea los campos:
+   - Nombre → Company Name
+   - Teléfono → Phone
+   - Email → Email
+   - Dirección → Address
+   - Zona → Custom property "Zona" (create if needed)
+   - Score → Custom property "IA_Score"
+   - Oportunidad → Custom property "Opportunity_Level"
+7. Click IMPORT
+
+LISTO: Los 25 restaurantes están en tu base de datos.
+
+========================================================================================
+PASO 2: CREAR PROPIEDADES PERSONALIZADAS (Custom Properties)
+========================================================================================
+
+HubSpot necesita campos para rastrear el estado de cada prospect.
+
+VE A: Settings → Objects → Contacts → Properties
+
+Crea estas propiedades:
+
+PROPIEDAD 1: Email_Sequence_Started
+- Type: Checkbox
+- Descripción: "Marca si se inició secuencia de emails"
+
+PROPIEDAD 2: Email_Sequence_Stage
+- Type: Dropdown
+- Valores:
+  * "Email 1 enviado"
+  * "Email 2 enviado"
+  * "Email 3 enviado"
+  * "Email 4 enviado"
+  * "Call realizado"
+  * "Propuesta enviada"
+  * "Cerrado"
+  * "No interesado"
+
+PROPIEDAD 3: Last_Email_Date
+- Type: Date
+- Descripción: "Fecha del último email enviado"
+
+PROPIEDAD 4: Restaurant_Score
+- Type: Number
+- Descripción: "Score de oportunidad IA (1-100)"
+
+Ahora tienes la estructura. Vamos a crear los workflows.
+
+========================================================================================
+PASO 3: CREAR WORKFLOW 1 - EMAIL INICIAL (Contacto + Investigación)
+========================================================================================
+
+VE A: Automation → Workflows
+
+CLICK: "Create workflow"
+
+NOMBRE DEL WORKFLOW: "Restaurant_Prospecting_Sequence_1_Initial"
+
+PASO 1: CONFIGURAR EL TRIGGER (Cuándo se dispara)
+
+- Trigger type: "Contact is created"
+  (Se dispara cuando agregues un nuevo restaurante)
+
+PASO 2: AGREGAR CONDICIÓN (Solo restaurantes de Score alto)
+
+- Condition type: "Contact property"
+- Property: "Restaurant_Score"
+- Operator: "is greater than or equal to"
+- Value: 80
+
+(Solo dispara si el score es ≥80, es decir, alta oportunidad)
+
+PASO 3: AGREGAR ACCIÓN 1: Esperar 1 día
+
+- Action: "Delay"
+- Type: "Delay for..."
+- Value: 1 day
+
+(Espera 1 día antes de enviar, para no parecer spam)
+
+PASO 4: AGREGAR ACCIÓN 2: Enviar Email
+
+- Action: "Send Email"
+- Select email: [Crearás esto en PASO 4 de esta guía]
+- Si no existe el email: Click "Create new email"
+
+PASO 5: AGREGAR ACCIÓN 3: Actualizar propiedad
+
+- Action: "Update contact property"
+- Property: "Email_Sequence_Stage"
+- Set value to: "Email 1 enviado"
+
+PASO 6: GUARDAR Y ACTIVAR
+
+- Click PUBLISH (arriba a la derecha)
+
+LISTO: Workflow 1 activado.
+
+========================================================================================
+PASO 4: CREAR TEMPLATES DE EMAILS EN HUBSPOT
+========================================================================================
+
+Ve a: Marketing → Email
+
+CLICK: "Create email"
+
+CREA 5 EMAILS CON ESTOS DATOS:
+
+---
+
+EMAIL 1: Contacto Inicial - HIGH OPPORTUNITY
+SUBJECT: "Una idea para reducir tus reservas manuales en 70% [Restaurant Name]"
+
+BODY:
+Hola {{contact.firstname}},
+
+Viendo que {{contact.company}} tiene excelente reputación, probablemente gastáis
+mucho tiempo respondiendo reservas por WhatsApp.
+
+Acabo de trabajar con otros restaurantes y logramos automatizar todo eso.
+Resultado: liberaron 10+ horas/semana y los no-shows bajaron 35%.
+
+¿Quieren una consulta rápida (15 min) para ver si es aplicable a ustedes?
+
+Es gratis y sin compromiso.
+
+Un saludo,
+[Tu nombre]
+[Tu teléfono]
+
+---
+
+EMAIL 2: Seguimiento - Sin respuesta (Día 5)
+SUBJECT: "Re: Una idea para reducir tus reservas manuales (2 min de lectura)"
+
+BODY:
+Hola {{contact.firstname}},
+
+No sé si viste mi email anterior. Te lo repito rápido:
+
+**El problema:** Cada día pierden tiempo respondiendo reservas por WhatsApp
+que podrían ser 100% automáticas.
+
+**La solución:** Un chatbot que reciba reservas 24/7 + confirme automáticamente.
+
+Resultado: Menos no-shows + menos carga en tu equipo.
+
+¿Te interesa charlar?
+[Tu teléfono]
+
+Un saludo,
+[Tu nombre]
+
+---
+
+EMAIL 3: Propuesta de Valor - Día 10
+SUBJECT: "{{contact.company}} | Aumentar ingresos sin aumentar costos"
+
+BODY:
+Hola {{contact.firstname}},
+
+Seguí investigando {{contact.company}} y ví claramente la oportunidad:
+
+✓ Alto volumen de reservas = alto potencial de automatización
+✓ 4.5+ rating = clientes satisfechos = queremos mantenerlos
+✓ Zona {{custom.Zona}} = competencia fuerte = necesitas diferenciarte
+
+Mi propuesta:
+
+Una plataforma IA que:
+- Gestiona reservas 24/7
+- Reduce no-shows 30-40%
+- Aumenta rotación de mesas 15-25%
+- Analiza clientes VIP
+
+Costo: $800/mes
+Beneficio: +$1,200/mes en ingresos (conservador)
+
+ROI: 30 días.
+
+¿Una llamada de 20 min?
+[Tu teléfono] o responde este email.
+
+Un saludo,
+[Tu nombre]
+
+---
+
+EMAIL 4: Reactivación - Día 15
+SUBJECT: "{{contact.company}} | Última propuesta antes de dejar esto"
+
+BODY:
+Hola {{contact.firstname}},
+
+He estado esperando tu respuesta. Entiendo que hay mucho en la agenda.
+
+Pero no quería dejar pasar sin intentarlo una última vez:
+
+Si le importa reducir carga operativa y aumentar ingresos → podemos hacerlo.
+
+Si no → simplemente dime "no gracias" y no te molesto más.
+
+¿Cuál es?
+
+[Tu teléfono]
+
+Un saludo,
+[Tu nombre]
+
+---
+
+EMAIL 5: Propuesta Ejecutiva - Día 20
+SUBJECT: "Propuesta ejecutiva: {{contact.company}}"
+
+BODY:
+Hola {{contact.firstname}},
+
+Basándome en nuestra investigación, aquí va la propuesta formal:
+
+**SITUACIÓN ACTUAL:**
+- Gestión de reservas manual
+- Pérdida de ingresos por no-shows
+- Sin análisis de datos de clientes
+
+**SOLUCIÓN: Pack Pro - $800/mes**
+- Chatbot inteligente
+- Sistema de reservas automático
+- Kitchen display system
+- Análisis de clientes VIP
+
+**RESULTADOS (3 meses):**
+- Liberación de 8 horas/semana
+- Reducción de no-shows: 40%
+- Aumento de rotación: 15%
+
+**ROI: Se paga en mes 1**
+
+¿Procedemos? Confirmá y empezamos setup.
+
+[Tu teléfono]
+
+Un saludo,
+[Tu nombre]
+
+---
+
+GUARDAR CADA EMAIL:
+1. Click SAVE
+2. Dale un nombre descriptivo (ej: "Email_1_Initial_Contact_RestaurantProspecting")
+3. Click SAVE again
+
+Ahora tienes 5 templates listos.
+
+========================================================================================
+PASO 5: CREAR WORKFLOW 2 - EMAIL 2 (Seguimiento, Día 5)
+========================================================================================
+
+VE A: Automation → Workflows
+
+CLICK: "Create workflow"
+
+NOMBRE: "Restaurant_Prospecting_Sequence_2_FollowUp_Day5"
+
+CONFIGURACIÓN:
+
+1. TRIGGER:
+   - Type: "Contact property value changes"
+   - Property: "Email_Sequence_Stage"
+   - Set to: "Email 1 enviado"
+
+2. DELAY:
+   - 5 days
+
+3. SEND EMAIL:
+   - Email 2 (Seguimiento - Sin respuesta)
+
+4. UPDATE PROPERTY:
+   - Email_Sequence_Stage = "Email 2 enviado"
+
+PUBLISH ✓
+
+========================================================================================
+PASO 6: CREAR WORKFLOW 3 - EMAIL 3 (Propuesta de Valor, Día 10)
+========================================================================================
+
+VE A: Automation → Workflows
+
+CLICK: "Create workflow"
+
+NOMBRE: "Restaurant_Prospecting_Sequence_3_ProposalValue_Day10"
+
+CONFIGURACIÓN:
+
+1. TRIGGER:
+   - Type: "Contact property value changes"
+   - Property: "Email_Sequence_Stage"
+   - Set to: "Email 2 enviado"
+
+2. DELAY:
+   - 5 days
+
+3. SEND EMAIL:
+   - Email 3 (Propuesta de Valor)
+
+4. UPDATE PROPERTY:
+   - Email_Sequence_Stage = "Email 3 enviado"
+
+PUBLISH ✓
+
+========================================================================================
+PASO 7: CREAR WORKFLOW 4 - EMAIL 4 (Reactivación, Día 15)
+========================================================================================
+
+VE A: Automation → Workflows
+
+CLICK: "Create workflow"
+
+NOMBRE: "Restaurant_Prospecting_Sequence_4_Reactivation_Day15"
+
+CONFIGURACIÓN:
+
+1. TRIGGER:
+   - Type: "Contact property value changes"
+   - Property: "Email_Sequence_Stage"
+   - Set to: "Email 3 enviado"
+
+2. DELAY:
+   - 5 days
+
+3. SEND EMAIL:
+   - Email 4 (Reactivación)
+
+4. UPDATE PROPERTY:
+   - Email_Sequence_Stage = "Email 4 enviado"
+
+PUBLISH ✓
+
+========================================================================================
+PASO 8: CREAR WORKFLOW 5 - EMAIL 5 (Propuesta Ejecutiva, Día 20)
+========================================================================================
+
+VE A: Automation → Workflows
+
+CLICK: "Create workflow"
+
+NOMBRE: "Restaurant_Prospecting_Sequence_5_FinalProposal_Day20"
+
+CONFIGURACIÓN:
+
+1. TRIGGER:
+   - Type: "Contact property value changes"
+   - Property: "Email_Sequence_Stage"
+   - Set to: "Email 4 enviado"
+
+2. DELAY:
+   - 5 days
+
+3. SEND EMAIL:
+   - Email 5 (Propuesta Ejecutiva)
+
+4. UPDATE PROPERTY:
+   - Email_Sequence_Stage = "Propuesta enviada"
+
+PUBLISH ✓
+
+========================================================================================
+PASO 9: CREAR WORKFLOW DE CIERRE (Cuando responden)
+========================================================================================
+
+Este workflow se dispara cuando alguien responde a los emails.
+
+VE A: Automation → Workflows
+
+CLICK: "Create workflow"
+
+NOMBRE: "Restaurant_Prospecting_Engaged_Response"
+
+CONFIGURACIÓN:
+
+1. TRIGGER:
+   - Type: "Email replied"
+
+2. ACTION 1: Send internal notification
+   - Action: "Send internal notification"
+   - Message: "{{contact.company}} respondió tu email. {{contact.firstname}} está interesado."
+
+3. ACTION 2: Update property
+   - Email_Sequence_Stage = "Engaged - Require followup"
+
+4. ACTION 3: Task creation (para que TÚ llames)
+   - Create task for: "You"
+   - Title: "CALL {{contact.company}} - {{contact.firstname}}"
+   - Due date: "Tomorrow"
+
+PUBLISH ✓
+
+Esto te notifica cuando alguien responde.
+
+========================================================================================
+PASO 10: VISTA DE PIPELINE PARA MONITOREAR
+========================================================================================
+
+Ahora quieres VER todo en un dashboard.
+
+Ve a: Sales → Deals (o Contacts si prefieres)
+
+Personaliza la vista para VER:
+- Nombre del restaurante
+- Email_Sequence_Stage
+- Restaurant_Score
+- Último email enviado
+
+Crea una TABLA así:
+
+┌─────────────────────┬──────────────┬────────┬──────────────────┐
+│ Restaurante         │ Etapa        │ Score  │ Último Email     │
+├─────────────────────┼──────────────┼────────┼──────────────────┤
+│ Don Julio           │ Email 3      │ 92     │ Hace 2 días      │
+│ La Cabrera          │ Email 1      │ 90     │ Hoy              │
+│ BASABAR             │ Email 4      │ 85     │ Ayer             │
+│ Fervor              │ Email 2      │ 88     │ Hace 5 días      │
+│ La Brigada          │ Email 1      │ 84     │ Hoy              │
+└─────────────────────┴──────────────┴────────┴──────────────────┘
+
+Para crear esto:
+1. Ve a Contacts
+2. Click "Filters" (arriba)
+3. Agrega columnas: "Add column"
+4. Selecciona: Company, Email_Sequence_Stage, Restaurant_Score
+5. Save view como "Restaurant_Prospecting_Pipeline"
+
+========================================================================================
+PASO 11: METRICS & REPORTES (Lo importante)
+========================================================================================
+
+Ahora miras qué funciona.
+
+Ve a: Automation → Workflows
+
+Para CADA workflow, verás:
+- # de contactos que entraron
+- # que completaron el email
+- # que abrieron
+- # que hicieron click
+
+EJEMPLO:
+
+Workflow 1 (Email Inicial):
+- 25 contactos entrados
+- 25 emails enviados
+- 8 abrieron (32% open rate) ← apuntá a >25%
+- 2 hicieron click (8% click rate) ← apuntá a >5%
+
+Esto te dice si tus emails funcionan.
+
+Si open rate es bajo (<20%):
+→ Cambia el subject line
+→ Prueba diferentes horarios de envío
+
+Si click rate es bajo (<3%):
+→ Agrega CTA más claro
+→ Personaliza más el contenido
+
+========================================================================================
+PASO 12: INTEGRACIÓN CON CALENDLY (Opcional pero poderoso)
+========================================================================================
+
+Quieres que cuando alguien haga click en "Una llamada de 20 min",
+se abra directamente tu calendario de Calendly.
+
+1. Crea una cuenta en Calendly (libre)
+2. Configura un "15 min meeting" para restaurantes
+3. Copia tu link de Calendly
+4. En CADA EMAIL, reemplaza [Tu teléfono] con tu link de Calendly
+
+Así cuando hacen click, directamente se ven tu disponibilidad.
+
+Pasos:
+- Calendly → Settings → Sharing
+- Copy your unique URL
+- En tus emails, pon el link en lugar del teléfono
+
+EJEMPLO:
+❌ "¿Una llamada de 20 min? +54 11 1234-5678"
+✅ "¿Una llamada de 20 min? calendly.com/[tu-usuario]/restaurante-15min"
+
+========================================================================================
+PASO 13: WHATSAPP INTEGRATION (BONUS - Si quieres ir más allá)
+========================================================================================
+
+HubSpot integra con WhatsApp. Así puedes enviar mensajes automáticos por WhatsApp
+además de email.
+
+Pero esto requiere:
+- Una account de WhatsApp Business
+- Integración con HubSpot (requires más setup)
+
+Por ahora, enfócate en EMAIL. WhatsApp viene después cuando domines este.
+
+========================================================================================
+RESUMEN: LO QUE ACABAS DE CREAR
+========================================================================================
+
+✅ 5 Workflows automáticos que:
+   - Envían Email 1 al Día 1
+   - Envían Email 2 al Día 5
+   - Envían Email 3 al Día 10
+   - Envían Email 4 al Día 15
+   - Envían Email 5 al Día 20
+
+✅ Cuando alguien responde:
+   - Te notifica automáticamente
+   - Crea una tarea para que llames
+
+✅ Dashboard visual de:
+   - Estado de cada prospect
+   - Score de oportunidad
+   - Cuándo se envió el último email
+
+✅ Métricas de:
+   - Tasa de apertura
+   - Tasa de click
+   - Engagement
+
+========================================================================================
+PRÓXIMOS PASOS INMEDIATOS
+========================================================================================
+
+1. HOYA: Importa los 25 restaurantes al CSV
+2. HOY: Crea las propiedades personalizadas
+3. HOY: Crea los 5 templates de email
+4. HOY: Crea los 5 workflows (30 min)
+5. MAÑANA: Activa TODO
+6. SEMANA 1: Monitorea open rates y clicks
+7. SEMANA 2: Ajusta subject lines si es necesario
+8. SEMANA 3: Analiza qué prospectos respondieron
+
+========================================================================================
+TROUBLESHOOTING COMÚN
+========================================================================================
+
+PROBLEMA 1: "No veo los emails en mi bandeja"
+SOLUCIÓN: Los emails no se envían a TI, se envían a los restaurantes.
+Para testing, ve a un contacto y click "Preview email" o "Send test"
+
+PROBLEMA 2: "¿Cuándo se disparan los workflows?"
+RESPUESTA: Cuando importas los 25 restaurantes, se dispara el Workflow 1
+para todos simultáneamente. Luego cada uno sigue su propia línea de tiempo.
+
+PROBLEMA 3: "Alguien respondió, pero no vi la notificación"
+SOLUCIÓN: Ve a Automation → Workflows → "Restaurant_Prospecting_Engaged_Response"
+→ Ver "Enrollments" para ver quién ha respondido
+
+PROBLEMA 4: "¿Puedo pausar la secuencia para alguien?"
+SÍ: Ve al contacto → Unenroll → selecciona el workflow → Unenroll
+
+PROBLEMA 5: "¿Puedo modificar un email después de que sale?"
+NO: Los cambios al template NO afectan emails ya enviados.
+PERO: Los cambios SÍ afectan emails futuros.
+
+========================================================================================
+VIDEOTUTORIAL (Si prefieres ver):
+========================================================================================
+
+YouTube busca:
+- "HubSpot Workflows tutorial 2024"
+- "HubSpot email automation"
+- "HubSpot CRM free plan setup"
+
+Eso te muestra paso a paso en video.
+
+========================================================================================
+¡LISTO!
+========================================================================================
+
+Ya tienes una máquina de prospección automática.
+
+- 25 restaurantes importados
+- 5 emails automáticos
+- 5 workflows en cascada
+- Notificaciones cuando alguien responde
+- Dashboard para monitorear
+
+Ahora se vende mientras TÚ duermes.
+
+¿Listo para activar?
