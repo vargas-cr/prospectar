@@ -1,0 +1,157 @@
+========================================================================================
+⚡ IMPORTAR CSV A HUBSPOT EN 5 MINUTOS
+========================================================================================
+
+ARCHIVOS QUE NECESITAS:
+✓ Tu email HubSpot creado: argentia.ai@gmail.com
+✓ El CSV: restaurantes-buenos-aires-HUBSPOT-READY.csv
+
+========================================================================================
+PASO 1: ABRE HUBSPOT
+========================================================================================
+
+URL: https://hubspot.com/login
+
+Username: argentia.ai@gmail.com
+Password: [tu contraseña]
+
+Click: "Log in"
+
+Espera a que cargue el dashboard.
+
+========================================================================================
+PASO 2: VAA A CONTACTS (CONTACTOS)
+========================================================================================
+
+En el menú izquierdo, busca: "CONTACTS"
+Click en "Contacts"
+
+Se abre la lista de contactos (probablemente vacía aún).
+
+========================================================================================
+PASO 3: CLICK EN "IMPORT"
+========================================================================================
+
+Arriba a la DERECHA, ves un botón azul que dice: "Import"
+
+Click en él.
+
+Una ventana se abre: "Import your contacts"
+
+========================================================================================
+PASO 4: SELECCIONA TU CSV
+========================================================================================
+
+La ventana muestra opciones:
+- "Upload a file" ← ESTO
+- Paste data
+- etc.
+
+Click: "Upload a file"
+
+Se abre tu EXPLORADOR DE ARCHIVOS.
+
+Busca y selecciona:
+📁 restaurantes-buenos-aires-HUBSPOT-READY.csv
+
+Click: "Open"
+
+========================================================================================
+PASO 5: IMPORTAR
+========================================================================================
+
+HubSpot muestra una PREVISUALIZACIÓN de los datos:
+
+Verás una tabla con:
+┌──────────────────────────────────────────────────────────┐
+│ firstname | lastname | email | phone | company | address │
+├──────────────────────────────────────────────────────────┤
+│ Don       | Julio    | info@ | +54   | Don    | Guatem  │
+│ La        | Cabrera  |       | +54   | La     | Laprida │
+│ Fervor    |          |       | +54   | Fervor | Posadas │
+│ ...                                                       │
+└──────────────────────────────────────────────────────────┘
+
+Scroll down hasta el final.
+
+Click: "Import" (botón azul abajo)
+
+Una barra de progreso aparece...
+
+Espera 1-2 minutos.
+
+========================================================================================
+LISTO ✓
+========================================================================================
+
+Verás un mensaje:
+
+"Successfully imported 25 contacts"
+
+Los 25 restaurantes están ahora en tu HubSpot.
+
+========================================================================================
+VERIFICAR QUE FUNCIONÓ
+========================================================================================
+
+1. La pantalla te muestra: "View imported contacts"
+   Click en él
+
+2. O va a: Contacts → Contacts (en el menú)
+
+3. Verás una lista con:
+   ✓ Don Julio Parrilla
+   ✓ La Cabrera
+   ✓ Fervor
+   ✓ BASABAR
+   ✓ ... (25 total)
+
+Si los ves → ¡LISTO!
+
+========================================================================================
+SIGUIENTE PASO
+========================================================================================
+
+Ahora sigue la GUIA-EJECUTIVA-argentia-ai@gmail.com.txt
+
+A partir de "PARTE 3: CREAR CUSTOM PROPERTIES"
+
+Porque los 25 restaurantes ya están importados.
+
+========================================================================================
+SI ALGO SALIÓ MAL
+========================================================================================
+
+PROBLEMA: "No veo el botón Import"
+SOLUCIÓN:
+- Estás en la página correcta (Contacts → Contacts)?
+- Recarga la página (F5)
+- Intenta de nuevo
+
+PROBLEMA: "El CSV no se encuentra"
+SOLUCIÓN:
+- El archivo debe estar en tu computadora
+- Busca: restaurantes-buenos-aires-HUBSPOT-READY.csv
+- Si no lo tienes, descárgalo de tu proyecto
+
+PROBLEMA: "Salió error en la importación"
+SOLUCIÓN:
+- Lee el mensaje de error (HubSpot dirá cuál es el problema)
+- Generalmente es un campo que no se mapea bien
+- Intenta de nuevo
+
+PROBLEMA: "¿Y si algo está mal en los datos?"
+SOLUCIÓN:
+- Los datos se importan como están
+- Después puedes editar cada restaurante manualmente en HubSpot
+- Click en el restaurante → edita → Save
+
+========================================================================================
+¡YA ESTÁ!
+========================================================================================
+
+En 5 minutos tienes los 25 restaurantes listos.
+
+Ahora continúa con PARTE 3 de la GUIA-EJECUTIVA-argentia-ai@gmail.com.txt
+
+(Las PARTES 1-2 ya están hechas)
