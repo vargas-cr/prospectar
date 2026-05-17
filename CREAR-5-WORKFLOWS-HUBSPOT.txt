@@ -1,0 +1,491 @@
+========================================================================================
+🤖 CREAR 5 WORKFLOWS AUTOMÁTICOS EN HUBSPOT
+========================================================================================
+
+¿QUÉ ES UN WORKFLOW?
+
+Es una automatización que:
+1. Espera un EVENTO (ej: "Agregaste un restaurante")
+2. Espera UN TIEMPO (ej: "5 días")
+3. Realiza UNA ACCIÓN (ej: "Envía email")
+4. Actualiza UN DATO (ej: "Email_Sequence_Stage = Email 2 enviado")
+
+========================================================================================
+LOS 5 WORKFLOWS QUE CREARÁS:
+========================================================================================
+
+WORKFLOW 1: "Initial Contact" (Email 1 - Día 1)
+├─ Cuándo: Se agrega un restaurante con score ≥80
+├─ Espera: 1 día
+└─ Envía: Email 1
+
+WORKFLOW 2: "Follow Up" (Email 2 - Día 5)
+├─ Cuándo: Email 1 fue enviado
+├─ Espera: 5 días
+└─ Envía: Email 2
+
+WORKFLOW 3: "Proposal Value" (Email 3 - Día 10)
+├─ Cuándo: Email 2 fue enviado
+├─ Espera: 5 días
+└─ Envía: Email 3
+
+WORKFLOW 4: "Reactivation" (Email 4 - Día 15)
+├─ Cuándo: Email 3 fue enviado
+├─ Espera: 5 días
+└─ Envía: Email 4
+
+WORKFLOW 5: "Final Proposal" (Email 5 - Día 20)
+├─ Cuándo: Email 4 fue enviado
+├─ Espera: 5 días
+└─ Envía: Email 5
+
+========================================================================================
+ANTES DE EMPEZAR - REQUISITOS:
+========================================================================================
+
+☐ 25 restaurantes importados en HubSpot
+☐ 5 email templates creados (Email_1, Email_2, Email_3, Email_4, Email_5)
+☐ 1 custom property creada: "Email_Sequence_Stage" (tipo: Dropdown)
+
+Si NO tienes estos, regresa atrás.
+Si SÍ tienes todo, continúa.
+
+========================================================================================
+WORKFLOW 1: INITIAL CONTACT (Email 1 - Día 1)
+========================================================================================
+
+PASO 1.1: Ir a WORKFLOWS
+═══════════════════════════════════════════════════════════════════════════════════════
+
+En HubSpot:
+- Menú izquierdo → "Automation"
+- Click en "Workflows"
+
+Se abre la página de Workflows.
+
+Ves un botón azul que dice: "Create workflow"
+
+PASO 1.2: Click en "Create workflow"
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Una ventana se abre con opciones.
+
+Verás:
+┌────────────────────────────────┐
+│ Start from blank               │
+│ Start from a template          │
+│ Start from a saved workflow    │
+└────────────────────────────────┘
+
+Click: "Start from blank"
+
+PASO 1.3: Selecciona el OBJETO
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Te pregunta: "Which object is this workflow for?"
+
+Opciones:
+- Contact ← ESTO
+- Deal
+- Ticket
+
+Click: "Contact"
+
+PASO 1.4: Dale un NOMBRE al workflow
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Te pregunta: "What do you want to name this workflow?"
+
+Llena con:
+Restaurant_Sequence_1_Initial_Contact
+
+Click: "Create"
+
+Se abre el EDITOR de workflows.
+
+PASO 1.5: AGREGAR TRIGGER (Cuándo se dispara)
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Ves una pantalla con:
+┌─────────────────────────────────────────────┐
+│ + Add trigger                               │
+│                                             │
+│ (Un espacio vacío para agregar el trigger) │
+└─────────────────────────────────────────────┘
+
+Click: "+ Add trigger"
+
+Se abre un menú. Busca y selecciona:
+
+"Contact property value changes"
+
+Luego aparecen campos para llenar:
+
+Property: "Restaurant_Score"
+Operator: "is greater than or equal to"
+Value: "80"
+
+[Esto significa: se dispara cuando agregas un contacto con score ≥80]
+
+Click: "Set trigger"
+
+PASO 1.6: AGREGAR ACCIÓN 1 - DELAY (Esperar 1 día)
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Ves otro botón:
+Click: "+ Add action"
+
+Se abre un menú. Busca:
+
+"Delay"
+
+Aparecen campos:
+
+Type: "Delay for a specific amount of time"
+Value: "1"
+Unit: "day"
+
+Click: "Save action"
+
+PASO 1.7: AGREGAR ACCIÓN 2 - SEND EMAIL
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Click: "+ Add action"
+
+Busca: "Send email"
+
+Aparece un campo:
+
+Select template: Busca y selecciona "Email_1_Initial_Contact_Restaurant"
+
+[Si no la ves, significa que aún no creaste los emails. Regresa y créalos primero.]
+
+Click: "Save action"
+
+PASO 1.8: AGREGAR ACCIÓN 3 - UPDATE PROPERTY
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Click: "+ Add action"
+
+Busca: "Update contact property"
+
+Aparecen campos:
+
+Property: "Email_Sequence_Stage"
+Set value to: "Email 1 enviado"
+
+[Esto marca que el email 1 fue enviado, para que el siguiente workflow sepa cuándo dispararse]
+
+Click: "Save action"
+
+PASO 1.9: ACTIVAR EL WORKFLOW
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Arriba a la DERECHA, ves un toggle:
+
+OFF (rojo/gris)
+
+Click en él para cambiar a:
+
+ON (verde)
+
+Una ventana te pregunta:
+"Are you sure you want to enable this workflow?"
+
+Click: "Enable"
+
+El workflow está ACTIVO ✓
+
+RESULTADO WORKFLOW 1:
+→ Trigger: Contact score ≥80
+→ Delay: 1 día
+→ Acción: Envía Email 1
+→ Actualiza: Email_Sequence_Stage = "Email 1 enviado"
+
+========================================================================================
+WORKFLOW 2: FOLLOW UP (Email 2 - Día 5)
+========================================================================================
+
+Click: "Create workflow" (en la página de Workflows)
+
+Repite los pasos 1.2 a 1.4:
+- Start from blank
+- Contact
+- Nombre: "Restaurant_Sequence_2_FollowUp_Day5"
+
+PASO 2.5: AGREGAR TRIGGER
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Click: "+ Add trigger"
+
+Selecciona: "Contact property value changes"
+
+Property: "Email_Sequence_Stage"
+Operator: "is equal to"
+Value: "Email 1 enviado"
+
+[Se dispara cuando Email_Sequence_Stage = "Email 1 enviado"]
+
+Click: "Set trigger"
+
+PASO 2.6: AGREGAR ACCIÓN 1 - DELAY (5 días)
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Click: "+ Add action"
+
+Selecciona: "Delay"
+
+Value: "5"
+Unit: "days"
+
+Click: "Save action"
+
+PASO 2.7: AGREGAR ACCIÓN 2 - SEND EMAIL
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Click: "+ Add action"
+
+Selecciona: "Send email"
+
+Template: "Email_2_Followup_Day5"
+
+Click: "Save action"
+
+PASO 2.8: AGREGAR ACCIÓN 3 - UPDATE PROPERTY
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Click: "+ Add action"
+
+Selecciona: "Update contact property"
+
+Property: "Email_Sequence_Stage"
+Set value to: "Email 2 enviado"
+
+Click: "Save action"
+
+PASO 2.9: ACTIVAR
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Toggle OFF → ON
+
+Click: "Enable"
+
+RESULTADO WORKFLOW 2: ✓ ACTIVO
+
+========================================================================================
+WORKFLOW 3: PROPOSAL VALUE (Email 3 - Día 10)
+========================================================================================
+
+Click: "Create workflow"
+
+- Start from blank → Contact
+- Nombre: "Restaurant_Sequence_3_ProposalValue_Day10"
+
+TRIGGER:
+Property: "Email_Sequence_Stage"
+Operator: "is equal to"
+Value: "Email 2 enviado"
+
+ACCIÓN 1 - DELAY: 5 días
+
+ACCIÓN 2 - SEND EMAIL: "Email_3_ProposalValue_Day10"
+
+ACCIÓN 3 - UPDATE PROPERTY:
+Property: "Email_Sequence_Stage"
+Value: "Email 3 enviado"
+
+ACTIVAR: Toggle ON → Enable
+
+RESULTADO: ✓ ACTIVO
+
+========================================================================================
+WORKFLOW 4: REACTIVATION (Email 4 - Día 15)
+========================================================================================
+
+Click: "Create workflow"
+
+- Start from blank → Contact
+- Nombre: "Restaurant_Sequence_4_Reactivation_Day15"
+
+TRIGGER:
+Property: "Email_Sequence_Stage"
+Operator: "is equal to"
+Value: "Email 3 enviado"
+
+ACCIÓN 1 - DELAY: 5 días
+
+ACCIÓN 2 - SEND EMAIL: "Email_4_Reactivation_Day15"
+
+ACCIÓN 3 - UPDATE PROPERTY:
+Property: "Email_Sequence_Stage"
+Value: "Email 4 enviado"
+
+ACTIVAR: Toggle ON → Enable
+
+RESULTADO: ✓ ACTIVO
+
+========================================================================================
+WORKFLOW 5: FINAL PROPOSAL (Email 5 - Día 20)
+========================================================================================
+
+Click: "Create workflow"
+
+- Start from blank → Contact
+- Nombre: "Restaurant_Sequence_5_FinalProposal_Day20"
+
+TRIGGER:
+Property: "Email_Sequence_Stage"
+Operator: "is equal to"
+Value: "Email 4 enviado"
+
+ACCIÓN 1 - DELAY: 5 días
+
+ACCIÓN 2 - SEND EMAIL: "Email_5_ExecutiveProposal_Day20"
+
+ACCIÓN 3 - UPDATE PROPERTY:
+Property: "Email_Sequence_Stage"
+Value: "Propuesta enviada"
+
+ACTIVAR: Toggle ON → Enable
+
+RESULTADO: ✓ ACTIVO
+
+========================================================================================
+VERIFICAR QUE TODO FUNCIONA
+========================================================================================
+
+Ve a: Automation → Workflows
+
+Deberías ver 5 workflows listados:
+
+✅ Restaurant_Sequence_1_Initial_Contact (Status: ON)
+✅ Restaurant_Sequence_2_FollowUp_Day5 (Status: ON)
+✅ Restaurant_Sequence_3_ProposalValue_Day10 (Status: ON)
+✅ Restaurant_Sequence_4_Reactivation_Day15 (Status: ON)
+✅ Restaurant_Sequence_5_FinalProposal_Day20 (Status: ON)
+
+Si los 5 están en ON (verde) → ¡LISTO!
+
+========================================================================================
+CÓMO FUNCIONAN LOS 5 WORKFLOWS JUNTOS:
+========================================================================================
+
+EJEMPLO CON DON JULIO:
+
+1. Importas Don Julio con Email_Sequence_Stage = VACÍO
+
+2. WORKFLOW 1 se activa (score ≥80)
+   ├─ Espera 1 día
+   ├─ Envía Email 1 (Contacto inicial)
+   └─ Actualiza: Email_Sequence_Stage = "Email 1 enviado"
+
+3. WORKFLOW 2 se activa (Email_Sequence_Stage = "Email 1 enviado")
+   ├─ Espera 5 días
+   ├─ Envía Email 2 (Seguimiento)
+   └─ Actualiza: Email_Sequence_Stage = "Email 2 enviado"
+
+4. WORKFLOW 3 se activa (Email_Sequence_Stage = "Email 2 enviado")
+   ├─ Espera 5 días
+   ├─ Envía Email 3 (Propuesta)
+   └─ Actualiza: Email_Sequence_Stage = "Email 3 enviado"
+
+5. WORKFLOW 4 se activa (Email_Sequence_Stage = "Email 3 enviado")
+   ├─ Espera 5 días
+   ├─ Envía Email 4 (Reactivación)
+   └─ Actualiza: Email_Sequence_Stage = "Email 4 enviado"
+
+6. WORKFLOW 5 se activa (Email_Sequence_Stage = "Email 4 enviado")
+   ├─ Espera 5 días
+   ├─ Envía Email 5 (Propuesta ejecutiva)
+   └─ Actualiza: Email_Sequence_Stage = "Propuesta enviada"
+
+RESULTADO FINAL:
+Don Julio recibió 5 emails automáticamente, uno cada 5 días.
+Sin que TÚ hagas NADA.
+
+========================================================================================
+TROUBLESHOOTING
+========================================================================================
+
+PROBLEMA: "No encuentro el email template que necesito"
+SOLUCIÓN: Ve a Marketing → Email
+Verifica que existan los 5 emails:
+- Email_1_Initial_Contact_Restaurant
+- Email_2_Followup_Day5
+- Email_3_ProposalValue_Day10
+- Email_4_Reactivation_Day15
+- Email_5_ExecutiveProposal_Day20
+
+Si faltan, créalos primero antes de hacer los workflows.
+
+PROBLEMA: "El toggle de activación no funciona"
+SOLUCIÓN: Probablemente hay un error en el workflow.
+Revisa que:
+- El trigger está correctamente configurado
+- Cada acción está "Saved"
+- No hay campos vacíos
+
+PROBLEMA: "¿Cómo edito un workflow después de activarlo?"
+SOLUCIÓN: Ve a Workflows → Click en el nombre → Edit
+Haz cambios → Save changes
+(Los cambios afectan futuros emails, no los ya enviados)
+
+PROBLEMA: "¿Puedo pausar un workflow?"
+RESPUESTA: Sí. Ve a Workflows → Toggle ON → OFF
+Se pausa. Luego lo vuelves a activar.
+
+PROBLEMA: "¿Qué pasa si alguien responde antes de la secuencia?"
+SOLUCIÓN: Idealmente creas un workflow que detecte replies y pause la secuencia.
+Por ahora, puedes pausal el workflow manualmente.
+
+========================================================================================
+CHECKLIST FINAL
+========================================================================================
+
+Antes de decir "LISTO":
+
+☐ WORKFLOW 1 creado y ACTIVO (ON)
+☐ WORKFLOW 2 creado y ACTIVO (ON)
+☐ WORKFLOW 3 creado y ACTIVO (ON)
+☐ WORKFLOW 4 creado y ACTIVO (ON)
+☐ WORKFLOW 5 creado y ACTIVO (ON)
+
+☐ Los 5 workflows aparecen en "Automation → Workflows"
+
+☐ Todos tienen STATUS = "ON" (verde)
+
+☐ Entiendes cómo funcionan (uno dispara al otro en cascada)
+
+SI TODOS LOS ☐ ESTÁN CHECKEADOS:
+
+→ ¡LISTO! Los workflows están activos.
+
+Ahora solo necesitas que los restaurantes tengan Email_Sequence_Stage vacío
+para que se inicie la cadena.
+
+========================================================================================
+SIGUIENTE PASO
+========================================================================================
+
+Después de crear los 5 workflows:
+
+1. Ve a Contacts → Restaurant_Prospecting_Pipeline
+
+2. Para CADA restaurante, asegúrate que:
+   - Email_Sequence_Stage = VACÍO (o sin valor)
+   - Restaurant_Score ≥ 80
+
+3. Los restaurantes con score ≥80 automáticamente iniciarán WORKFLOW 1
+
+4. El resto de workflows se dispararán automáticamente en secuencia.
+
+========================================================================================
+¡LISTO!
+========================================================================================
+
+En 30-45 minutos tienes los 5 workflows activos.
+
+Sin hacer nada más, tus 25 restaurantes van a recibir 5 emails automáticos
+en los días 1, 5, 10, 15, 20.
+
+¿Necesitas ayuda con algo específico?
