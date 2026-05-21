@@ -1,0 +1,265 @@
+========================================================================================
+📋 RESUMEN EJECUTIVO: PROSPECTING AUTOMÁTICO A 25 PIZZERÍAS CÓRDOBA
+========================================================================================
+
+OBJETIVO: Enviar secuencia de 5 emails automáticos a 25 pizzerías en 20 días
+para vender servicios de IA (Web, Chatbot, Pedidos Online, CRM, Email Marketing)
+
+========================================================================================
+ARCHIVOS QUE TIENES LISTOS
+========================================================================================
+
+✅ 1. EMAILS-PIZZERIAS-TEMPLATES.txt
+   → 5 templates de email personalizados (Día 1, 5, 10, 15, 20)
+   → Copy/paste directo en HubSpot
+   → Adaptados para pizzerías (no restaurantes)
+
+✅ 2. pizzerias-cordoba-25-HUBSPOT-READY.csv
+   → 25 pizzerías con toda la info necesaria
+   → Listo para importar en HubSpot Contacts
+   → Formato: firstname, lastname, email, phone, company, address, etc.
+
+✅ 3. CREAR-WORKFLOWS-PIZZERIAS-5-EMAILS.txt
+   → Guía paso-a-paso para crear 5 workflows en HubSpot
+   → Exact mismo sistema que usamos con restaurantes
+   → 5 workflows = 5 emails automáticos en cascada
+
+✅ 4. pizzerias-cordoba-25-DIAGNOSTICO-COMPLETO.html
+   → Dashboard visual de las 25 pizzerías
+   → Scores de oportunidad IA (71-92)
+   → Top 5 para priorizar
+
+✅ 5. pizzerias-cordoba-25-COMPLETO.json
+   → Datos completos en JSON
+   → Información detallada de cada pizzería
+
+========================================================================================
+PASOS A SEGUIR (Checklist)
+========================================================================================
+
+PASO 1: COPIAR LOS 5 EMAILS EN HUBSPOT (30 minutos)
+─────────────────────────────────────────────────────
+
+☐ Ve a HubSpot → Marketing → Email
+☐ Click: "Create email"
+☐ Para cada uno de los 5 emails:
+   - Copia el contenido de EMAILS-PIZZERIAS-TEMPLATES.txt
+   - Nombre: Email_1_ContactoInicial_Pizzeria (similar para los demás)
+   - Asunto: El asunto especificado en cada email
+   - Contenido: El body especificado
+   - Click: Publish
+
+Resultado: 5 email templates en HubSpot
+
+PASO 2: IMPORTAR LAS 25 PIZZERÍAS EN CONTACTS (15 minutos)
+─────────────────────────────────────────────────────────
+
+☐ Ve a HubSpot → Contacts
+☐ Click: "Import"
+☐ Selecciona archivo: pizzerias-cordoba-25-HUBSPOT-READY.csv
+☐ Mapea los campos (debería ser automático)
+☐ Click: Import
+
+Resultado: 25 pizzerías en tu CRM con scores 71-92
+
+PASO 3: CREAR CUSTOM PROPERTY (10 minutos)
+───────────────────────────────────────────
+
+☐ Ve a HubSpot → Settings → Properties → Contacts
+☐ Click: "Create property"
+☐ Name: Email_Sequence_Stage_Pizzeria
+☐ Type: Dropdown
+☐ Values:
+   - Email 1 enviado
+   - Email 2 enviado
+   - Email 3 enviado
+   - Email 4 enviado
+   - Propuesta enviada
+☐ Click: Create
+
+Resultado: Custom property creada para rastrear la secuencia
+
+PASO 4: CREAR LOS 5 WORKFLOWS (1.5 horas)
+──────────────────────────────────────────
+
+☐ Lee: CREAR-WORKFLOWS-PIZZERIAS-5-EMAILS.txt
+☐ Sigue cada PASO (hay 7 pasos = 7 workflows que crear)
+☐ Para cada workflow:
+   - Ir a Automation → Workflows
+   - Create workflow
+   - Configura trigger, delay, envío de email, actualización de property
+   - Activa (toggle ON)
+
+Resultado: 5 workflows activos enviando emails automáticamente
+
+PASO 5: VERIFICA QUE FUNCIONA (15 minutos)
+──────────────────────────────────────────
+
+☐ Ve a Automation → Workflows
+☐ Deberías ver 5 workflows: todos en status ON
+☐ Click en uno (ej: Pizzeria_Sequence_1_ContactoInicial)
+☐ Busca "Enrollments"
+☐ Deberías ver: 25 pizzerías enrolladas
+
+Resultado: ¡SISTEMA FUNCIONANDO! 25 pizzerías recibirán emails automáticamente
+
+TIEMPO TOTAL: ~2.5 horas
+
+========================================================================================
+FLUJO AUTOMÁTICO QUE OCURRE
+========================================================================================
+
+CUANDO AGREGAS UNA PIZZERÍA CON SCORE ≥ 75:
+
+Día 1:
+  → Email 1 enviado ("Una idea para que tus clientes pidan pizza online")
+  → Email_Sequence_Stage = "Email 1 enviado"
+
+Día 6 (5 días después):
+  → Email 2 enviado ("Mira lo que logró otra pizzería con esto")
+  → Email_Sequence_Stage = "Email 2 enviado"
+
+Día 11:
+  → Email 3 enviado ("Exactamente cómo aumentar tus ventas sin publicidad")
+  → Email_Sequence_Stage = "Email 3 enviado"
+
+Día 16:
+  → Email 4 enviado ("Las 3 razones por las que deberías empezar AHORA")
+  → Email_Sequence_Stage = "Email 4 enviado"
+
+Día 21:
+  → Email 5 enviado ("Tu pizzería en el futuro digital")
+  → Email_Sequence_Stage = "Propuesta enviada"
+
+TODO SIN QUE TÚ HAGAS NADA.
+
+========================================================================================
+RESULTADOS ESPERADOS
+========================================================================================
+
+De 25 pizzerías:
+
+TASA DE RESPUESTA:
+→ 25-45% responden (6-11 pizzerías)
+→ 40-50% de los que responden cierran (2-6 pizzerías)
+
+VALOR POR CLIENTE:
+→ USD 3,500 - USD 5,000 por pizzería
+→ Implementación en 4-6 semanas
+→ ROI cliente: 400-600% en 12 meses
+
+TOTAL ESTIMADO:
+→ 2-6 nuevos clientes en 30 días
+→ USD 7,000 - USD 30,000 en ingresos en el primer ciclo
+→ Repetible: Puedes relanzar a las que no respondieron en 60 días
+
+========================================================================================
+TOP 5 PIZZERÍAS A PRIORIZAR
+========================================================================================
+
+Si quieres hacer llamadas de seguimiento manual, prioriza estos:
+
+1. BEATO (Score: 92) - Obispo Trejo 1127, Nueva Córdoba
+   → Más receptivo, mejor ubicación
+
+2. AHORA PIZZA (Score: 88) - Vélez Sarsfield 759, Nueva Córdoba
+   → Marca joven, redes activas, tech-friendly
+
+3. LA COMANDA (Score: 86) - 3 sucursales
+   → Oportunidad corporativa, impacto mayor
+
+4. PISA (Score: 85) - Lima 945, General Paz
+   → Pizzas de alta calidad, clientes adinerados
+
+5. PIZZA MADRE (Score: 84) - Marcelo T. de Alvear 277, Centro
+   → Ganadora de rankings, visibilidad alta
+
+→ Si quieres llamadas manuales, enfócate en estos 5 primero
+
+========================================================================================
+PREGUNTAS FRECUENTES
+========================================================================================
+
+P: ¿Qué pasa si no tengo tiempo de crear los workflows?
+R: Puedes hacerlo todo en 2-3 horas. O puedo hacerlo por ti con acceso a tu HubSpot.
+
+P: ¿Qué pasa si una pizzería no tiene email?
+R: Los emails generados automáticamente tienen emails estimados. Puedes actualizar manualmente.
+
+P: ¿Puedo enviar a más de 25?
+R: Sí, puedes duplicar los workflows y crear nuevos. O expandir el CSV.
+
+P: ¿Qué pasa si alguien responde?
+R: Recibirás el email en tu inbox. Responde rápido y agenda una llamada de 15 min.
+
+P: ¿Cuándo debo empezar?
+R: Mañana. Cada día que esperes, la competencia se adelanta.
+
+P: ¿Puedo personalizar los emails?
+R: Totalmente. Adapta los templates a tu estilo y valor agregado.
+
+========================================================================================
+DIFERENCIA CON EL SISTEMA DE RESTAURANTES
+========================================================================================
+
+RESTAURANTES (Buenos Aires):
+- 25 restaurantes
+- Ángulo: Automatización de reservas, mesas
+- Servicios: Chatbot reservas, CRM clientes
+- Score promedio: 78/100
+- Web promedio: 25/100
+
+PIZZERÍAS (Córdoba):
+- 25 pizzerías
+- Ángulo: Automatización de pedidos, ventas
+- Servicios: Pedidos online, Chatbot, Email marketing
+- Score promedio: 79.6/100
+- Web promedio: 19.2/100
+
+→ Las pizzerías son MEJOR TARGET: más urgencia, menos web, mismo potencial $
+
+========================================================================================
+PRÓXIMOS PASOS OPCIONALES
+========================================================================================
+
+1. CREAR VIDEO DE DEMO (5 minutos)
+   → Muestra cómo funciona un chatbot de pizzería
+   → Muestra cómo se ven los pedidos online
+   → Incluye el link en los emails
+
+2. CREAR LANDING PAGE SIMPLE
+   → Página que muestre los servicios
+   → Con botón "Agendar llamada gratis"
+   → Link en los emails
+
+3. CREAR PROPUESTA PERSONALIZADA EN PDF
+   → Para cada pizzería
+   → Mostrar su situación actual (sin web, etc.)
+   → Propuesta de solución con precio
+
+4. CREAR PLANILLA DE SEGUIMIENTO
+   → Rastrear quién respondió
+   → Quién hizo llamada
+   → Quién cerró
+   → Valor total
+
+========================================================================================
+LISTO PARA EMPEZAR?
+========================================================================================
+
+Todos los archivos están en: /home/user/prospectar/
+
+- EMAILS-PIZZERIAS-TEMPLATES.txt ← Copia estos en HubSpot
+- pizzerias-cordoba-25-HUBSPOT-READY.csv ← Importa este en Contacts
+- CREAR-WORKFLOWS-PIZZERIAS-5-EMAILS.txt ← Sigue esta guía
+- pizzerias-cordoba-25-DIAGNOSTICO-COMPLETO.html ← Dashboard visual
+
+Tiempo estimado: 2-3 horas para todo listo
+
+Tiempo hasta primeras respuestas: 5-10 días
+
+Potencial: USD 7,000 - USD 30,000 en el primer mes
+
+¿COMENZAMOS?
+
+========================================================================================

@@ -1,0 +1,368 @@
+========================================================================================
+🤖 CREAR 5 WORKFLOWS AUTOMÁTICOS PARA PROSPECTING A PIZZERÍAS
+========================================================================================
+
+OBJETIVO: Enviar 5 emails automáticos a las 25 pizzerías en secuencia
+de 20 días, personalizados para vender servicios de IA.
+
+========================================================================================
+REQUISITOS PREVIOS:
+========================================================================================
+
+☐ 5 email templates creados en HubSpot:
+   - Email_1_ContactoInicial_Pizzeria
+   - Email_2_SeguidorValor_Pizzeria
+   - Email_3_PropuestaValor_Pizzeria
+   - Email_4_Reactivacion_Pizzeria
+   - Email_5_ProuestaEjecutiva_Pizzeria
+
+☐ 25 pizzerías importadas en Contacts (usando CSV: pizzerias-cordoba-25-HUBSPOT-READY.csv)
+
+☐ Custom property creada: "Email_Sequence_Stage_Pizzeria" (tipo: Dropdown)
+   Valores:
+   - Email 1 enviado
+   - Email 2 enviado
+   - Email 3 enviado
+   - Email 4 enviado
+   - Propuesta enviada
+
+========================================================================================
+PASO 1: IMPORTAR EMAILS EN HUBSPOT
+========================================================================================
+
+1. Ve a: Marketing → Email
+2. Click: "Create email"
+3. Para cada email, copia el contenido de EMAILS-PIZZERIAS-TEMPLATES.txt
+4. Nombre cada template:
+   - Email_1_ContactoInicial_Pizzeria
+   - Email_2_SeguimientoValor_Pizzeria
+   - Email_3_PropuestaValor_Pizzeria
+   - Email_4_Reactivacion_Pizzeria
+   - Email_5_ProuestaEjecutiva_Pizzeria
+
+5. IMPORTANTE: En cada email, personaliza:
+   - {{contact.firstname}} para el nombre
+   - {{company.name}} para el nombre de la pizzería
+   - Tus datos de contacto: [TU NOMBRE], [TU TELÉFONO]
+
+========================================================================================
+PASO 2: IMPORTAR CSV DE PIZZERÍAS
+========================================================================================
+
+1. Ve a: Contacts
+2. Click: "Import"
+3. Selecciona el archivo: pizzerias-cordoba-25-HUBSPOT-READY.csv
+4. En el mapeo de campos:
+   - firstname → First name
+   - lastname → Last name
+   - email → Email
+   - phone → Phone
+   - company → Company
+   - address → Address
+   - city → City
+   - website → Website
+   - hs_lead_status → Lead status
+   - restaurant_score → Automáticamente mapea
+
+5. Click: "Import"
+
+RESULTADO: 25 pizzerías agregadas al CRM
+
+========================================================================================
+PASO 3: CREAR WORKFLOW 1 - CONTACTO INICIAL (Email 1 - Día 1)
+========================================================================================
+
+PASO 3.1: Ir a WORKFLOWS
+En HubSpot:
+- Menú izquierdo → "Automation" → "Workflows"
+- Click: "Create workflow"
+
+PASO 3.2: Configuración Básica
+- Start from blank
+- Object: Contact
+- Name: "Pizzeria_Sequence_1_ContactoInicial"
+
+PASO 3.3: AGREGAR TRIGGER
+Click: "+ Add trigger"
+Selecciona: "Contact property value changes"
+
+Property: "restaurant_score" (o "hs_lead_score")
+Operator: "is greater than or equal to"
+Value: "75"
+
+[Esto se dispara cuando agregas una pizzería con score ≥75]
+
+Click: "Set trigger"
+
+PASO 3.4: AGREGAR ACCIÓN 1 - DELAY (1 día)
+Click: "+ Add action"
+Selecciona: "Delay"
+Value: "1"
+Unit: "day"
+Click: "Save action"
+
+PASO 3.5: AGREGAR ACCIÓN 2 - SEND EMAIL
+Click: "+ Add action"
+Selecciona: "Send email"
+Template: "Email_1_ContactoInicial_Pizzeria"
+Click: "Save action"
+
+PASO 3.6: AGREGAR ACCIÓN 3 - UPDATE PROPERTY
+Click: "+ Add action"
+Selecciona: "Update contact property"
+Property: "Email_Sequence_Stage_Pizzeria"
+Set value to: "Email 1 enviado"
+Click: "Save action"
+
+PASO 3.7: ACTIVAR WORKFLOW
+Toggle OFF → ON
+Click: "Enable"
+
+✅ WORKFLOW 1 ACTIVO
+
+========================================================================================
+PASO 4: CREAR WORKFLOW 2 - SEGUIMIENTO (Email 2 - Día 5)
+========================================================================================
+
+Repite pasos 3.1-3.2:
+- Create workflow
+- Start from blank
+- Contact
+- Name: "Pizzeria_Sequence_2_SeguidorValor"
+
+TRIGGER:
+Property: "Email_Sequence_Stage_Pizzeria"
+Operator: "is equal to"
+Value: "Email 1 enviado"
+
+ACCIÓN 1 - DELAY: 5 días
+ACCIÓN 2 - SEND EMAIL: "Email_2_SeguimientoValor_Pizzeria"
+ACCIÓN 3 - UPDATE PROPERTY:
+Property: "Email_Sequence_Stage_Pizzeria"
+Value: "Email 2 enviado"
+
+ACTIVAR: Toggle ON → Enable
+
+✅ WORKFLOW 2 ACTIVO
+
+========================================================================================
+PASO 5: CREAR WORKFLOW 3 - PROPUESTA (Email 3 - Día 10)
+========================================================================================
+
+Name: "Pizzeria_Sequence_3_PropuestaValor"
+
+TRIGGER:
+Property: "Email_Sequence_Stage_Pizzeria"
+Operator: "is equal to"
+Value: "Email 2 enviado"
+
+ACCIÓN 1 - DELAY: 5 días
+ACCIÓN 2 - SEND EMAIL: "Email_3_PropuestaValor_Pizzeria"
+ACCIÓN 3 - UPDATE PROPERTY:
+Property: "Email_Sequence_Stage_Pizzeria"
+Value: "Email 3 enviado"
+
+ACTIVAR: Toggle ON → Enable
+
+✅ WORKFLOW 3 ACTIVO
+
+========================================================================================
+PASO 6: CREAR WORKFLOW 4 - REACTIVACIÓN (Email 4 - Día 15)
+========================================================================================
+
+Name: "Pizzeria_Sequence_4_Reactivacion"
+
+TRIGGER:
+Property: "Email_Sequence_Stage_Pizzeria"
+Operator: "is equal to"
+Value: "Email 3 enviado"
+
+ACCIÓN 1 - DELAY: 5 días
+ACCIÓN 2 - SEND EMAIL: "Email_4_Reactivacion_Pizzeria"
+ACCIÓN 3 - UPDATE PROPERTY:
+Property: "Email_Sequence_Stage_Pizzeria"
+Value: "Email 4 enviado"
+
+ACTIVAR: Toggle ON → Enable
+
+✅ WORKFLOW 4 ACTIVO
+
+========================================================================================
+PASO 7: CREAR WORKFLOW 5 - CIERRE (Email 5 - Día 20)
+========================================================================================
+
+Name: "Pizzeria_Sequence_5_ProuestaEjecutiva"
+
+TRIGGER:
+Property: "Email_Sequence_Stage_Pizzeria"
+Operator: "is equal to"
+Value: "Email 4 enviado"
+
+ACCIÓN 1 - DELAY: 5 días
+ACCIÓN 2 - SEND EMAIL: "Email_5_ProuestaEjecutiva_Pizzeria"
+ACCIÓN 3 - UPDATE PROPERTY:
+Property: "Email_Sequence_Stage_Pizzeria"
+Value: "Propuesta enviada"
+
+ACTIVAR: Toggle ON → Enable
+
+✅ WORKFLOW 5 ACTIVO
+
+========================================================================================
+VERIFICAR QUE TODO FUNCIONA
+========================================================================================
+
+Ve a: Automation → Workflows
+
+Deberías ver 5 workflows:
+
+✅ Pizzeria_Sequence_1_ContactoInicial (Status: ON)
+✅ Pizzeria_Sequence_2_SeguidorValor (Status: ON)
+✅ Pizzeria_Sequence_3_PropuestaValor (Status: ON)
+✅ Pizzeria_Sequence_4_Reactivacion (Status: ON)
+✅ Pizzeria_Sequence_5_ProuestaEjecutiva (Status: ON)
+
+Si todos están en ON (verde) → ¡LISTO!
+
+========================================================================================
+CÓMO FUNCIONA LA SECUENCIA COMPLETA
+========================================================================================
+
+EJEMPLO CON BEATO:
+
+DÍA 1:
+- Beato se agrega al CRM con restaurant_score = 92
+- WORKFLOW 1 se dispara (score ≥75)
+- Espera 1 día
+- Envía Email 1 (Contacto inicial)
+- Actualiza: Email_Sequence_Stage_Pizzeria = "Email 1 enviado"
+
+DÍA 6:
+- WORKFLOW 2 se dispara (Email_Sequence_Stage = "Email 1 enviado")
+- Espera 5 días
+- Envía Email 2 (Seguimiento - valor)
+- Actualiza: Email_Sequence_Stage_Pizzeria = "Email 2 enviado"
+
+DÍA 11:
+- WORKFLOW 3 se dispara (Email_Sequence_Stage = "Email 2 enviado")
+- Espera 5 días
+- Envía Email 3 (Propuesta de valor)
+- Actualiza: Email_Sequence_Stage_Pizzeria = "Email 3 enviado"
+
+DÍA 16:
+- WORKFLOW 4 se dispara (Email_Sequence_Stage = "Email 3 enviado")
+- Espera 5 días
+- Envía Email 4 (Reactivación)
+- Actualiza: Email_Sequence_Stage_Pizzeria = "Email 4 enviado"
+
+DÍA 21:
+- WORKFLOW 5 se dispara (Email_Sequence_Stage = "Email 4 enviado")
+- Espera 5 días
+- Envía Email 5 (Propuesta ejecutiva)
+- Actualiza: Email_Sequence_Stage_Pizzeria = "Propuesta enviada"
+
+RESULTADO:
+Beato recibió 5 emails automáticamente en 20 días.
+Sin que tú hagas nada.
+
+========================================================================================
+RASTREAR RESULTADOS
+========================================================================================
+
+Para ver si los workflows se dispararon:
+
+1. Ve a: Contacts
+2. Busca una pizzería (ej: "Beato")
+3. Click en el contacto
+4. Busca el campo: "Email_Sequence_Stage_Pizzeria"
+5. Deberías ver: "Email 5 enviado" o "Propuesta enviada" (si ya pasaron los 20 días)
+
+O bien:
+
+1. Ve a: Automation → Workflows
+2. Click en "Pizzeria_Sequence_1_ContactoInicial"
+3. Busca: "Enrollments" o "Activity"
+4. Deberías ver una lista de las 25 pizzerías que entraron en el workflow
+
+Si ves las 25 pizzerías → ¡EL WORKFLOW FUNCIONA PERFECTAMENTE!
+
+========================================================================================
+TROUBLESHOOTING
+========================================================================================
+
+PROBLEMA: "Los workflows no se disparan"
+SOLUCIÓN:
+1. Verifica que las pizzerías tienen restaurant_score ≥ 75
+2. Verifica que el campo Email_Sequence_Stage_Pizzeria existe
+3. Intenta editar una pizzería y cambiar el restaurant_score
+4. El workflow debería dispararse automáticamente
+
+PROBLEMA: "Los emails no se envían"
+SOLUCIÓN:
+1. Verifica que los email templates existen en Marketing → Email
+2. Verifica que los templates tienen asunto y contenido
+3. Verifica que tu Gmail está conectado en Settings → Email
+4. Intenta enviar un test email manualmente
+
+PROBLEMA: "Quiero editar un email después de crear el workflow"
+SOLUCIÓN:
+1. Ve a: Marketing → Email
+2. Edita el template
+3. Click: Save
+4. Los workflows seguirán usando el email actualizado
+5. Los nuevos contactos recibirán la versión actualizada
+
+PROBLEMA: "Quiero pausar un workflow"
+SOLUCIÓN:
+1. Ve a: Automation → Workflows
+2. Click en el workflow
+3. Toggle ON → OFF
+4. Pausa activada
+5. Los contactos nuevos no entrarán en el workflow
+6. Los que ya están dentro continúan
+
+========================================================================================
+PRÓXIMOS PASOS DESPUÉS DE CREAR LOS WORKFLOWS
+========================================================================================
+
+1. ✅ Workflows creados → Las 25 pizzerías recibirán emails automáticamente
+
+2. ⏰ Espera 2-3 días → Algunos comenzarán a responder
+
+3. 📱 Prepara tu teléfono/email → Para recibir respuestas de pizzerías
+
+4. 💬 Responde rápido → Si alguien responde "Sí, quiero hablar", crea una llamada
+
+5. 🎬 Primera llamada → Muestra un demo en vivo de:
+   - Cómo funciona el chatbot
+   - Cómo se ven los pedidos online
+   - Cuánto cuesta
+   - Cuándo comenzaría
+
+6. 🤝 Cierre → Firma el contrato y comienza la implementación
+
+========================================================================================
+ESTIMACIONES
+========================================================================================
+
+Email 1 (Día 1): 100% envío
+Email 2 (Día 6): ~90% envío (algunos rebotes)
+Email 3 (Día 11): ~85% envío
+Email 4 (Día 16): ~80% envío
+Email 5 (Día 21): ~75% envío
+
+TASA DE RESPUESTA ESPERADA:
+- Email 1: 3-5% (curiosos)
+- Email 2: 5-8% (engagement aumenta)
+- Email 3: 8-12% (propuesta de valor)
+- Email 4: 6-10% (urgencia)
+- Email 5: 4-7% (cierre)
+
+TOTAL ESTIMADO: 25-45% de 25 pizzerías = 6-11 respuestas positivas
+
+DE ESAS 6-11:
+- 40-50% cierran un contrato → 2-6 pizzerías
+- Valor promedio: USD 3,500-5,000 por pizzería
+- TOTAL: USD 7,000 - USD 30,000 en 30 días
+
+========================================================================================

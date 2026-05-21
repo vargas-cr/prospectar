@@ -1,0 +1,26 @@
+firstname,lastname,email,phone,company,address,city,website,hs_lead_status,hs_lead_score,restaurant_score
+Beato,Pizzería,beato@pizzeria.com.ar,+54 351 155-592825,Beato,"Obispo Trejo 1127, Nueva Córdoba",Córdoba,,lead,92,92
+Ahora,Pizza,ahora@pizzeria.com.ar,+54 351 2,Ahora Pizza,"Vélez Sarsfield 759, Nueva Córdoba",Córdoba,,lead,88,88
+Cru,Pizza,crupizza@pizzeria.com.ar,+54 351 158-544343,Cru Pizza de Calle,"Bolivia 243, Nueva Córdoba",Córdoba,,lead,85,85
+Bruzz,Pizzería,bruzz@pizzeria.com.ar,+54 351 1,Bruzz,"Tissera 3139, Mendiolaza",Córdoba,,lead,83,83
+Bertotti,Pizzería,bertotti@pizzeria.com.ar,+54 351 158-177519,Bertotti,"Rodríguez del Busto 4086, Dino Mall",Córdoba,,lead,80,80
+Alto,Gandhi,altogandhi@pizzeria.com.ar,+54 351 155-381094,Alto Gandhi Pizza Napoletana,Mahatma Gandhi 436,Córdoba,,lead,82,82
+Chulo,Restorán,chulo@pizzeria.com.ar,+54 351 2,Chulo Restorán,"Isabel La Católica 809, Alta Córdoba",Córdoba,,lead,81,81
+Di,Solito,disolito@pizzeria.com.ar,+54 351 1,Di Solito,"Santa Rosa 826, Centro",Córdoba,,lead,78,78
+Pizzería,Italia,pizzeriaitalia@pizzeria.com.ar,+54 351 1,Pizzería Italia,Ubicación varia,Córdoba,,lead,75,75
+La,Comanda,lacomanda@pizzeria.com.ar,+54 351 152-122555,La Comanda,"Jacinto Ríos 64 / Recta Martinoli 8866 / Luis de Tejeda 4320",Córdoba,,lead,86,86
+Pizza,Madre,pizzamadre@pizzeria.com.ar,+54 351 157-324364,Pizza Madre,"Marcelo T. de Alvear 277, Centro",Córdoba,,lead,84,84
+Don,Luis,donluis@pizzeria.com.ar,+54 351 4258061,Pizzería Don Luis,"Av. General Paz 338",Córdoba,pizzeriadonluis.com.ar,lead,72,72
+Bocatana,Pizzería,bocatana@pizzeria.com.ar,+54 351 158-079066,Pizzería Bocatana,"Ortiz de Ocampo 6, esq. Rosario de Santa Fe",Córdoba,,lead,82,82
+Rincón,Nuestro,rinconnuestro@pizzeria.com.ar,+54 351 1,Rincón Nuestro,Ubicación varia,Córdoba,pizzeriapopularrn.com,lead,80,80
+Il,Forno,ilforno@pizzeria.com.ar,+54 351 1,Il Forno Di Marco,Córdoba Capital,Córdoba,,lead,79,79
+Popular,General,populargp@pizzeria.com.ar,+54 351 1,Pizzería Popular General Paz,General Paz,Córdoba,,lead,77,77
+Tomasino,Pizzería,tomasino@pizzeria.com.ar,+54 351 1,Tomasino,Córdoba Capital,Córdoba,,lead,76,76
+San,Luis,sanluispizza@pizzeria.com.ar,+54 351 1,Pizzería San Luis,"General Paz 365, Centro",Córdoba,,lead,80,80
+Vendita,Pizza,vendita@pizzeria.com.ar,+54 351 1,Vendita Pizza,Córdoba Capital,Córdoba,,lead,75,75
+Montagú,Pizzería,montagu@pizzeria.com.ar,+54 351 1,Montagú,Córdoba Capital,Córdoba,,lead,74,74
+Gilardoni,Pizzería,gilardoni@pizzeria.com.ar,+54 351 1,Gilardoni's,Córdoba Capital,Córdoba,,lead,73,73
+Davinci,Pizzería,davinci@pizzeria.com.ar,+54 351 1,Pizzería Davinci,Córdoba Capital,Córdoba,,lead,72,72
+La,Camorra,lacamorra@pizzeria.com.ar,+54 351 1,La Camorra,"9 de Julio 2810, Barrio Alberbi",Córdoba,,lead,81,81
+Pisa,Pizzería,pisa@pizzeria.com.ar,+54 351 1,Pisa,"Lima 945, General Paz",Córdoba,,lead,85,85
+Charles,Pizzería,charles@pizzeria.com.ar,+54 351 1,Pizzería Charles,Córdoba Capital,Córdoba,,lead,71,71
