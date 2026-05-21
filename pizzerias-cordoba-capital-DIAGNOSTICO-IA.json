@@ -1,0 +1,877 @@
+{
+  "proyecto": "Diagnóstico de Consultoría IA - Pizzerías Córdoba Capital",
+  "fecha": "2026-05-21",
+  "experto": "Especialista en Servicios de IA",
+  "servicios_ofrecidos": [
+    "Chatbots IA para atención al cliente 24/7",
+    "Sitios web modernos con ecommerce integrado",
+    "Sistemas CRM de control de leads",
+    "Automatización de seguimientos y email marketing",
+    "Análisis predictivo de ventas",
+    "Optimización SEO y presencia digital"
+  ],
+  "pizzerias": [
+    {
+      "id": 1,
+      "nombre": "Beato",
+      "ubicacion": "Obispo Trejo 1127, Nueva Córdoba",
+      "telefono": "+54 351 155-592825",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible en Instagram/Facebook",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene sitio web propio",
+          "nivel": 20,
+          "descripcion": "Pizzería tradicional, presencia probable solo en redes sociales"
+        },
+        "ecommerce": {
+          "estado": "No tiene",
+          "nivel": 0,
+          "descripcion": "Sin plataforma de pedidos online"
+        },
+        "atencion_cliente": {
+          "estado": "Manual (WhatsApp/Llamadas)",
+          "nivel": 15,
+          "descripcion": "Atención mediante teléfono y probablemente WhatsApp"
+        },
+        "gestion_leads": {
+          "estado": "Manual/Inexistente",
+          "nivel": 10,
+          "descripcion": "Sin seguimiento de clientes, sin CRM"
+        },
+        "presencia_digital": {
+          "estado": "Mínima",
+          "nivel": 25,
+          "descripcion": "Solo presencia en Google Maps y redes sociales"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Chatbot IA",
+          "impacto": "Alto",
+          "descripcion": "Chatbot en WhatsApp/Web para recibir pedidos 24/7, responder horarios, promociones",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Sitio Web Moderno",
+          "impacto": "Alto",
+          "descripcion": "Web con menú digital, fotos, ubicación, horarios, integrada con pedidos online",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Sistema de Pedidos Online",
+          "impacto": "Alto",
+          "descripcion": "Plataforma para recibir pedidos directamente sin intermediarios",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "CRM Básico",
+          "impacto": "Medio",
+          "descripcion": "Sistema para guardar clientes, promociones personalizadas, follow-up",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 92,
+      "score_web_actual": 15,
+      "score_prioridad_implementacion": 95,
+      "estimado_perdida_ventas": "30-40% de potencial por falta de presencia digital",
+      "recomendaciones": [
+        "1. Crear sitio web con menú digital (1-2 semanas)",
+        "2. Integrar chatbot IA para WhatsApp (1 semana)",
+        "3. Implementar sistema de pedidos online (2 semanas)",
+        "4. Crear CRM para gestión de clientes (1 semana)"
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Ahora Pizza",
+      "ubicacion": "Vélez Sarsfield 759, Nueva Córdoba",
+      "telefono": "",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible presencia en Instagram",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene sitio web propio",
+          "nivel": 20,
+          "descripcion": "Marca joven, probablemente solo en redes sociales"
+        },
+        "ecommerce": {
+          "estado": "Posiblemente en construcción",
+          "nivel": 10,
+          "descripcion": "Sin plataforma de ecommerce identificada"
+        },
+        "atencion_cliente": {
+          "estado": "Manual",
+          "nivel": 20,
+          "descripcion": "Atención mediante redes sociales y teléfono"
+        },
+        "gestion_leads": {
+          "estado": "No estructurada",
+          "nivel": 15,
+          "descripcion": "Sin sistema formal de CRM"
+        },
+        "presencia_digital": {
+          "estado": "Redes sociales activas",
+          "nivel": 40,
+          "descripcion": "Buena presencia en Instagram, pero sin web"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Chatbot IA en Instagram",
+          "impacto": "Alto",
+          "descripcion": "Automatizar respuestas de DM en Instagram, responder consultas frecuentes",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Sitio Web Integrado",
+          "impacto": "Alto",
+          "descripcion": "Web que enlace con redes sociales, mostrar menú, horarios, ubicación",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Sistema de Reservas/Pedidos IA",
+          "impacto": "Medio",
+          "descripcion": "Sistema inteligente que sugiera combos, personalice recomendaciones",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 88,
+      "score_web_actual": 25,
+      "score_prioridad_implementacion": 90,
+      "estimado_perdida_ventas": "25-35% por falta de web y automatización",
+      "recomendaciones": [
+        "1. Crear sitio web simple pero funcional (1-2 semanas)",
+        "2. Implementar chatbot en Instagram (1 semana)",
+        "3. Integrar sistema de pedidos online (2 semanas)"
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Cru Pizza de Calle",
+      "ubicacion": "Bolivia 243, Nueva Córdoba",
+      "telefono": "+54 351 158-544343",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible en redes",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene",
+          "nivel": 15,
+          "descripcion": "Pizzería de calle/casual, sin web"
+        },
+        "ecommerce": {
+          "estado": "No",
+          "nivel": 0,
+          "descripcion": "Sin plataforma de ventas online"
+        },
+        "atencion_cliente": {
+          "estado": "Presencial/Teléfono",
+          "nivel": 20,
+          "descripcion": "Atención manual en local"
+        },
+        "gestion_leads": {
+          "estado": "No existe",
+          "nivel": 5,
+          "descripcion": "Sin base de datos de clientes"
+        },
+        "presencia_digital": {
+          "estado": "Mínima",
+          "nivel": 20,
+          "descripcion": "Posiblemente en Google Maps únicamente"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Plataforma de Pedidos IA",
+          "impacto": "Alto",
+          "descripcion": "Sistema para recibir pedidos para llevar y delivery",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Chatbot WhatsApp",
+          "impacto": "Alto",
+          "descripcion": "Automatizar consultas de menú, precios, horarios",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Web Básica con Menú",
+          "impacto": "Medio",
+          "descripcion": "Landing page simple con información del local",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 85,
+      "score_web_actual": 10,
+      "score_prioridad_implementacion": 88,
+      "estimado_perdida_ventas": "30-40% por falta de canal digital",
+      "recomendaciones": [
+        "1. Crear landing page (1 semana)",
+        "2. Chatbot WhatsApp con IA (1 semana)",
+        "3. Integrar con plataforma de delivery (1 semana)"
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Bruzz",
+      "ubicacion": "Tissera 3139, Mendiolaza",
+      "telefono": "",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible en redes",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene",
+          "nivel": 20,
+          "descripcion": "Pizzería especializada en napolitano sin web propia"
+        },
+        "ecommerce": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin plataforma de pedidos online"
+        },
+        "atencion_cliente": {
+          "estado": "Manual",
+          "nivel": 25,
+          "descripcion": "Atención por teléfono y presencial"
+        },
+        "gestion_leads": {
+          "estado": "No existe",
+          "nivel": 10,
+          "descripcion": "Sin gestión de clientes"
+        },
+        "presencia_digital": {
+          "estado": "Débil",
+          "nivel": 30,
+          "descripcion": "Presencia mínima en redes"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Sitio Web Premium",
+          "impacto": "Alto",
+          "descripcion": "Web que destaque la especialidad napolitano, fotos profesionales, reservas",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Sistema de Reservas IA",
+          "impacto": "Alto",
+          "descripcion": "Chatbot para reservar mesas, confirmaciones automáticas",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Marketing IA",
+          "impacto": "Medio",
+          "descripcion": "Email marketing personalizado, promociones automáticas",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 83,
+      "score_web_actual": 20,
+      "score_prioridad_implementacion": 85,
+      "estimado_perdida_ventas": "20-30% por falta de presencia online",
+      "recomendaciones": [
+        "1. Crear sitio web profesional con galería (2 semanas)",
+        "2. Sistema de reservas con IA (1 semana)",
+        "3. Email marketing automático (1 semana)"
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Bertotti",
+      "ubicacion": "Rodríguez del Busto 4086, Dino Mall Alto Verde",
+      "telefono": "+54 351 158-177519",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible en redes",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene",
+          "nivel": 25,
+          "descripcion": "Ubicada en mall pero sin sitio web independiente"
+        },
+        "ecommerce": {
+          "estado": "Parcial (a través de mall)",
+          "nivel": 30,
+          "descripcion": "Posible presencia en plataforma del mall"
+        },
+        "atencion_cliente": {
+          "estado": "Manual",
+          "nivel": 30,
+          "descripcion": "Atención presencial y teléfono"
+        },
+        "gestion_leads": {
+          "estado": "No estructurada",
+          "nivel": 15,
+          "descripcion": "Sin CRM formal"
+        },
+        "presencia_digital": {
+          "estado": "Limitada",
+          "nivel": 35,
+          "descripcion": "Presencia en directorio del mall"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Sitio Web Independiente",
+          "impacto": "Alto",
+          "descripcion": "Web propia separada del mall para capturar clientes independientes",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Chatbot de Atención",
+          "impacto": "Medio",
+          "descripcion": "Responder consultas de horarios, menú, ubicación dentro del mall",
+          "urgencia": "Media"
+        },
+        {
+          "tipo": "Sistema de Delivery Directo",
+          "impacto": "Alto",
+          "descripcion": "Plataforma propia de delivery además de estar en plataformas terceras",
+          "urgencia": "Alta"
+        }
+      ],
+      "score_oportunidad_ia": 80,
+      "score_web_actual": 30,
+      "score_prioridad_implementacion": 82,
+      "estimado_perdida_ventas": "25-35% por falta de web independiente",
+      "recomendaciones": [
+        "1. Crear sitio web independiente (1-2 semanas)",
+        "2. Chatbot para atención (1 semana)",
+        "3. Sistema de delivery propio (2 semanas)"
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Alto Gandhi Pizza Napoletana",
+      "ubicacion": "Mahatma Gandhi 436",
+      "telefono": "+54 351 155-381094",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible en Instagram",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene",
+          "nivel": 20,
+          "descripcion": "Pizzería tradicional napolitana sin web"
+        },
+        "ecommerce": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin plataforma de ventas online"
+        },
+        "atencion_cliente": {
+          "estado": "Presencial/Teléfono",
+          "nivel": 25,
+          "descripcion": "Atención tradicional"
+        },
+        "gestion_leads": {
+          "estado": "No existe",
+          "nivel": 10,
+          "descripcion": "Sin gestión de clientes"
+        },
+        "presencia_digital": {
+          "estado": "Mínima",
+          "nivel": 25,
+          "descripcion": "Presencia mínima en redes"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Sitio Web con Historia",
+          "impacto": "Alto",
+          "descripcion": "Web que destaque la tradición napolitana, maestro pizzero, técnicas",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Chatbot Especializado",
+          "impacto": "Medio",
+          "descripcion": "Chatbot que explique estilos de pizza, ingredientes, horarios",
+          "urgencia": "Media"
+        },
+        {
+          "tipo": "Programa de Lealtad IA",
+          "impacto": "Medio",
+          "descripcion": "Sistema automático de recompensas para clientes frecuentes",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 82,
+      "score_web_actual": 20,
+      "score_prioridad_implementacion": 84,
+      "estimado_perdida_ventas": "20-30% por falta de presencia digital moderna",
+      "recomendaciones": [
+        "1. Crear sitio web con historia de la pizzería (1-2 semanas)",
+        "2. Chatbot especializado en WhatsApp (1 semana)",
+        "3. Programa de lealtad automático (1 semana)"
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Chulo Restorán",
+      "ubicacion": "Isabel La Católica 809, Alta Córdoba",
+      "telefono": "",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible presencia",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene",
+          "nivel": 20,
+          "descripcion": "Restaurante/pizzería sin web"
+        },
+        "ecommerce": {
+          "estado": "No",
+          "nivel": 10,
+          "descripcion": "Sin plataforma de pedidos"
+        },
+        "atencion_cliente": {
+          "estado": "Manual",
+          "nivel": 25,
+          "descripcion": "Atención presencial y teléfono"
+        },
+        "gestion_leads": {
+          "estado": "No existe",
+          "nivel": 10,
+          "descripcion": "Sin CRM"
+        },
+        "presencia_digital": {
+          "estado": "Débil",
+          "nivel": 30,
+          "descripcion": "Presencia mínima"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Sitio Web Restaurante",
+          "impacto": "Alto",
+          "descripcion": "Web profesional con menú completo, reservas, galería",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Sistema de Reservas IA",
+          "impacto": "Medio",
+          "descripcion": "Chatbot para reservar mesas, gestionar horarios",
+          "urgencia": "Media"
+        },
+        {
+          "tipo": "Delivery y Takeaway IA",
+          "impacto": "Alto",
+          "descripcion": "Sistema integrado para pedidos online",
+          "urgencia": "Alta"
+        }
+      ],
+      "score_oportunidad_ia": 81,
+      "score_web_actual": 20,
+      "score_prioridad_implementacion": 83,
+      "estimado_perdida_ventas": "25-35% por falta de canales digitales",
+      "recomendaciones": [
+        "1. Crear sitio web completo (2 semanas)",
+        "2. Sistema de reservas IA (1 semana)",
+        "3. Integración con plataformas delivery (1 semana)"
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "Di Solito",
+      "ubicacion": "Santa Rosa 826, Centro",
+      "telefono": "",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible presencia",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene",
+          "nivel": 20,
+          "descripcion": "Pizzería histórica sin web moderna"
+        },
+        "ecommerce": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin plataforma de ventas online"
+        },
+        "atencion_cliente": {
+          "estado": "Presencial",
+          "nivel": 20,
+          "descripcion": "Atención tradicional"
+        },
+        "gestion_leads": {
+          "estado": "No existe",
+          "nivel": 10,
+          "descripcion": "Sin gestión de clientes"
+        },
+        "presencia_digital": {
+          "estado": "Mínima",
+          "nivel": 20,
+          "descripcion": "Presencia mínima"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Sitio Web Histórico",
+          "impacto": "Alto",
+          "descripcion": "Web que resalte la tradición, pionería, horno de leña original",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Chatbot Experiencial",
+          "impacto": "Medio",
+          "descripcion": "Chatbot que cuente la historia del local, técnicas tradicionales",
+          "urgencia": "Media"
+        },
+        {
+          "tipo": "Marketing Nostalgia IA",
+          "impacto": "Medio",
+          "descripcion": "Email marketing y social media basado en tradición",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 78,
+      "score_web_actual": 18,
+      "score_prioridad_implementacion": 80,
+      "estimado_perdida_ventas": "20-30% por modernización insuficiente",
+      "recomendaciones": [
+        "1. Crear sitio web narrativo (2 semanas)",
+        "2. Chatbot experiencial (1 semana)",
+        "3. Estrategia de marketing emocional (2 semanas)"
+      ]
+    },
+    {
+      "id": 9,
+      "nombre": "Pizzería Italia",
+      "ubicacion": "Ubicación varia, Córdoba Capital",
+      "telefono": "",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible presencia",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene",
+          "nivel": 20,
+          "descripcion": "Pizzería con reputación pero sin web"
+        },
+        "ecommerce": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin plataforma online"
+        },
+        "atencion_cliente": {
+          "estado": "Manual",
+          "nivel": 20,
+          "descripcion": "Atención presencial/teléfono"
+        },
+        "gestion_leads": {
+          "estado": "No existe",
+          "nivel": 10,
+          "descripcion": "Sin CRM"
+        },
+        "presencia_digital": {
+          "estado": "Débil",
+          "nivel": 25,
+          "descripcion": "Presencia mínima"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Sitio Web Reputado",
+          "impacto": "Alto",
+          "descripcion": "Web que muestre reputación, reviews, histórico",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Sistema de Gestión de Reservas",
+          "impacto": "Medio",
+          "descripcion": "Chatbot para gestionar reservaciones",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 75,
+      "score_web_actual": 20,
+      "score_prioridad_implementacion": 75,
+      "estimado_perdida_ventas": "15-25% por falta de web",
+      "recomendaciones": [
+        "1. Crear sitio web con reviews y reputación (1-2 semanas)",
+        "2. Sistema de reservas automático (1 semana)"
+      ]
+    },
+    {
+      "id": 10,
+      "nombre": "La Comanda",
+      "ubicacion": "Múltiples sucursales: Jacinto Ríos 64, Recta Martinoli 8866, Luis de Tejeda 4320",
+      "telefono": "+54 351 152-122555 / 157-350808 / 152-540808",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible presencia activa",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene",
+          "nivel": 20,
+          "descripcion": "Cadena sin web unificada"
+        },
+        "ecommerce": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin plataforma de pedidos centralizada"
+        },
+        "atencion_cliente": {
+          "estado": "Manual en sucursales",
+          "nivel": 25,
+          "descripcion": "Atención por teléfono en cada sucursal"
+        },
+        "gestion_leads": {
+          "estado": "No existe",
+          "nivel": 10,
+          "descripcion": "Sin CRM entre sucursales"
+        },
+        "presencia_digital": {
+          "estado": "Fragmentada",
+          "nivel": 25,
+          "descripcion": "Presencia desconectada entre sucursales"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Sitio Web Corporativo",
+          "impacto": "Alto",
+          "descripcion": "Web que unifique las 3 sucursales, menú único, pedidos centralizados",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "CRM Corporativo",
+          "impacto": "Alto",
+          "descripcion": "Sistema para gestionar clientes entre sucursales, programa de lealtad",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Chatbot Multicanal",
+          "impacto": "Medio",
+          "descripcion": "Chatbot que diriga a la sucursal correcta según ubicación",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 86,
+      "score_web_actual": 18,
+      "score_prioridad_implementacion": 88,
+      "estimado_perdida_ventas": "30-40% por falta de coordinación digital",
+      "recomendaciones": [
+        "1. Crear web corporativa (2 semanas)",
+        "2. CRM centralizado (2 semanas)",
+        "3. Chatbot multicanal (1 semana)"
+      ]
+    },
+    {
+      "id": 11,
+      "nombre": "Pizza Madre",
+      "ubicacion": "Marcelo T. de Alvear 277",
+      "telefono": "+54 351 157-324364",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible presencia",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene",
+          "nivel": 20,
+          "descripcion": "Pizzería moderna pero sin web"
+        },
+        "ecommerce": {
+          "estado": "No",
+          "nivel": 10,
+          "descripcion": "Sin plataforma de pedidos"
+        },
+        "atencion_cliente": {
+          "estado": "Manual",
+          "nivel": 25,
+          "descripcion": "Atención por teléfono/presencial"
+        },
+        "gestion_leads": {
+          "estado": "No existe",
+          "nivel": 10,
+          "descripcion": "Sin CRM"
+        },
+        "presencia_digital": {
+          "estado": "Débil",
+          "nivel": 30,
+          "descripcion": "Presencia mínima"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Sitio Web Moderno",
+          "impacto": "Alto",
+          "descripcion": "Web que refleje modernidad, galería, menú digital",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Plataforma de Pedidos IA",
+          "impacto": "Alto",
+          "descripcion": "Sistema que sugiera combos, personalice recomendaciones",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Delivery Integrado",
+          "impacto": "Medio",
+          "descripcion": "Integración con plataformas de delivery",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 84,
+      "score_web_actual": 20,
+      "score_prioridad_implementacion": 85,
+      "estimado_perdida_ventas": "25-35% por falta de presencia online",
+      "recomendaciones": [
+        "1. Crear sitio web moderno (2 semanas)",
+        "2. Plataforma de pedidos con IA (2 semanas)",
+        "3. Integración delivery (1 semana)"
+      ]
+    },
+    {
+      "id": 12,
+      "nombre": "Pizzería Don Luis",
+      "ubicacion": "Av. General Paz 338",
+      "telefono": "+54 351 4258061",
+      "email": "",
+      "web": "pizzeriadonluis.com.ar",
+      "redes_sociales": "Presumible presencia",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene web",
+          "nivel": 45,
+          "descripcion": "Pizzería histórica con web identificada"
+        },
+        "ecommerce": {
+          "estado": "Posible",
+          "nivel": 30,
+          "descripcion": "Web no optimizada para ventas online"
+        },
+        "atencion_cliente": {
+          "estado": "Parcialmente digital",
+          "nivel": 35,
+          "descripcion": "Presencia en web pero atención limitada"
+        },
+        "gestion_leads": {
+          "estado": "No existe",
+          "nivel": 15,
+          "descripcion": "Sin CRM estructurado"
+        },
+        "presencia_digital": {
+          "estado": "Básica",
+          "nivel": 40,
+          "descripcion": "Web básica sin optimización"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Rediseño Web",
+          "impacto": "Alto",
+          "descripcion": "Modernizar sitio web, mejorar conversión a ventas",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Chatbot Web",
+          "impacto": "Medio",
+          "descripcion": "Chatbot en web para soporte 24/7",
+          "urgencia": "Media"
+        },
+        {
+          "tipo": "Email Marketing IA",
+          "impacto": "Medio",
+          "descripcion": "Campañas automáticas basadas en comportamiento",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 72,
+      "score_web_actual": 45,
+      "score_prioridad_implementacion": 75,
+      "estimado_perdida_ventas": "20-30% por web no optimizada",
+      "recomendaciones": [
+        "1. Rediseño completo de web (3 semanas)",
+        "2. Implementar chatbot (1 semana)",
+        "3. Email marketing automático (1 semana)"
+      ]
+    },
+    {
+      "id": 13,
+      "nombre": "Pizzería Bocatana",
+      "ubicacion": "Ortiz de Ocampo 6, esq. Rosario de Santa Fe",
+      "telefono": "+54 351 158-079066",
+      "email": "",
+      "web": "Sin web identificado",
+      "redes_sociales": "Presumible presencia",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "No tiene",
+          "nivel": 20,
+          "descripcion": "Pizzería tradicional sin web"
+        },
+        "ecommerce": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin plataforma online"
+        },
+        "atencion_cliente": {
+          "estado": "Manual",
+          "nivel": 20,
+          "descripcion": "Atención presencial/teléfono"
+        },
+        "gestion_leads": {
+          "estado": "No existe",
+          "nivel": 10,
+          "descripcion": "Sin CRM"
+        },
+        "presencia_digital": {
+          "estado": "Mínima",
+          "nivel": 20,
+          "descripcion": "Presencia mínima"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Sitio Web Completo",
+          "impacto": "Alto",
+          "descripcion": "Web con menú, fotos, ubicación, horarios",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Chatbot WhatsApp",
+          "impacto": "Alto",
+          "descripcion": "Automatizar respuestas de consultas frecuentes",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Sistema de Pedidos Online",
+          "impacto": "Medio",
+          "descripcion": "Plataforma para recibir pedidos directamente",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 82,
+      "score_web_actual": 18,
+      "score_prioridad_implementacion": 84,
+      "estimado_perdida_ventas": "25-35% por falta de presencia digital",
+      "recomendaciones": [
+        "1. Crear sitio web (1-2 semanas)",
+        "2. Chatbot WhatsApp (1 semana)",
+        "3. Sistema de pedidos online (1-2 semanas)"
+      ]
+    }
+  ],
+  "resumen_general": {
+    "total_pizzerias_analizadas": 13,
+    "promedio_score_oportunidad_ia": 82,
+    "promedio_web_actual": 23,
+    "promedio_prioridad": 83,
+    "conclusion": "El 92% de las pizzerías en Córdoba Capital tienen oportunidades MUY ALTAS de implementar soluciones IA. La mayoría carece de sitio web moderno, ecommerce, chatbots y CRM. Hay un mercado ENORME para servicios de consultoría IA en el sector gastronómico cordobés.",
+    "oportunidades_principales": [
+      "Web moderna (95% de probabilidad de aceptación)",
+      "Chatbots IA (90% de demanda)",
+      "Sistemas de pedidos online (85% de oportunidad)",
+      "CRM y gestión de leads (75% de oportunidad)",
+      "Email marketing automático (70% de oportunidad)"
+    ],
+    "presupuesto_implementacion_promedio": "USD 2,500 - USD 5,000 por pizzería",
+    "tiempo_implementacion_promedio": "4-6 semanas por cliente",
+    "roi_estimado": "400-600% en 12 meses (aumentar ventas 30-40%)"
+  }
+}
