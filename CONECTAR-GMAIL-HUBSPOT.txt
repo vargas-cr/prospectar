@@ -1,0 +1,232 @@
+========================================================================================
+🔐 CONECTAR TU GMAIL A HUBSPOT (Para enviar emails automáticos)
+========================================================================================
+
+Esto permite que HubSpot envíe los 5 emails desde TU email (argentia.ai@gmail.com)
+sin que tengas que hacer nada manualmente.
+
+========================================================================================
+PASO 1: ABRE HUBSPOT SETTINGS
+========================================================================================
+
+En HubSpot:
+- Arriba a la DERECHA, click en tu avatar/nombre
+- Selecciona: "Settings"
+
+Se abre la página de configuración.
+
+========================================================================================
+PASO 2: VAA A EMAIL
+========================================================================================
+
+En el menú izquierdo, busca:
+"Email"
+
+Se abre las opciones de email.
+
+Verás varias secciones:
+- Email sending
+- Email signatures
+- Connected inbox (Gmail)
+- etc.
+
+========================================================================================
+PASO 3: CLICK EN "CONNECTED INBOX" O "GMAIL"
+========================================================================================
+
+Busca: "Connected inbox"
+
+Click en él.
+
+Una ventana se abre que dice:
+"Connect your email"
+
+Verás opciones:
+- Gmail
+- Outlook
+- Other
+
+Click: "Gmail"
+
+========================================================================================
+PASO 4: AUTORIZAR GMAIL
+========================================================================================
+
+HubSpot te redirige a Google.
+
+Se abre una ventana de Google que dice:
+"Claude Code IA wants to access your Google Account"
+
+HubSpot pide estos permisos:
+✓ Read your Gmail messages
+✓ Send emails on your behalf
+✓ Manage your Gmail mailbox
+
+Click: "Allow" (o "Accept")
+
+Espera a que se procese (2-3 segundos).
+
+========================================================================================
+PASO 5: VERIFICAR CONEXIÓN
+========================================================================================
+
+Vuelves a HubSpot automáticamente.
+
+Verás un mensaje:
+✓ "Gmail connected successfully"
+
+O un checkmark verde indicando que está conectado.
+
+========================================================================================
+PASO 6: CONFIGURAR EMAIL DE SALIDA
+========================================================================================
+
+En Email settings, busca: "Sender email"
+
+Deberías ver tu email:
+argentia.ai@gmail.com
+
+Si no está seleccionado, click y selecciónalo.
+
+Esto le dice a HubSpot: "Envía los emails desde este email"
+
+========================================================================================
+PASO 7: CONFIGURAR FIRMA (Opcional pero recomendado)
+========================================================================================
+
+En Settings → Email → Email signatures
+
+Crea una firma:
+───────────────────────────────────
+[Tu nombre]
+Especialista en Automatización IA
+Teléfono: [Tu teléfono]
+Email: argentia.ai@gmail.com
+───────────────────────────────────
+
+Esto aparecerá al final de cada email automático.
+
+========================================================================================
+LISTO ✓
+========================================================================================
+
+Ahora:
+✅ HubSpot está conectado a tu Gmail
+✅ Cuando se dispare un workflow, enviará desde tu email
+✅ Los leads verán emails que vienen de "argentia.ai@gmail.com"
+✅ Las respuestas llegan a tu Gmail
+✅ HubSpot te notifica cuando alguien responde
+
+========================================================================================
+¿CÓMO FUNCIONA?
+========================================================================================
+
+FLUJO:
+
+1. Se dispara Workflow 1 (Day 1)
+   ↓
+2. HubSpot envía Email 1 desde tu Gmail (argentia.ai@gmail.com)
+   ↓
+3. Don Julio Parrilla recibe el email en su inbox
+   ↓
+4. [Opcional] Don Julio responde
+   ↓
+5. Tu Gmail recibe la respuesta
+   ↓
+6. HubSpot te notifica: "Don Julio respondió"
+   ↓
+7. Tú ves la notificación en HubSpot
+   ↓
+8. Haces click y llamas a Don Julio
+
+========================================================================================
+VERIFICAR QUE FUNCIONA
+========================================================================================
+
+Para confirmar que todo está conectado:
+
+1. Ve a: Marketing → Email
+2. Selecciona cualquier email (ej: Email_1)
+3. Click: "Preview" o "Send test"
+4. Envía un test email a ti mismo (argentia.ai@gmail.com)
+5. Espera 1-2 minutos
+6. Abre tu Gmail
+7. Deberías recibir el test email
+
+Si lo recibes → ¡FUNCIONA! Gmail está conectado.
+
+========================================================================================
+IMPORTANTE: SEGURIDAD
+========================================================================================
+
+✅ HubSpot NO tiene acceso a tu contraseña
+✅ Solo tiene permiso para enviar emails
+✅ Puedes revocar el acceso cuando quieras (Settings → Revoke)
+✅ Es una conexión 100% segura (OAuth de Google)
+
+========================================================================================
+SI ALGO NO FUNCIONA
+========================================================================================
+
+PROBLEMA 1: "No veo la opción 'Connected inbox' o 'Gmail'"
+SOLUCIÓN:
+- En Settings, busca bien en la izquierda
+- Puede estar bajo "Integrations" o "Apps and integrations"
+- O prueba: Settings → Integrations → Gmail
+
+PROBLEMA 2: "Google no me deja autorizar"
+SOLUCIÓN:
+- Verifica que NO tengas bloqueo de apps no confiables en tu cuenta Google
+- Ve a: myaccount.google.com → Security → Less secure app access
+- Activa: "Allow less secure apps"
+
+PROBLEMA 3: "Conecté pero los emails no salen"
+SOLUCIÓN:
+- Verifica que el "Sender email" esté correctamente seleccionado
+- En Settings → Email sending → Verifica que argentia.ai@gmail.com está elegido
+- Intenta enviar un email de prueba
+
+PROBLEMA 4: "¿Cuántos emails puedo enviar por día?"
+RESPUESTA: Gmail permite ~500 emails por día en versión gratuita.
+Con 25 restaurantes × 5 emails = 125 emails total (muy por debajo)
+
+========================================================================================
+CONFIGURACIÓN ADICIONAL (Opcional)
+========================================================================================
+
+TRACKING DE APERTURAS:
+
+En Settings → Email → Tracking
+
+Habilita:
+✓ "Track when recipients open emails"
+✓ "Track when recipients click links"
+
+Así verás en HubSpot:
+- Quién abrió cada email
+- Quién hizo click en qué link
+- Cuándo lo hizo
+
+Esto es útil para priorizar llamadas (enfocarte en los más interesados).
+
+========================================================================================
+SIGUIENTE PASO
+========================================================================================
+
+Una vez conectado Gmail:
+
+1. Ve a: Marketing → Email → Email_1_Initial_Contact_Restaurant
+2. Click: "Preview" o "Send test"
+3. Envía un test a ti mismo
+4. Verifica que el email llegó a tu Gmail
+5. Listo para enviar automático
+
+========================================================================================
+¡LISTO!
+========================================================================================
+
+Ahora tus 5 workflows enviarán emails automáticamente desde tu Gmail.
+
+No necesitas hacer nada más. Todo ocurre en segundo plano.
+
+Los 25 restaurantes recibirán los 5 emails sin que levantes un dedo.
