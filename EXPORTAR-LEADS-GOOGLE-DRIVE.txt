@@ -1,0 +1,326 @@
+========================================================================================
+📊 AUTOMATIZAR: HUBSPOT → GOOGLE DRIVE (Reports automáticos)
+========================================================================================
+
+Esto configura HubSpot para que AUTOMÁTICAMENTE:
+1. Exporte los 25 restaurantes
+2. Los guarde en Google Drive
+3. Se actualice cada día
+
+Sin hacer NADA.
+
+========================================================================================
+PASO 1: VERIFICAR QUE GOOGLE DRIVE ESTÁ CONECTADO
+========================================================================================
+
+En HubSpot:
+- Settings → Integrations → Google Drive
+
+Verifica que diga: "✓ Connected"
+
+Si NO está conectado:
+- Click: "Connect"
+- Autoriza con Google
+- Confirma que se conectó
+
+RESULTADO: Google Drive está listo en HubSpot.
+
+========================================================================================
+PASO 2: CREAR UN REPORT (Lista de leads)
+========================================================================================
+
+En HubSpot:
+- Menú izquierda → "Reports" (o "Reporting")
+
+Click: "Reports"
+
+Se abre una lista de reports disponibles.
+
+PASO 2.1: Crear nuevo report
+
+Click: "+ Create custom report" (o "New report")
+
+PASO 2.2: Seleccionar tipo de report
+
+Opciones:
+- "Table report" ← ESTO (es un tabla simple)
+- "Bar chart"
+- "Line chart"
+- etc.
+
+Click: "Table report"
+
+PASO 2.3: Nombrar el report
+
+Name: "Restaurantes - Leads Export"
+
+Description: "Lista de 25 restaurantes con datos de contacto"
+
+PASO 2.4: Seleccionar objeto
+
+Object: "Contacts" (porque son contactos)
+
+Click: "Next"
+
+PASO 2.5: Seleccionar columnas
+
+Deberías seleccionar qué información mostrar:
+
+Agrega estas columnas:
+- Company (Nombre del restaurante)
+- Phone (Teléfono)
+- Email (Email)
+- Address (Dirección)
+- City (Ciudad)
+- Website (Sitio web)
+- Restaurant_Score (Score IA)
+- Email_Sequence_Stage (Estado de secuencia)
+
+Puedes agregar más si quieres.
+
+Click: "Next"
+
+PASO 2.6: Agregar filtro
+
+Filter: "Only show contacts where:"
+- Restaurant_Score is greater than or equal to 70
+
+[Esto muestra solo los restaurantes "buenos"]
+
+Click: "Create"
+
+RESULTADO: Report creado.
+
+Se abre una tabla con los 25 restaurantes y sus datos.
+
+========================================================================================
+PASO 3: EXPORTAR EL REPORT A GOOGLE DRIVE
+========================================================================================
+
+OPCIÓN A: Exportar manualmente (cada vez que lo necesites)
+
+En el report que acabas de crear:
+- Arriba a la DERECHA, ves un botón: "..."
+- Click en él
+
+Se abre un menú con opciones:
+- Export to Google Drive ← ESTO
+- Download CSV
+- etc.
+
+Click: "Export to Google Drive"
+
+Se abre un diálogo:
+
+"Save report to Google Drive"
+
+- Folder: Selecciona la carpeta donde guardar (o crea una nueva: "HubSpot Reports")
+- Frequency: "One time" (solo esta vez)
+
+Click: "Export"
+
+RESULTADO: El report se guarda en Google Drive automáticamente.
+
+Espera 1-2 minutos y verifica en tu Google Drive que aparezca el archivo.
+
+OPCIÓN B: Configurar RECURRENTE (cada día automático) ← RECOMENDADO
+
+En el mismo diálogo "Save report to Google Drive":
+
+- Folder: "HubSpot Reports" (crea una carpeta nueva o selecciona una existente)
+- Frequency: "Daily" ← ESTO
+- Time: Selecciona la hora (ej: 9:00 AM)
+- Starting: [Hoy o mañana]
+
+[Esto hace que HubSpot exporte automáticamente cada día a esa hora]
+
+Click: "Save"
+
+RESULTADO: Todos los días a las 9 AM, HubSpot exporta los leads a Google Drive automáticamente.
+
+========================================================================================
+PASO 4: VERIFICAR EN GOOGLE DRIVE
+========================================================================================
+
+Abre tu Google Drive:
+https://drive.google.com
+
+Busca la carpeta: "HubSpot Reports" (o el nombre que pusiste)
+
+Dentro deberías ver:
+- Un archivo CSV o Excel con los datos
+- Nombre: "Restaurantes - Leads Export"
+
+Click en el archivo para abrirlo.
+
+Deberías ver:
+
+┌───────────────────────────────────────────────────────────┐
+│ Restaurante | Teléfono | Email | Dirección | City | Score│
+├───────────────────────────────────────────────────────────┤
+│ Don Julio | +54 11... | info@ | Guatemala | BA | 92   │
+│ La Cabrera | +54 11... |       | Laprida  | BA | 90   │
+│ BASABAR | +54 11... | basa@ | San Telmo | BA | 85   │
+│ ...                                                       │
+└───────────────────────────────────────────────────────────┘
+
+RESULTADO: ✓ Los 25 restaurantes están en Google Drive.
+
+========================================================================================
+CREAR MÁS REPORTS (Opcional)
+========================================================================================
+
+Puedes crear varios reports diferentes:
+
+REPORT 1: "Todos los restaurantes"
+- Filtro: Restaurant_Score ≥ 70
+- Columnas: Nombre, Teléfono, Email, Dirección
+
+REPORT 2: "Top 5 prospectos"
+- Filtro: Restaurant_Score ≥ 85
+- Columnas: Nombre, Score, Email_Sequence_Stage
+
+REPORT 3: "Restaurantes sin respuesta"
+- Filtro: Email_Sequence_Stage = "Email 3 enviado"
+- Columnas: Nombre, Teléfono, Score, Última fecha de email
+
+Cada uno se exporta automáticamente a Google Drive.
+
+========================================================================================
+CONFIGURAR DESCARGA AUTOMÁTICA (AVANZADO)
+========================================================================================
+
+Si quieres que Google Drive actualice automáticamente SIN hacer nada:
+
+OPCIÓN 1: Usa la "Scheduled export" de HubSpot (lo que hicimos arriba)
+
+OPCIÓN 2: Conecta HubSpot con Zapier/Make (más complejo, pero más potente)
+
+Por ahora, quédate con OPCIÓN 1 (Scheduled export).
+
+========================================================================================
+SCHEDULE HABITUAL RECOMENDADO
+========================================================================================
+
+Exporta automáticamente TODOS LOS DÍAS:
+
+- Lunes a viernes: 9:00 AM
+- (Los domingos/sábados no necesitas trabajar)
+
+HubSpot te proporciona:
+- Lunes: Datos de que pasó el fin de semana
+- Miércoles: Datos de la mitad de la semana
+- Viernes: Datos semanales completos
+
+Así tienes un histórico en Google Drive de cómo evolucionan los leads.
+
+========================================================================================
+USAR LOS DATOS EN GOOGLE DRIVE
+========================================================================================
+
+Una vez en Google Drive, puedes:
+
+1. ABRIR EN SHEETS
+   - Click derecho en el archivo
+   - "Open with" → "Google Sheets"
+   - Ahora puedes editar, filtrar, hacer gráficos
+
+2. AGREGAR COLUMNAS PERSONALIZADAS
+   - Agrega "Fecha de contacto"
+   - "Resultado de llamada"
+   - "Contrato cerrado: Sí/No"
+   - etc.
+
+3. COMPARTIR CON EL EQUIPO
+   - Share → Agrega emails de tu equipo
+   - Todos ven los mismos datos en tiempo real
+
+4. HACER GRÁFICOS
+   - Insert → Chart
+   - Crea gráficos de:
+     - Distribución por score
+     - Progreso de secuencia de emails
+     - Conversiones
+
+5. CREAR DASHBOARD
+   - Data studio (tool de Google) puede leer el Sheets
+   - Crea un dashboard visual
+
+========================================================================================
+VERIFICAR QUE LA AUTOMATIZACIÓN FUNCIONA
+========================================================================================
+
+Después de configurar:
+
+DÍA 1:
+- Configuras la exportación
+- Se exporta inmediatamente
+- Esperas 5 minutos
+- Verifica que el archivo apareció en Google Drive ✓
+
+DÍA 2:
+- Vuelves a abrir Google Drive
+- Verifica que hay un archivo nuevo o actualizado
+- (Significa que la automatización funcionó) ✓
+
+PRÓXIMOS DÍAS:
+- Cada mañana a las 9 AM (o la hora que configuraste)
+- Un nuevo archivo se crea automáticamente
+- O el mismo se actualiza con datos nuevos
+
+========================================================================================
+TROUBLESHOOTING
+========================================================================================
+
+PROBLEMA 1: "No aparece el archivo en Google Drive"
+SOLUCIÓN:
+1. Verifica que Google Drive está conectado (Settings → Integrations)
+2. Espera 5-10 minutos (puede tardar)
+3. Refresca Google Drive (F5)
+4. Si sigue sin aparecer, intenta exportar manualmente ("One time")
+
+PROBLEMA 2: "El archivo está vacío"
+SOLUCIÓN:
+1. Verifica que la configuración del report es correcta
+2. Revisa los filtros (tal vez está filtrando todos)
+3. En HubSpot, abre el report y verifica que muestra datos
+4. Si el report en HubSpot está vacío, hay un error en la config
+
+PROBLEMA 3: "¿Cómo cambio la hora de exportación?"
+SOLUCIÓN:
+1. En HubSpot, abre el report
+2. Click en "..." → "Settings"
+3. Busca "Export schedule"
+4. Cambia la hora
+5. Save
+
+PROBLEMA 4: "¿Puedo exportar más de 1 report a la vez?"
+RESPUESTA: Sí. Crea múltiples reports y configura cada uno con su propio schedule.
+
+========================================================================================
+RESUMEN
+========================================================================================
+
+ANTES:
+- No tenías los datos
+- No sabías quién respondió
+- Sin seguimiento
+
+DESPUÉS:
+- Archivo en Google Drive con todos los leads
+- Se actualiza automáticamente cada día
+- Puedes compartir con tu equipo
+- Puedes hacer análisis/gráficos
+
+TODO SIN HACER NADA (automático).
+
+========================================================================================
+PRÓXIMOS PASOS
+========================================================================================
+
+1. En HubSpot, crea el report "Restaurantes - Leads Export"
+2. Configura para exportar a Google Drive diariamente (9 AM)
+3. Verifica que funciona (espera 5 min, chequea Drive)
+4. Listo - Todos los días tendrás datos actualizados
+
+¿NECESITAS AYUDA CON ALGÚN PASO?
