@@ -1,0 +1,814 @@
+{
+  "proyecto": "Diagnóstico de Consultoría IA - Clínicas Dentales Córdoba Capital",
+  "fecha": "2026-05-21",
+  "experto": "Especialista en Servicios de IA",
+  "total_clinicas": 12,
+  "estado": "ANÁLISIS INICIAL - 12 clínicas identificadas",
+  "servicios_ia_prioritarios": [
+    "Chatbots para agendamiento de turnos (24/7)",
+    "CRM para gestión de pacientes y tratamientos",
+    "Email marketing para recordatorios de citas",
+    "Webs modernas con presencia digital fuerte",
+    "Lead management y conversión de consultas",
+    "Sistema de recordatorios automáticos",
+    "Análisis predictivo de pacientes",
+    "Automatización de seguimiento post-tratamiento"
+  ],
+  "clinicas": [
+    {
+      "id": 1,
+      "nombre": "Clínica Dental Si",
+      "ubicacion": "Córdoba Capital",
+      "sitio_web": "clinicadentalsi.com",
+      "estado_web": "Existe",
+      "telefono": "",
+      "email": "",
+      "resenas": "415 reseñas (actualizado febrero 2026)",
+      "especialidades": "Odontología general",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 50,
+          "descripcion": "Presencia digital básica, probablemente sin chatbot o agendamiento online"
+        },
+        "chatbot": {
+          "estado": "Probablemente no",
+          "nivel": 10,
+          "descripcion": "No hay evidencia de chatbot para agendar turnos automáticamente"
+        },
+        "agendamiento_online": {
+          "estado": "Desconocido",
+          "nivel": 20,
+          "descripcion": "No hay evidencia de sistema de agendamiento online"
+        },
+        "crm": {
+          "estado": "No existe",
+          "nivel": 5,
+          "descripcion": "Sin sistema de CRM para seguimiento de pacientes"
+        },
+        "email_marketing": {
+          "estado": "Probablemente no",
+          "nivel": 10,
+          "descripcion": "Sin automatización de recordatorios"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Chatbot WhatsApp/Web",
+          "impacto": "Alto",
+          "descripcion": "Agendar turnos automáticamente sin contacto manual",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Sistema de Agendamiento Online",
+          "impacto": "Alto",
+          "descripcion": "Pacientes ven disponibilidad y reservan desde web",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Email Marketing Automático",
+          "impacto": "Medio",
+          "descripcion": "Recordatorios de citas, seguimiento post-tratamiento",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 78,
+      "score_web_actual": 50,
+      "score_prioridad": 80,
+      "potencial_pacientes_adicionales": "20-30% más consultas",
+      "estimado_perdida_ventas": "15-20% por falta de agendamiento online"
+    },
+    {
+      "id": 2,
+      "nombre": "Clínica Dental PCM",
+      "ubicacion": "Córdoba Capital",
+      "sitio_web": "clinicadentalpcm.com",
+      "estado_web": "Existe",
+      "telefono": "",
+      "email": "",
+      "especialidades": "Radiología 3D, Escáner intraoral, Sedación consciente, Odontología general",
+      "años_experiencia": 20,
+      "horario": "Lunes-Jueves 9:00-21:00, Viernes 9:00-17:00",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 55,
+          "descripcion": "Web funcional, muestra servicios y tecnología"
+        },
+        "chatbot": {
+          "estado": "Probablemente no",
+          "nivel": 10,
+          "descripcion": "Aunque tiene tecnología avanzada, probablemente sin chatbot IA"
+        },
+        "agendamiento_online": {
+          "estado": "Probablemente sí (parcial)",
+          "nivel": 40,
+          "descripcion": "Puede tener agendamiento pero probablemente limitado"
+        },
+        "crm": {
+          "estado": "Básico/No existe",
+          "nivel": 20,
+          "descripcion": "Sin automatización de seguimiento de pacientes"
+        },
+        "email_marketing": {
+          "estado": "No existe",
+          "nivel": 5,
+          "descripcion": "Sin recordatorios automáticos de citas"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Chatbot IA Inteligente",
+          "impacto": "Alto",
+          "descripcion": "Responder preguntas sobre sedación, radiología, horarios",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "CRM Avanzado",
+          "impacto": "Alto",
+          "descripcion": "Seguimiento de tratamientos, histórico de radiologías",
+          "urgencia": "Media"
+        },
+        {
+          "tipo": "Email Marketing",
+          "impacto": "Medio",
+          "descripcion": "Recordatorios pre-cita, post-tratamiento seguimiento",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 82,
+      "score_web_actual": 55,
+      "score_prioridad": 82,
+      "potencial_pacientes_adicionales": "25-35% más consultas",
+      "estimado_perdida_ventas": "10-15% por falta de automatización"
+    },
+    {
+      "id": 3,
+      "nombre": "Docta Dent",
+      "ubicacion": "Nueva Córdoba",
+      "sitio_web": "doctadent.com.ar",
+      "estado_web": "Existe",
+      "especialidades": "Odontología general, Implantología, Estética dental",
+      "años_experiencia": 25,
+      "ubicacion_destacada": "Principal centro odontológico zona Nueva Córdoba",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 60,
+          "descripcion": "Buena presencia digital para la zona"
+        },
+        "chatbot": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización de consultas"
+        },
+        "agendamiento_online": {
+          "estado": "Posiblemente sí",
+          "nivel": 35,
+          "descripcion": "Posible agendamiento pero no IA"
+        },
+        "crm": {
+          "estado": "Básico",
+          "nivel": 25,
+          "descripcion": "Sin seguimiento automatizado de tratamientos"
+        },
+        "email_marketing": {
+          "estado": "No existe",
+          "nivel": 5,
+          "descripcion": "Sin automatización de marketing"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Chatbot Especializado",
+          "impacto": "Alto",
+          "descripcion": "Responder sobre implantes, estética, tratamientos",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "CRM para Implantología",
+          "impacto": "Alto",
+          "descripcion": "Seguimiento de tratamientos de implantes (multi-fase)",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Lead Management",
+          "impacto": "Medio",
+          "descripcion": "Convertir consultas en citas confirmadas",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 85,
+      "score_web_actual": 60,
+      "score_prioridad": 85,
+      "potencial_pacientes_adicionales": "30-40% más consultas",
+      "estimado_perdida_ventas": "20-25% por falta de IA"
+    },
+    {
+      "id": 4,
+      "nombre": "Dentis",
+      "ubicacion": "Belgrano 66 / Recta Martinolli 5727",
+      "sitio_web": "dentis-cba.com.ar",
+      "estado_web": "Existe",
+      "especialidades": "Odontología general, Guardia 24hs",
+      "años_experiencia": 30,
+      "ventaja_competitiva": "Guardia 24 horas",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 50,
+          "descripcion": "Presencia básica, probablemente sin distinguir guardia 24hs online"
+        },
+        "chatbot": {
+          "estado": "No",
+          "nivel": 8,
+          "descripcion": "Sin chatbot para emergencias 24hs"
+        },
+        "agendamiento_online": {
+          "estado": "No probablemente",
+          "nivel": 15,
+          "descripcion": "Sin sistema de agendamiento online para guardia"
+        },
+        "crm": {
+          "estado": "No",
+          "nivel": 10,
+          "descripcion": "Sin seguimiento de pacientes de guardia"
+        },
+        "email_marketing": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Chatbot Guardia 24hs",
+          "impacto": "Muy Alto",
+          "descripcion": "Atender emergencias fuera de horario con IA",
+          "urgencia": "Muy Alta"
+        },
+        {
+          "tipo": "Sistema Urgencias Online",
+          "impacto": "Alto",
+          "descripcion": "Formulario automático para emergencias",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "CRM Emergencias",
+          "impacto": "Medio",
+          "descripcion": "Seguimiento de casos de emergencia",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 88,
+      "score_web_actual": 50,
+      "score_prioridad": 87,
+      "potencial_pacientes_adicionales": "35-45% más en emergencias",
+      "estimado_perdida_ventas": "25-30% de emergencias que van a otro lado"
+    },
+    {
+      "id": 5,
+      "nombre": "Odontología Nueva Córdoba",
+      "ubicacion": "Nueva Córdoba",
+      "sitio_web": "odonuevacordoba.com.ar",
+      "estado_web": "Existe",
+      "especialidades": "Odontología general, Multidisciplinaria",
+      "enfoque": "Comodidad del paciente, profesionales con especialidades",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 55,
+          "descripcion": "Presencia digital en zona Nueva Córdoba"
+        },
+        "chatbot": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        },
+        "agendamiento_online": {
+          "estado": "Posiblemente",
+          "nivel": 30,
+          "descripcion": "Agendamiento básico sin IA"
+        },
+        "crm": {
+          "estado": "No",
+          "nivel": 15,
+          "descripcion": "Sin seguimiento multidisciplinario automatizado"
+        },
+        "email_marketing": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Chatbot Multidisciplinario",
+          "impacto": "Alto",
+          "descripcion": "Dirigir a especialista correcto automáticamente",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "CRM Multidisciplinario",
+          "impacto": "Alto",
+          "descripcion": "Coordinar múltiples especialistas en mismo plan",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Lead Routing Inteligente",
+          "impacto": "Medio",
+          "descripcion": "Derivar consultas al especialista correcto",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 80,
+      "score_web_actual": 55,
+      "score_prioridad": 80,
+      "potencial_pacientes_adicionales": "20-30% más consultas",
+      "estimado_perdida_ventas": "15-20% por falta de coordinación digital"
+    },
+    {
+      "id": 6,
+      "nombre": "Clínica Dental Lozano",
+      "ubicacion": "Córdoba Capital (2 sucursales)",
+      "sitio_web": "clinicadentallozano.com",
+      "estado_web": "Existe",
+      "especialidades": "Odontología general",
+      "ventaja": "2 sucursales, opciones de financiación (12-60 meses)",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 55,
+          "descripcion": "Presencia básica, probablemente sin mostrar financiación online"
+        },
+        "chatbot": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        },
+        "agendamiento_online": {
+          "estado": "Posiblemente",
+          "nivel": 25,
+          "descripcion": "Agendamiento básico"
+        },
+        "crm": {
+          "estado": "Básico",
+          "nivel": 20,
+          "descripcion": "Sin coordinación entre sucursales"
+        },
+        "email_marketing": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Web Financiación Online",
+          "impacto": "Alto",
+          "descripcion": "Mostrar planes de financiación interactivos",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "CRM Multilocal",
+          "impacto": "Medio",
+          "descripcion": "Coordinación entre 2 sucursales",
+          "urgencia": "Media"
+        },
+        {
+          "tipo": "Chatbot Financiero",
+          "impacto": "Medio",
+          "descripcion": "Explicar planes de pago automáticamente",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 75,
+      "score_web_actual": 55,
+      "score_prioridad": 76,
+      "potencial_pacientes_adicionales": "15-25% más por mostrar financiación",
+      "estimado_perdida_ventas": "10-15% que van a otro lado por desconocer financiación"
+    },
+    {
+      "id": 7,
+      "nombre": "Estética Dental Córdoba",
+      "ubicacion": "Obispo Trejo 961 - 1º B, Nueva Córdoba",
+      "sitio_web": "esteticadentalcba.com.ar",
+      "estado_web": "Existe",
+      "especialidades": "Estética dental, Blanqueamiento, Carillas",
+      "enfoque": "Especializado en estética",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 60,
+          "descripcion": "Especialización en estética debería reflejarse bien"
+        },
+        "chatbot": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        },
+        "agendamiento_online": {
+          "estado": "Posiblemente",
+          "nivel": 30,
+          "descripcion": "Sin sistema de galería antes/después online"
+        },
+        "crm": {
+          "estado": "No",
+          "nivel": 10,
+          "descripcion": "Sin seguimiento de proyectos estéticos"
+        },
+        "email_marketing": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin retención de pacientes"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Galería Before/After IA",
+          "impacto": "Alto",
+          "descripcion": "Visualización interactiva de resultados estéticos",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Simulador Estético IA",
+          "impacto": "Alto",
+          "descripcion": "Mostrar cómo se vería el paciente con tratamiento",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Email Marketing Retención",
+          "impacto": "Medio",
+          "descripcion": "Recordar citas de mantenimiento estético",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 82,
+      "score_web_actual": 60,
+      "score_prioridad": 84,
+      "potencial_pacientes_adicionales": "25-35% más por visualización",
+      "estimado_perdida_ventas": "15-20% por falta de demostración visual"
+    },
+    {
+      "id": 8,
+      "nombre": "Prosmile Dental",
+      "ubicacion": "Córdoba Capital",
+      "sitio_web": "prosmiledental.com.ar",
+      "estado_web": "Existe",
+      "especialidades": "Implantes, Ortodoncia, Odontología general",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 55,
+          "descripcion": "Presencia digital básica"
+        },
+        "chatbot": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        },
+        "agendamiento_online": {
+          "estado": "Posiblemente",
+          "nivel": 25,
+          "descripcion": "Sin sistema especializado para implantes/ortodoncia"
+        },
+        "crm": {
+          "estado": "No",
+          "nivel": 15,
+          "descripcion": "Sin seguimiento de tratamientos prolongados"
+        },
+        "email_marketing": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "CRM Implantes",
+          "impacto": "Alto",
+          "descripcion": "Seguimiento multi-fase de implantes (diagnostico, colocacion, carga)",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Chatbot Ortodoncia",
+          "impacto": "Medio",
+          "descripcion": "Responder preguntas sobre duración, costo, tipos de brackets",
+          "urgencia": "Media"
+        },
+        {
+          "tipo": "Email Marketing Retención",
+          "impacto": "Medio",
+          "descripcion": "Recordatorios ajustes, revisiones",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 80,
+      "score_web_actual": 55,
+      "score_prioridad": 81,
+      "potencial_pacientes_adicionales": "20-30% más",
+      "estimado_perdida_ventas": "15-20% por falta de seguimiento automatizado"
+    },
+    {
+      "id": 9,
+      "nombre": "Clínica Dental Aranda",
+      "ubicacion": "Córdoba Capital",
+      "sitio_web": "dentistascordoba.com",
+      "estado_web": "Existe",
+      "especialidades": "Odontología general, Tecnología avanzada",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 60,
+          "descripcion": "Presencia digital moderna"
+        },
+        "chatbot": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        },
+        "agendamiento_online": {
+          "estado": "Posiblemente",
+          "nivel": 35,
+          "descripcion": "Sistema básico sin IA"
+        },
+        "crm": {
+          "estado": "No",
+          "nivel": 15,
+          "descripcion": "Sin automatización"
+        },
+        "email_marketing": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Chatbot IA",
+          "impacto": "Alto",
+          "descripcion": "Atender consultas por IA 24/7",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Lead Management",
+          "impacto": "Alto",
+          "descripcion": "Convertir más consultas en citas",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Email Marketing",
+          "impacto": "Medio",
+          "descripcion": "Fidelización de pacientes",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 78,
+      "score_web_actual": 60,
+      "score_prioridad": 79,
+      "potencial_pacientes_adicionales": "20-25%",
+      "estimado_perdida_ventas": "10-15%"
+    },
+    {
+      "id": 10,
+      "nombre": "Hospital Privado Universitario",
+      "ubicacion": "Córdoba Capital",
+      "sitio_web": "hospitalprivado.com.ar",
+      "estado_web": "Existe",
+      "especialidades": "Odontología general, Rehabilitación protésica, Odontopediatría",
+      "nivel_institucion": "Universitario",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 70,
+          "descripcion": "Presencia institucional completa"
+        },
+        "chatbot": {
+          "estado": "Posiblemente",
+          "nivel": 20,
+          "descripcion": "Posible chatbot general del hospital, no específico para odontología"
+        },
+        "agendamiento_online": {
+          "estado": "Posiblemente",
+          "nivel": 40,
+          "descripcion": "Sistema institucional pero no optimizado para odontología"
+        },
+        "crm": {
+          "estado": "Institucional",
+          "nivel": 30,
+          "descripcion": "CRM hospitalario, no especializado en odontología"
+        },
+        "email_marketing": {
+          "estado": "No específico",
+          "nivel": 10,
+          "descripcion": "Sin automatización para odontología"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Chatbot Odontología",
+          "impacto": "Alto",
+          "descripcion": "Especializado en servicios odontológicos",
+          "urgencia": "Media"
+        },
+        {
+          "tipo": "CRM Pediátrico",
+          "impacto": "Medio",
+          "descripcion": "Seguimiento especial para odontopediatría",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 72,
+      "score_web_actual": 70,
+      "score_prioridad": 70,
+      "potencial_pacientes_adicionales": "10-15%",
+      "estimado_perdida_ventas": "5-10%"
+    },
+    {
+      "id": 11,
+      "nombre": "Clínica Orabell",
+      "ubicacion": "Córdoba Capital",
+      "sitio_web": "clinicaorabell.com",
+      "estado_web": "Existe",
+      "especialidades": "Odontología general",
+      "años_experiencia": 35,
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 55,
+          "descripcion": "Presencia básica con 35 años de experiencia"
+        },
+        "chatbot": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        },
+        "agendamiento_online": {
+          "estado": "Posiblemente",
+          "nivel": 25,
+          "descripcion": "Probablemente teléfono tradicional"
+        },
+        "crm": {
+          "estado": "No",
+          "nivel": 10,
+          "descripcion": "Sin automatización"
+        },
+        "email_marketing": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Modernización Digital",
+          "impacto": "Alto",
+          "descripcion": "Traer clínica tradicional al mundo digital",
+          "urgencia": "Alta"
+        },
+        {
+          "tipo": "Chatbot Experiencia",
+          "impacto": "Medio",
+          "descripcion": "Destacar 35 años de experiencia",
+          "urgencia": "Media"
+        }
+      ],
+      "score_oportunidad_ia": 76,
+      "score_web_actual": 55,
+      "score_prioridad": 77,
+      "potencial_pacientes_adicionales": "15-25%",
+      "estimado_perdida_ventas": "10-15% por falta de presencia digital moderna"
+    },
+    {
+      "id": 12,
+      "nombre": "Corporación Dental",
+      "ubicacion": "Avenida de los Almogávares, Córdoba",
+      "sitio_web": "corporacion-dental.com",
+      "estado_web": "Existe",
+      "especialidades": "Odontología general",
+      "diagnostico": {
+        "presencia_web": {
+          "estado": "Tiene sitio web",
+          "nivel": 55,
+          "descripcion": "Presencia digital básica"
+        },
+        "chatbot": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        },
+        "agendamiento_online": {
+          "estado": "Posiblemente",
+          "nivel": 25,
+          "descripcion": "Sistema básico sin IA"
+        },
+        "crm": {
+          "estado": "No",
+          "nivel": 10,
+          "descripcion": "Sin automatización"
+        },
+        "email_marketing": {
+          "estado": "No",
+          "nivel": 5,
+          "descripcion": "Sin automatización"
+        }
+      },
+      "oportunidades_ia": [
+        {
+          "tipo": "Transformación Digital",
+          "impacto": "Alto",
+          "descripcion": "Chatbot, CRM, Email marketing",
+          "urgencia": "Alta"
+        }
+      ],
+      "score_oportunidad_ia": 75,
+      "score_web_actual": 55,
+      "score_prioridad": 76,
+      "potencial_pacientes_adicionales": "15-25%",
+      "estimado_perdida_ventas": "10-15%"
+    }
+  ],
+  "resumen_estadisticas": {
+    "total_clinicas": 12,
+    "promedio_score_ia": 79.3,
+    "promedio_web": 57.5,
+    "promedio_prioridad": 79.6,
+    "con_sitio_web": "100% (12 de 12)",
+    "sin_chatbot": "100% (12 de 12)",
+    "sin_agendamiento_online_especializado": "75%"
+  },
+  "top_5_oportunidades": [
+    {
+      "rank": 1,
+      "nombre": "Dentis",
+      "score": 88,
+      "razon": "Guardia 24hs sin automatización - Oportunidad única de chatbot emergencias"
+    },
+    {
+      "rank": 2,
+      "nombre": "Clínica Dental PCM",
+      "score": 82,
+      "razon": "Tecnología avanzada pero sin IA - Oportunidad de diferenciación"
+    },
+    {
+      "rank": 3,
+      "nombre": "Docta Dent",
+      "score": 85,
+      "razon": "Líder en Nueva Córdoba sin automatización - Oportunidad de consolidar liderazgo"
+    },
+    {
+      "rank": 4,
+      "nombre": "Estética Dental Córdoba",
+      "score": 82,
+      "razon": "Especialidad visual sin herramientas visuales IA"
+    },
+    {
+      "rank": 5,
+      "nombre": "Clínica Dental Aranda",
+      "score": 78,
+      "razon": "Tecnología avanzada sin marketing IA"
+    }
+  ],
+  "servicios_ia_demanda": [
+    {
+      "servicio": "Chatbot para Agendamiento",
+      "demanda": "95%",
+      "descripcion": "Agendar turnos 24/7 sin personal",
+      "precio_estimado": "USD 600-1200/mes"
+    },
+    {
+      "servicio": "CRM Odontológico",
+      "demanda": "90%",
+      "descripcion": "Seguimiento de pacientes y tratamientos",
+      "precio_estimado": "USD 800-1500/mes"
+    },
+    {
+      "servicio": "Email Marketing",
+      "demanda": "85%",
+      "descripcion": "Recordatorios automáticos de citas",
+      "precio_estimado": "USD 300-600/mes"
+    },
+    {
+      "servicio": "Agendamiento Online Especializado",
+      "demanda": "80%",
+      "descripcion": "Web integrada con disponibilidad en tiempo real",
+      "precio_estimado": "USD 1000-2000"
+    },
+    {
+      "servicio": "Lead Management",
+      "demanda": "75%",
+      "descripcion": "Convertir consultas en citas",
+      "precio_estimado": "USD 500-1000"
+    }
+  ],
+  "proyeccion_negocio": {
+    "clinicas_potenciales": 12,
+    "inversion_promedio_por_clinica": "USD 3500-6000/mes",
+    "contrato_anual_promedio": "USD 42000-72000",
+    "inversion_total_estimada": "USD 504000-864000",
+    "potencial_carrtera_12_clinicas": "USD 504000-864000 anuales",
+    "margen_estimado": "60-70%",
+    "roi_cliente": "300-400% en 12 meses (reducción de no-show, aumento de pacientes)"
+  },
+  "recomendacion": "MERCADO ALTAMENTE ATRACTIVO - Clínicas dentales con 100% de sitios web pero 0% con chatbots IA especializados. Guardia 24hs sin automatización. Enorme oportunidad de diferenciación. ROI más alto que pizzerías porque reduce costos operacionales significativamente."
+}

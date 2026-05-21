@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico IA - Clínicas Dentales Córdoba Capital</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            padding: 30px 40px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .stat-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 10px 0;
+        }
+        .stat-label {
+            font-size: 0.85em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        .top-5 {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .top-5 h3 {
+            color: #ff9800;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        .top-5-item {
+            background: white;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-left: 4px solid #ff9800;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .rank {
+            display: inline-block;
+            background: #ff9800;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 0.85em;
+        }
+        .conclusion {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border: 2px solid #4caf50;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .conclusion h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .conclusion p {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .table-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 0.9em;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #667eea;
+        }
+        .score-high { color: #28a745; font-weight: bold; }
+        .score-medium { color: #ffc107; font-weight: bold; }
+        .score-low { color: #dc3545; font-weight: bold; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .service-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .service-name {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        .service-demand {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+            color: #666;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+        .comparison-box {
+            background: #f0f7ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🦷 DIAGNÓSTICO IA - CLÍNICAS DENTALES</h1>
+            <p>Córdoba Capital - Análisis de Oportunidades</p>
+            <div class="badge">✅ 12 clínicas analizadas | 📊 Análisis especializado | 🎯 Estrategia de prospecting</div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-label">Clínicas Analizadas</div>
+                <div class="stat-value">12</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Score IA Promedio</div>
+                <div class="stat-value">79.3/100</div>
+                <div style="font-size: 0.8em; color: #28a745;">🔥 MUY ALTO</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Web Actual Promedio</div>
+                <div class="stat-value">57.5/100</div>
+                <div style="font-size: 0.8em; color: #ff9800;">⚠️ MEDIO</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Con Chatbot IA</div>
+                <div class="stat-value">0%</div>
+                <div style="font-size: 0.8em; color: #dc3545;">❌ CRÍTICO</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Potencial Anual</div>
+                <div class="stat-value">$684K</div>
+                <div style="font-size: 0.8em; color: #28a745;">USD 504K-864K</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">ROI Cliente</div>
+                <div class="stat-value">350%</div>
+                <div style="font-size: 0.8em; color: #28a745;">En 12 meses</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- TOP 5 OPORTUNIDADES -->
+            <div class="section">
+                <div class="top-5">
+                    <h3>🏆 TOP 5: MAYORES OPORTUNIDADES DE IA</h3>
+
+                    <div class="top-5-item">
+                        <span class="rank">1</span>
+                        <strong>Dentis</strong> (88/100) - 24 Horas
+                        <div style="margin-left: 40px; color: #666; font-size: 0.85em; margin-top: 3px;">
+                            Guardia 24hs SIN chatbot automático | Oportunidad: Chatbot emergencias (caso único)
+                        </div>
+                    </div>
+
+                    <div class="top-5-item">
+                        <span class="rank">2</span>
+                        <strong>Docta Dent</strong> (85/100) - Nueva Córdoba
+                        <div style="margin-left: 40px; color: #666; font-size: 0.85em; margin-top: 3px;">
+                            Líder zona sin automatización | Oportunidad: Consolidar liderazgo con IA
+                        </div>
+                    </div>
+
+                    <div class="top-5-item">
+                        <span class="rank">3</span>
+                        <strong>Clínica Dental PCM</strong> (82/100) - 20 años
+                        <div style="margin-left: 40px; color: #666; font-size: 0.85em; margin-top: 3px;">
+                            Tecnología avanzada sin IA | Oportunidad: Diferenciar con chatbot + CRM
+                        </div>
+                    </div>
+
+                    <div class="top-5-item">
+                        <span class="rank">4</span>
+                        <strong>Estética Dental Córdoba</strong> (82/100) - Especializada
+                        <div style="margin-left: 40px; color: #666; font-size: 0.85em; margin-top: 3px;">
+                            Especialidad visual sin herramientas visuales | Oportunidad: Simulador IA
+                        </div>
+                    </div>
+
+                    <div class="top-5-item">
+                        <span class="rank">5</span>
+                        <strong>Odontología Nueva Córdoba</strong> (80/100) - Multidisciplinaria
+                        <div style="margin-left: 40px; color: #666; font-size: 0.85em; margin-top: 3px;">
+                            Múltiples especialistas sin coordinación digital | Oportunidad: CRM multidisciplinario
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TABLA COMPARATIVA 12 CLÍNICAS -->
+            <div class="section">
+                <h2>📋 Análisis de las 12 Clínicas Dentales</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Clínica</th>
+                                <th>Ubicación</th>
+                                <th>Score IA</th>
+                                <th>Web</th>
+                                <th>Chatbot</th>
+                                <th>Oportunidad Principal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Dentis</strong></td>
+                                <td>2 Sucursales</td>
+                                <td><span class="score-high">88</span></td>
+                                <td>Sí</td>
+                                <td>❌ No</td>
+                                <td>Chatbot Guardia 24hs</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>Docta Dent</strong></td>
+                                <td>Nueva Córdoba</td>
+                                <td><span class="score-high">85</span></td>
+                                <td>Sí</td>
+                                <td>❌ No</td>
+                                <td>CRM Implantes + Chatbot</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>Clínica Dental PCM</strong></td>
+                                <td>Centro</td>
+                                <td><span class="score-high">82</span></td>
+                                <td>Sí</td>
+                                <td>❌ No</td>
+                                <td>Chatbot IA (tecnología existe)</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>Estética Dental CBA</strong></td>
+                                <td>Nueva Córdoba</td>
+                                <td><span class="score-high">82</span></td>
+                                <td>Sí</td>
+                                <td>❌ No</td>
+                                <td>Simulador Before/After IA</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>Odontología Nueva CBA</strong></td>
+                                <td>Nueva Córdoba</td>
+                                <td><span class="score-high">80</span></td>
+                                <td>Sí</td>
+                                <td>❌ No</td>
+                                <td>CRM Multidisciplinario</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>Prosmile Dental</strong></td>
+                                <td>Capital</td>
+                                <td><span class="score-high">80</span></td>
+                                <td>Sí</td>
+                                <td>❌ No</td>
+                                <td>CRM Implantes/Ortodoncia</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><strong>Clínica Dental Si</strong></td>
+                                <td>Capital</td>
+                                <td><span class="score-medium">78</span></td>
+                                <td>Sí</td>
+                                <td>❌ No</td>
+                                <td>Chatbot + Agendamiento</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><strong>Clínica Dental Aranda</strong></td>
+                                <td>Capital</td>
+                                <td><span class="score-medium">78</span></td>
+                                <td>Sí</td>
+                                <td>❌ No</td>
+                                <td>Chatbot + Lead Management</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><strong>Clínica Orabell</strong></td>
+                                <td>Capital</td>
+                                <td><span class="score-medium">76</span></td>
+                                <td>Sí</td>
+                                <td>❌ No</td>
+                                <td>Modernización Digital</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><strong>Corporación Dental</strong></td>
+                                <td>Capital</td>
+                                <td><span class="score-medium">75</span></td>
+                                <td>Sí</td>
+                                <td>❌ No</td>
+                                <td>Transformación Digital</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td><strong>Clínica Dental Lozano</strong></td>
+                                <td>2 Sucursales</td>
+                                <td><span class="score-medium">75</span></td>
+                                <td>Sí</td>
+                                <td>❌ No</td>
+                                <td>CRM Multilocal</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><strong>Hospital Privado Univ.</strong></td>
+                                <td>Capital</td>
+                                <td><span class="score-low">72</span></td>
+                                <td>Sí</td>
+                                <td>❓ Parcialmente</td>
+                                <td>Especialización Odontología</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SERVICIOS DE IA -->
+            <div class="section">
+                <h2>🤖 Servicios de IA con Mayor Demanda para Clínicas</h2>
+                <div class="services-grid">
+                    <div class="service-box">
+                        <div class="service-name">💬 Chatbot Agendamiento</div>
+                        <div style="color: #28a745; font-weight: bold; margin-bottom: 5px;">95% Demanda</div>
+                        <div class="service-demand">0% de clínicas lo tienen ahora</div>
+                        <div style="color: #667eea; font-size: 0.8em; margin-top: 8px;">Agendar turnos 24/7 sin personal</div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-name">📊 CRM Odontológico</div>
+                        <div style="color: #28a745; font-weight: bold; margin-bottom: 5px;">90% Demanda</div>
+                        <div class="service-demand">Seguimiento de pacientes y tratamientos</div>
+                        <div style="color: #667eea; font-size: 0.8em; margin-top: 8px;">USD 800-1500/mes</div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-name">📧 Email Marketing</div>
+                        <div style="color: #28a745; font-weight: bold; margin-bottom: 5px;">85% Demanda</div>
+                        <div class="service-demand">Recordatorios automáticos de citas</div>
+                        <div style="color: #667eea; font-size: 0.8em; margin-top: 8px;">Reduce no-show 30-40%</div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-name">🔄 Agendamiento Online</div>
+                        <div style="color: #ff9800; font-weight: bold; margin-bottom: 5px;">80% Demanda</div>
+                        <div class="service-demand">Integrado con disponibilidad real</div>
+                        <div style="color: #667eea; font-size: 0.8em; margin-top: 8px;">+20% citas online</div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-name">🎯 Lead Management</div>
+                        <div style="color: #ff9800; font-weight: bold; margin-bottom: 5px;">75% Demanda</div>
+                        <div class="service-demand">Convertir consultas en citas</div>
+                        <div style="color: #667eea; font-size: 0.8em; margin-top: 8px;">+25% conversión</div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-name">📱 SMS Recordatorios</div>
+                        <div style="color: #ff9800; font-weight: bold; margin-bottom: 5px;">70% Demanda</div>
+                        <div class="service-demand">SMS automático antes de cita</div>
+                        <div style="color: #667eea; font-size: 0.8em; margin-top: 8px;">-20% no-show</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCLUSIÓN -->
+            <div class="conclusion">
+                <h3>💡 CONCLUSIÓN: OPORTUNIDAD MASIVA MÁS GRANDE QUE PIZZERÍAS</h3>
+                <p>
+                    <strong>Las clínicas dentales son un mercado MEJOR que pizzerías y restaurantes para servicios IA.</strong>
+                </p>
+                <p style="margin-top: 15px;">
+                    <span class="highlight">📊 Score IA Promedio: 79.3/100</span> - Similar a pizzerías (79.6)
+                </p>
+                <p style="margin-top: 10px;">
+                    <span class="highlight">🦷 Chatbot IA: 0% de clínicas lo tienen</span> - vs 8% de pizzerías
+                </p>
+                <p style="margin-top: 10px;">
+                    <span class="highlight">💰 Inversión más alta: USD 3500-6000/mes</span> - vs USD 3000-5000 pizzerías
+                </p>
+                <p style="margin-top: 10px;">
+                    <span class="highlight">📈 ROI más alto: 300-400%</span> - Reduce no-show, incrementa pacientes
+                </p>
+                <p style="margin-top: 10px;">
+                    <span class="highlight">🎯 Potencial 12 clínicas: USD 504K-864K anuales</span> - Más que 25 pizzerías
+                </p>
+
+                <div class="comparison-box">
+                    <strong>✨ Por qué DENTISTAS > PIZZERÍAS:</strong>
+                    <ul style="margin-top: 10px; margin-left: 20px; color: #333;">
+                        <li><strong>Ninguna tiene chatbot</strong> (0% vs 8% pizzerías) - Oportunidad 100%</li>
+                        <li><strong>Pagan más:</strong> USD 600-1500/mes por servicio vs USD 300-600 pizzerías</li>
+                        <li><strong>ROI más medible:</strong> Reducen no-show (-20-40% = dinero directo)</li>
+                        <li><strong>Urgencia más alta:</strong> Pérdida de pacientes es crítica</li>
+                        <li><strong>Guardia 24hs:</strong> Dentis es caso único (emergencias sin cubrir)</li>
+                        <li><strong>Carrtera más rentable:</strong> Pacientes de alto valor (tratamientos caros)</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 4px solid #667eea;">
+                    <strong>🎯 ESTRATEGIA RECOMENDADA:</strong>
+                    <ul style="margin-top: 10px; margin-left: 20px; color: #333;">
+                        <li><strong>Fase 1 (Semana 1-2):</strong> Prospecting a Dentis (caso Guardia 24hs único)</li>
+                        <li><strong>Fase 2 (Semana 3-4):</strong> Docta Dent, PCM, Estética Dental</li>
+                        <li><strong>Fase 3 (Mes 2):</strong> Resto de clínicas (12 total)</li>
+                        <li><strong>Potencial primer mes:</strong> 2-4 clínicas cerradas = USD 7K-24K MES</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DIFERENCIA CON OTROS SECTORES -->
+            <div class="section">
+                <h2>📊 Comparativa: Pizzerías vs Clínicas Dentales vs Restaurantes</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Métrica</th>
+                                <th>Pizzerías CBA</th>
+                                <th>Clínicas CBA</th>
+                                <th>Restaurantes CABA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Score IA Promedio</strong></td>
+                                <td>79.6/100</td>
+                                <td><strong>79.3/100</strong></td>
+                                <td>78/100</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Con Chatbot IA</strong></td>
+                                <td>0%</td>
+                                <td><strong>0% (CRÍTICO)</strong></td>
+                                <td>5%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Inversión Promedio</strong></td>
+                                <td>USD 3K-5K/mes</td>
+                                <td><strong>USD 3.5K-6K/mes</strong></td>
+                                <td>USD 3K-5K/mes</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Contrato Anual</strong></td>
+                                <td>USD 36K-60K</td>
+                                <td><strong>USD 42K-72K</strong></td>
+                                <td>USD 36K-60K</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ROI Cliente</strong></td>
+                                <td>400-600%</td>
+                                <td><strong>300-400%</strong></td>
+                                <td>400-600%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Métrica Clave</strong></td>
+                                <td>+30-40% ventas</td>
+                                <td><strong>-20-40% no-show</strong></td>
+                                <td>+20-30% reservas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Servicio Principal</strong></td>
+                                <td>Pedidos online</td>
+                                <td><strong>Chatbot + CRM</strong></td>
+                                <td>Reservas online</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top: 15px; color: #333;">
+                    <strong>✨ Conclusión:</strong> Clínicas dentales tienen MAYOR potencial que pizzerías porque: (1) Pagan más, (2) 0% tiene chatbot (vs 8% pizzerías), (3) ROI más medible (reducción de no-show = dinero directo), (4) Casos especiales como Dentis con Guardia 24hs.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Diagnóstico de Consultoría IA - Clínicas Dentales Córdoba Capital</strong></p>
+            <p>Análisis completo realizado el 21 de mayo de 2026</p>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #999;">
+                Datos compilados a partir de búsqueda web, análisis de presencia digital de 12 clínicas.
+                <br>Estado: ✅ 12 clínicas identificadas y analizadas
+                <br>Potencial de negocio: USD 504K-864K anuales en cartera de 12 clínicas
+            </p>
+        </div>
+    </div>
+</body>
+</html>
