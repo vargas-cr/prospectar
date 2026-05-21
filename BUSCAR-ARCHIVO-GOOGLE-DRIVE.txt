@@ -1,0 +1,257 @@
+========================================================================================
+🔍 BUSCAR EL ARCHIVO EN GOOGLE DRIVE
+========================================================================================
+
+El archivo puede estar en varios lugares. Vamos a buscarlo paso a paso.
+
+========================================================================================
+PASO 1: ABRE GOOGLE DRIVE
+========================================================================================
+
+URL: https://drive.google.com
+
+Inicia sesión con: argentia.ai@gmail.com
+
+========================================================================================
+PASO 2: BUSCA LA CARPETA "HUBSPOT REPORTS"
+========================================================================================
+
+MÉTODO A: Buscar directamente
+
+En la página de Google Drive, arriba ves un SEARCH BOX.
+
+Click en el search box y escribe:
+"HubSpot Reports"
+
+Press Enter.
+
+¿QUÉ VERÍAS?
+- Si aparece una carpeta llamada "HubSpot Reports" → ENCONTRADO ✓
+- Si aparecen varios archivos → Abre cada carpeta
+
+MÉTODO B: Ver todas las carpetas
+
+En el menú izquierdo:
+- Click en "My Drive" (Inicio)
+
+Scroll down y busca una carpeta llamada:
+- "HubSpot Reports"
+- "Restaurantes - Leads Export"
+- "Reports"
+- Cualquier nombre que hayas puesto
+
+¿VES ALGUNA CARPETA DE HUBSPOT?
+- SÍ → Abre y busca adentro
+- NO → Ir al PASO 3
+
+========================================================================================
+PASO 3: ¿ESTÁ CONECTADO GOOGLE DRIVE A HUBSPOT?
+========================================================================================
+
+El problema más común es que Google Drive NO está conectado a HubSpot.
+
+Verifica en HubSpot:
+
+1. Ve a: Settings → Integrations (o Integrations & Extensions)
+2. Busca: "Google Drive"
+3. ¿QUÉ VES?
+
+OPCIÓN A: "Google Drive ✓ Connected"
+→ Está conectado, pero el archivo puede no haber sido exportado
+→ Ir a PASO 4
+
+OPCIÓN B: "Google Drive - Not connected" o "Disconnected"
+→ NO está conectado
+→ SOLUCIÓN: Click "Connect" → Autoriza Google Drive → Reconecta
+
+OPCIÓN C: No aparece Google Drive en integraciones
+→ HubSpot puede no tener la integración
+→ SOLUCIÓN: Click "+ Add integration" → Busca "Google Drive" → Conecta
+
+========================================================================================
+PASO 4: ¿EXPORTASTE EL REPORT?
+========================================================================================
+
+Vuelve a HubSpot y verifica que el REPORT fue realmente exportado.
+
+1. Ve a: Reports
+2. Abre el report "Restaurantes - Leads Export"
+3. En la pantalla del report, busca un botón con "..."
+4. Click en "..."
+5. Busca una opción que diga:
+   - "Export to Google Drive"
+   - "Google Drive settings"
+   - "Download"
+
+¿QUÉ VES?
+
+OPCIÓN A: "Last exported: [fecha/hora]"
+→ El report YA fue exportado
+→ El archivo DEBERÍA estar en Google Drive
+→ Ir a PASO 2 nuevamente (buscar con más cuidado)
+
+OPCIÓN B: No ves nada sobre exportación
+→ El report NUNCA fue exportado
+→ Necesitas exportar manualmente
+→ SOLUCIÓN: Click "Export to Google Drive" → Elige carpeta → Exporta
+
+OPCIÓN C: "Not connected" o "Reconnect"
+→ La conexión se perdió
+→ SOLUCIÓN: Click "Reconnect" → Autoriza Google → Intenta de nuevo
+
+========================================================================================
+PASO 5: BUSCAR EN CARPETAS MENOS OBVIAS
+========================================================================================
+
+A veces Google Drive guarda el archivo en un lugar inesperado.
+
+BÚSQUEDA AVANZADA:
+
+1. En Google Drive, arriba: Click en SEARCH
+2. Click en "Search all files"
+3. Escribe:
+   - "csv" (extensión del archivo)
+   - "xlsx" (si es Excel)
+   - "Restaurantes" (parte del nombre)
+
+¿QUÉ VERÁS?
+- Una lista de archivos CSV/XLSX en tu Drive
+- Busca el más RECIENTE (fecha más nueva)
+
+RESULTADO:
+- Si ves un archivo reciente → ESE es el que buscas ✓
+- Si no ves nada reciente → El archivo no fue exportado
+
+========================================================================================
+PASO 6: BUSCAR EN "RECIENTES"
+========================================================================================
+
+En Google Drive:
+- Menú izquierda → "Recent" (o "Recientes")
+
+Deberías ver archivos que subiste recientemente.
+
+¿VES ALGÚN ARCHIVO DE HUBSPOT?
+- SÍ → Abre y verifica que tenga los 25 restaurantes
+- NO → El archivo no fue exportado todavía
+
+========================================================================================
+PASO 7: ¿FUE COMPARTIDO CONTIGO?
+========================================================================================
+
+Si otra persona lo exportó, puede que esté en "Shared with me".
+
+En Google Drive:
+- Menú izquierda → "Shared with me"
+
+¿VES ALGO RELACIONADO A HUBSPOT?
+- SÍ → Abre y verifica
+- NO → Continúa
+
+========================================================================================
+SI NO ENCUENTRAS EL ARCHIVO (SOLUCIONES)
+========================================================================================
+
+SOLUCIÓN 1: EXPORTAR MANUALMENTE
+
+1. En HubSpot, abre el report "Restaurantes - Leads Export"
+2. Click en "..." (arriba derecha)
+3. Click: "Export to Google Drive"
+4. Diálogo se abre:
+   ┌────────────────────────────────┐
+   │ Save report to Google Drive     │
+   │                                │
+   │ Folder: [HubSpot Reports]       │
+   │ Frequency: [One time]           │
+   │ Button: [Export]                │
+   └────────────────────────────────┘
+
+5. Click: "Export"
+6. Espera 2-3 minutos
+7. Ve a Google Drive y busca la carpeta "HubSpot Reports"
+
+RESULTADO: El archivo debería aparecer.
+
+SOLUCIÓN 2: DESCARGAR COMO CSV
+
+Si Google Drive no funciona, descarga directo de HubSpot:
+
+1. En HubSpot, abre el report
+2. Click en "..." → "Download CSV"
+3. Se descarga un archivo a tu computadora
+4. Luego lo subes manualmente a Google Drive:
+   - Ve a Google Drive
+   - Click en "+ New"
+   - "File upload"
+   - Selecciona el archivo descargado
+   - Se sube a Google Drive
+
+RESULTADO: El archivo está en Google Drive (pero manual).
+
+SOLUCIÓN 3: RECONECTAR GOOGLE DRIVE
+
+Si nada funciona, reconecta desde cero:
+
+1. En HubSpot: Settings → Integrations
+2. Busca "Google Drive"
+3. Click: "Disconnect" (desconecta)
+4. Click: "Connect" (vuelve a conectar)
+5. Autoriza de nuevo con Google
+6. Intenta exportar de nuevo
+
+RESULTADO: Debería funcionar después.
+
+========================================================================================
+CHECKLIST: ¿DÓNDE ESTÁ EL ARCHIVO?
+========================================================================================
+
+Verifica EN ESTE ORDEN:
+
+☐ Google Drive → My Drive → "HubSpot Reports" carpeta
+☐ Google Drive → Search → "HubSpot" o "Restaurantes"
+☐ Google Drive → Recent → Archivos más recientes
+☐ Google Drive → Shared with me → Compartido por otros
+☐ HubSpot → Report → "Last exported" dice una fecha
+☐ Google Drive Integrations en HubSpot → Status "Connected"
+
+SI NINGUNO DE ESTOS ESTÁ CHEQUEADO:
+→ El archivo probablemente NO fue exportado
+→ Exporta manualmente (SOLUCIÓN 1)
+
+========================================================================================
+¿CUÁL ES EL PROBLEMA MÁS PROBABLE?
+========================================================================================
+
+PROBLEMA 1 (80% de casos): "Google Drive no está conectado en HubSpot"
+SOLUCIÓN: Ve a Settings → Integrations → Conecta Google Drive
+
+PROBLEMA 2 (15% de casos): "El report nunca fue exportado"
+SOLUCIÓN: Exporta manualmente (SOLUCIÓN 1)
+
+PROBLEMA 3 (5% de casos): "El archivo está en otro lugar"
+SOLUCIÓN: Busca con "Search" en Google Drive
+
+========================================================================================
+PRÓXIMOS PASOS
+========================================================================================
+
+1. Verifica si Google Drive está conectado en HubSpot (PASO 3)
+2. Si NO → Conecta
+3. Si SÍ → Exporta manualmente (SOLUCIÓN 1)
+4. Espera 2-3 minutos
+5. Busca en Google Drive (PASO 2)
+6. Listo - Debería estar allá ✓
+
+========================================================================================
+NECESITAS AYUDA?
+
+Si probaste TODO y aún no encuentras el archivo:
+
+1. Abre HubSpot
+2. Ve a: Reports → "Restaurantes - Leads Export"
+3. Cuéntame:
+   - ¿Dónde dice "Last exported"? (¿aparece una fecha?)
+   - ¿Google Drive está conectado en Settings → Integrations?
+   - ¿Qué ves cuando haces click en "Export to Google Drive"?
+
+Con esa información puedo decirte exactamente qué hacer.
