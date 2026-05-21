@@ -1,0 +1,319 @@
+========================================================================================
+📨 GOOGLE APPS SCRIPT - CÓDIGO PARA ENVIAR EMAILS AUTOMATICAMENTE
+========================================================================================
+
+INSTRUCCIONES:
+1. Ve a tu Google Sheet
+2. Click en "Extensiones" → "Apps Script"
+3. Borra el código que viene
+4. Copia TODO el código de abajo (completo)
+5. Reemplaza SOLO estas 4 líneas con TUS DATOS:
+   - const TU_NOMBRE = "...";
+   - const TU_TELEFONO = "...";
+   - const TU_EMAIL = "...";
+   - const EMAIL_DESDE = "...";
+6. Click en "Guardar"
+7. Click en "Ejecutar"
+
+========================================================================================
+CÓDIGO COMPLETO (Copia TODO esto)
+========================================================================================
+
+// ===== CONFIGURACIÓN =====
+// REEMPLAZA ESTOS VALORES CON LOS TUYOS
+const TU_NOMBRE = "Juan García";              // Tu nombre
+const TU_TELEFONO = "+54 9 351 123-4567";     // Tu teléfono
+const TU_EMAIL = "juan@email.com";            // Tu email
+const EMAIL_DESDE = "argentia.ai@gmail.com";  // Tu Gmail conectado (igual que verificaste)
+
+// ===== FUNCIÓN PRINCIPAL - EJECUTA ESTO =====
+function enviarEmailsAutomaticamente() {
+  const sheet = SpreadsheetApp.getActiveSheet();
+  const data = sheet.getDataRange().getValues();
+
+  // Recorre cada fila (empezando de fila 2, porque fila 1 es encabezados)
+  for (let i = 1; i < data.length; i++) {
+    const clinicaNombre = data[i][0];  // Columna A: Nombre Clínica
+    const emailContacto = data[i][1];  // Columna B: Email Contacto
+    const telefonoContacto = data[i][2]; // Columna C: Teléfono
+    const especialidad = data[i][3];   // Columna D: Especialidad
+    const oportunidadIA = data[i][4];  // Columna E: Oportunidad IA
+    const emailPersonalizado = data[i][5]; // Columna F: Email Personalizado
+    const estadoActual = data[i][6];   // Columna G: Estado
+
+    // Solo envía si el estado está VACÍO (es decir, aún no se envió)
+    if (!estadoActual || estadoActual.trim() === "") {
+      enviarEmail(
+        emailContacto,
+        clinicaNombre,
+        emailPersonalizado,
+        i + 1  // Fila actual (para actualizar después)
+      );
+
+      // Pequeña pausa para no saturar Gmail (2 segundos entre emails)
+      Utilities.sleep(2000);
+    }
+  }
+
+  Logger.log("✅ Emails enviados completamente");
+}
+
+// ===== FUNCIÓN PARA ENVIAR UN EMAIL =====
+function enviarEmail(email, clinicaNombre, contenidoEmail, fila) {
+  try {
+    // ASUNTO DEL EMAIL
+    const asunto = `Oportunidad IA para ${clinicaNombre}`;
+
+    // CUERPO DEL EMAIL - Personalizado
+    let cuerpo = contenidoEmail.trim();
+
+    // Reemplaza placeholders
+    cuerpo = cuerpo.replace(/\[TU NOMBRE\]/g, TU_NOMBRE);
+    cuerpo = cuerpo.replace(/\[TU TELÉFONO\]/g, TU_TELEFONO);
+    cuerpo = cuerpo.replace(/\[TU EMAIL\]/g, TU_EMAIL);
+
+    // ENVÍA EL EMAIL
+    GmailApp.sendEmail(
+      email,
+      asunto,
+      cuerpo,
+      {
+        from: EMAIL_DESDE,
+        name: TU_NOMBRE,
+        replyTo: TU_EMAIL
+      }
+    );
+
+    // ACTUALIZA LA HOJA
+    const sheet = SpreadsheetApp.getActiveSheet();
+    const fechaActual = new Date().toLocaleString('es-AR');
+
+    // Columna G (Estado) = "Enviado"
+    sheet.getRange(fila, 7).setValue("Enviado");
+
+    // Columna H (Fecha Envío) = fecha/hora actual
+    sheet.getRange(fila, 8).setValue(fechaActual);
+
+    Logger.log(`✅ Email enviado a ${email} (${clinicaNombre})`);
+
+  } catch (error) {
+    Logger.log(`❌ Error enviando email a ${email}: ${error}`);
+  }
+}
+
+// ===== FUNCIÓN PARA MONITOREAR RESPUESTAS =====
+function verificarRespuestas() {
+  const sheet = SpreadsheetApp.getActiveSheet();
+  const data = sheet.getDataRange().getValues();
+
+  // Obtiene todos los threads de Gmail
+  const threads = GmailApp.getInboxThreads();
+
+  for (let thread of threads) {
+    const messages = thread.getMessages();
+    for (let msg of messages) {
+      // Si es una respuesta (no es el primer mensaje del thread)
+      if (!msg.isStarred()) {
+        const senderEmail = msg.getFrom();
+        const subject = msg.getSubject();
+        const body = msg.getPlainBody().substring(0, 100); // Primeras 100 caracteres
+
+        // Busca en el sheet si este email ya existe
+        for (let i = 1; i < data.length; i++) {
+          if (data[i][1] === senderEmail) {
+            // Actualiza como "Respondió"
+            sheet.getRange(i + 1, 7).setValue("Respondió");
+            sheet.getRange(i + 1, 9).setValue(body); // Columna I: Respuesta
+
+            Logger.log(`✅ Respuesta de ${senderEmail}: "${body}"`);
+          }
+        }
+      }
+    }
+  }
+}
+
+// ===== FUNCIÓN PARA CREAR ACTIVADOR (EJECUTAR AUTOMÁTICAMENTE CADA DÍA) =====
+function crearActivadorDiario() {
+  // Elimina activadores anteriores (opcional)
+  const triggers = ScriptApp.getProjectTriggers();
+  for (let trigger of triggers) {
+    ScriptApp.deleteTrigger(trigger);
+  }
+
+  // Crea nuevo activador para ejecutar CADA DÍA a las 10:00 AM
+  ScriptApp.newTrigger('enviarEmailsAutomaticamente')
+    .timeBased()
+    .atHour(10)
+    .everyDays(1)
+    .create();
+
+  Logger.log("✅ Activador creado - Se ejecutará diariamente a las 10:00 AM");
+}
+
+// ===== FUNCIÓN PARA CREAR ACTIVADOR CADA HORA (VERIFICAR RESPUESTAS) =====
+function crearActivadorVerificacionRespuestas() {
+  // Elimina activadores anteriores (opcional)
+  const triggers = ScriptApp.getProjectTriggers();
+  for (let trigger of triggers) {
+    if (trigger.getHandlerFunction() === 'verificarRespuestas') {
+      ScriptApp.deleteTrigger(trigger);
+    }
+  }
+
+  // Crea activador que verifica respuestas CADA HORA
+  ScriptApp.newTrigger('verificarRespuestas')
+    .timeBased()
+    .everyHours(1)
+    .create();
+
+  Logger.log("✅ Activador de respuestas creado - Verificará cada hora");
+}
+
+// ===== FUNCIÓN PARA LIMPIAR ACTIVADORES =====
+function limpiarActivadores() {
+  const triggers = ScriptApp.getProjectTriggers();
+  for (let trigger of triggers) {
+    ScriptApp.deleteTrigger(trigger);
+  }
+  Logger.log("✅ Todos los activadores eliminados");
+}
+
+========================================================================================
+CÓMO USAR ESTE CÓDIGO
+========================================================================================
+
+**OPCIÓN 1: Envío Manual (Ejecuta una vez)**
+
+1. Copia el código arriba
+2. Pega en Google Apps Script
+3. Reemplaza TUS 4 variables
+4. Click en ▶️ Ejecutar
+5. La primera vez pide autorización → Autoriza
+6. Los emails se envían AHORA
+7. Columnas G y H se actualizan automáticamente
+
+**OPCIÓN 2: Envío Automático Cada Día**
+
+1. Copia el código arriba
+2. Pega en Google Apps Script
+3. Reemplaza TUS 4 variables
+4. En la consola, selecciona: **"crearActivadorDiario"**
+5. Click en ▶️ Ejecutar
+6. Autoriza
+7. AHORA: Cada día a las 10:00 AM, se envían automáticamente TODOS los emails pendientes
+
+**OPCIÓN 3: Verificación Automática de Respuestas**
+
+1. En la consola, selecciona: **"crearActivadorVerificacionRespuestas"**
+2. Click en ▶️ Ejecutar
+3. AHORA: Cada hora, el script verifica si hay respuestas y actualiza el sheet
+
+========================================================================================
+QUÉ HACE CADA FUNCIÓN
+========================================================================================
+
+**enviarEmailsAutomaticamente()**
+- Lee cada fila del sheet
+- Si Columna G (Estado) está VACÍA, envía el email
+- Actualiza Columna G a "Enviado"
+- Llena Columna H con fecha/hora del envío
+
+**enviarEmail()**
+- Función auxiliar que envía 1 email
+- Personaliza con TU_NOMBRE, TU_TELÉFONO, TU_EMAIL
+- Maneja errores si algo falla
+
+**verificarRespuestas()**
+- Checkea todos los mensajes de tu Gmail
+- Si encuenta un email de un prospect, lo marca como "Respondió"
+- Copia la respuesta en Columna I
+
+**crearActivadorDiario()**
+- Programa el envío automático para ejecutarse cada día a las 10am
+- NO NECESITAS hacer nada, se ejecuta solo
+
+**crearActivadorVerificacionRespuestas()**
+- Programa la verificación de respuestas cada hora
+- Detecta automáticamente quién respondió
+
+**limpiarActivadores()**
+- Elimina todos los activadores (si necesitas pausar)
+
+========================================================================================
+VARIABLES IMPORTANTES - REEMPLAZA ESTAS
+========================================================================================
+
+const TU_NOMBRE = "Juan García";
+→ Reemplaza "Juan García" con TU nombre real
+
+const TU_TELEFONO = "+54 9 351 123-4567";
+→ Reemplaza con TU teléfono WhatsApp
+
+const TU_EMAIL = "juan@email.com";
+→ Reemplaza con TU email
+
+const EMAIL_DESDE = "argentia.ai@gmail.com";
+→ Reemplaza con TU Gmail conectado a HubSpot
+
+EJEMPLO CORRECTO:
+const TU_NOMBRE = "María González";
+const TU_TELEFONO = "+54 9 351 555-6666";
+const TU_EMAIL = "maria@email.com";
+const EMAIL_DESDE = "argentia.ai@gmail.com";
+
+========================================================================================
+TROUBLESHOOTING
+========================================================================================
+
+❌ "Permiso denegado"
+→ Algunos permisos requieren verificación. Click en el email de Google
+→ Verifica el dispositivo/navegador
+
+❌ "Error enviando email"
+→ El email del prospect puede estar mal escrito
+→ Gmail está sin conexión
+→ Check internet connection
+
+❌ "No actualiza automáticamente"
+→ Asegúrate de crear el ACTIVADOR (crearActivadorDiario)
+→ Si es la primera vez, puede tomar 5-10 minutos
+
+❌ "No recibí la autorización"
+→ Ve a Google Apps Script → Ejecuciones (relojito lado izquierdo)
+→ Debería haber un error listado
+
+❌ "El Estado sigue vacío"
+→ Ejecuta manualmente: Click en ▶️ Ejecutar
+→ Verifica que la columna G esté realmente vacía (sin espacios)
+
+========================================================================================
+LOGS Y DEBUGGING
+========================================================================================
+
+Para ver qué está pasando:
+
+1. En Google Apps Script, click en **"Ejecuciones"** (relojito 🔧 lado izquierdo)
+2. Verás un registro de cada ejecución
+3. Si hay errores, aparecerán listados
+4. Click en el error para ver detalles
+
+También puedes agregar logs para debugging:
+Logger.log("Mi mensaje de debug");
+
+Aparecerán en la consola de ejecuciones.
+
+========================================================================================
+LISTO PARA AUTOMATIZAR TU PROSPECTING
+========================================================================================
+
+Este script:
+✅ Envía emails personalizados automáticamente
+✅ Trackea estado de cada email (Enviado/Respondió/No respondió)
+✅ Verifica respuestas automáticamente cada hora
+✅ Se puede programar para ejecutarse cada día sin tocar nada
+✅ TODO desde Gmail + Google Sheets
+
+No necesitas HubSpot. No necesitas hacer nada manualmente después de configurar.
+
+========================================================================================

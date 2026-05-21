@@ -1,0 +1,375 @@
+========================================================================================
+🤖 SISTEMA AUTOMATIZADO: GOOGLE SHEETS + GMAIL
+========================================================================================
+
+Sistema para buscar leads, recolectar emails, y enviar emails automaticamente desde Gmail.
+
+ESTRUCTURA DEL SISTEMA:
+1. Google Sheet con datos de clínicas dentales
+2. Google Apps Script que lee el sheet y envía emails
+3. Seguimiento automático de estado (Enviado/Respondió/No respondió)
+
+========================================================================================
+PASO 1: CREAR GOOGLE SHEET
+========================================================================================
+
+1. Ve a **sheets.google.com**
+2. Click en **"+ Crear nuevo"** → **"Hoja de cálculo"**
+3. Renombra como: "Prospecting Clínicas Dentales"
+4. Copia esta estructura de columnas:
+
+COLUMNAS (Fila 1 - Encabezados):
+A: Nombre Clínica
+B: Email Contacto
+C: Teléfono
+D: Especialidad
+E: Oportunidad IA
+F: Email Personalizado
+G: Estado
+H: Fecha Envío
+I: Respuesta
+
+COPIA TODOS ESTOS DATOS (Fila 2 en adelante):
+
+Fila 2: Dentis | info@dentis-cba.com.ar | (351) 123-4567 | Guardia 24hs | Chatbot emergencias | [ver abajo] | | |
+Fila 3: Docta Dent | info@doctadent.com.ar | (351) 234-5678 | Implantología | Chatbot + CRM | [ver abajo] | | |
+Fila 4: Clínica Dental PCM | info@clinicadentalpcm.com | (351) 345-6789 | Radiología 3D | Chatbot IA | [ver abajo] | | |
+Fila 5: Estética Dental Córdoba | info@esteticadentalcba.com.ar | (351) 456-7890 | Estética | Galería IA | [ver abajo] | | |
+Fila 6: Odontología Nueva Córdoba | info@odonuevacordoba.com.ar | (351) 567-8901 | Multidisciplinaria | CRM Coordinación | [ver abajo] | | |
+Fila 7: Prosmile Dental | info@prosmiledental.com.ar | (351) 678-9012 | Implantes | CRM Implantes | [ver abajo] | | |
+Fila 8: Clínica Dental Si | info@clinicadentalsi.com | (351) 789-0123 | General | Chatbot Agendar | [ver abajo] | | |
+Fila 9: Clínica Dental Aranda | info@dentistascordoba.com | (351) 890-1234 | General | Chatbot IA | [ver abajo] | | |
+Fila 10: Clínica Orabell | info@clinicaorabell.com | (351) 901-2345 | General | Modernización | [ver abajo] | | |
+Fila 11: Corporación Dental | info@corporacion-dental.com | (351) 012-3456 | General | Transformación | [ver abajo] | | |
+Fila 12: Clínica Dental Lozano | info@clinicadentallozano.com | (351) 111-2222 | General | CRM Multilocal | [ver abajo] | | |
+Fila 13: Hospital Privado Universitario | info@hospitalprivado.com.ar | (351) 222-3333 | Rehabilitación | Chatbot Odonto | [ver abajo] | | |
+
+========================================================================================
+EMAILS PERSONALIZADOS POR CLÍNICA (Copia en columna F)
+========================================================================================
+
+DENTIS:
+"Hola,
+
+Vi que Dentis tiene Guardia 24hs - eso es tu MAYOR ventaja competitiva en Córdoba.
+
+El problema: Cuando un paciente llama a las 2am con dolor, nadie atiende y se va a otro lado. Pierdes USD 200-400 esa noche.
+
+Solución: Chatbot IA que atiende emergencias 24/7, confirma la cita, y tu equipo solo atiende lo que se confirma.
+
+Resultado: 5-7 emergencias adicionales/mes × USD 300 = USD 1,500/mes = USD 18,000/año.
+
+¿Podemos hablar 15 minutos?
+
+[TU NOMBRE]"
+
+---
+
+DOCTA DENT:
+"Hola,
+
+Docta Dent es claramente el líder en Nueva Córdoba. 25 años, excelentes reviews.
+
+Pero en tecnología, están 3-4 años atrás.
+
+Pacientes jóvenes (25-45 años) buscan "dentista online" y si no lo encuentran en Docta Dent, van a otro lado.
+
+Resultado: 22-23 pacientes/mes × USD 200 = USD 4,400/mes = USD 52,800/año perdidos.
+
+Nosotros los lleva a 2026 en 3 semanas: Chatbot, agendamiento online, CRM especializado en implantes.
+
+¿Hablamos?
+
+[TU NOMBRE]"
+
+---
+
+CLÍNICA DENTAL PCM:
+"Hola,
+
+Tienen radiología 3D, escáner intraoral, sedación consciente - tecnología de punta.
+
+Pero probablemente no tienen forma de comunicar eso automáticamente.
+
+Paciente potencial llama: "¿Hacen radiología 3D?" → Tu equipo responde manual vs Competencia con chatbot que dice "Sí, y es 100% digital. Manda foto y te mostramos cómo se vería".
+
+¿Quién ganó?
+
+Ustedes tienen las ARMAS (tecnología), pero sin el chatbot IA que las comunique.
+
+¿Exploramos cómo?
+
+[TU NOMBRE]"
+
+---
+
+ESTÉTICA DENTAL CÓRDOBA:
+"Hola,
+
+Tu especialidad es VISUAL (blanqueamiento, carillas, estética).
+
+Pero tu web probablemente NO muestra ANTES/DESPUÉS.
+
+Pacientes ven tu web → ¿ven casos de éxito? ¿simulaciones? Si no lo ven, se van.
+
+Solución: Galería inteligente con ANTES/DESPUÉS + simulador IA.
+
+Resultado: 9 pacientes perdidos ahora → 5 recuperados/mes × USD 300 = USD 1,500/mes = USD 18,000/año.
+
+¿Quieres ver exactamente cómo funciona?
+
+[TU NOMBRE]"
+
+---
+
+ODONTOLOGÍA NUEVA CÓRDOBA:
+"Hola,
+
+Modelo multidisciplinario = BUENO para calidad.
+
+Pero digitalmente, está desconectado: Paciente llama → atiende alguien que NO es especialista → derivación manual → paciente llama de nuevo → pérdida de información.
+
+Resultado: 12 derivaciones perdidas/mes × USD 250 = USD 3,000/mes = USD 36,000/año.
+
+Solución: CRM que coordina especialistas, ve disponibilidad, agenda automáticamente.
+
+¿Hablamos?
+
+[TU NOMBRE]"
+
+---
+
+PROSMILE DENTAL:
+"Hola,
+
+Implantes + Ortodoncia = tratamientos LARGOS (múltiples fases).
+
+Pacientes necesitan seguimiento, recordatorios, confirmaciones en cada fase.
+
+Sin CRM especializado, todo es manual y desconectado.
+
+Solución: CRM que sigue cada caso desde diagnóstico → colocación → carga → mantenimiento.
+
+Resultado: Mejor retención, menos no-show, pacientes más felices.
+
+¿Podemos hablar?
+
+[TU NOMBRE]"
+
+---
+
+CLÍNICA DENTAL SI:
+"Hola,
+
+Buena clínica, pero probablemente agendan por teléfono (manual).
+
+Eso significa: Pacientes que no consiguen línea → se van a otra.
+
+30-40% de llamadas no se contestan porque el equipo está con pacientes.
+
+Solución: Chatbot que atiende esas llamadas, muestra disponibilidad, agenda automáticamente.
+
+Resultado: 0 llamadas perdidas = más citas confirmadas.
+
+¿Interesa?
+
+[TU NOMBRE]"
+
+---
+
+CLÍNICA DENTAL ARANDA:
+"Hola,
+
+Tienen tecnología moderna, buena presencia web.
+
+¿Pero tienen chatbot IA para atender consultas 24/7?
+
+Si no, estás perdiendo oportunidades.
+
+Solución: Chatbot que responde "¿Cuánto cuesta?", "¿Horarios?", "¿Agendar?", y tú solo atiende lo que se confirma.
+
+Resultado: Más conversión, menos trabajo manual.
+
+¿Exploramos?
+
+[TU NOMBRE]"
+
+---
+
+CLÍNICA ORABELL:
+"Hola,
+
+35 años de experiencia es INCREÍBLE. Eso debería brillar digitalmente.
+
+Pero probablemente sigue con teléfono tradicional.
+
+Pacientes jóvenes buscan "agendar online" y no lo encuentran.
+
+Solución: Modernizar completamente: Web + Chatbot + Agendamiento online.
+
+Resultado: Traer la clínica tradicional al 2026 digitalmente.
+
+¿Hablamos?
+
+[TU NOMBRE]"
+
+---
+
+CORPORACIÓN DENTAL:
+"Hola,
+
+Tienen sitio web, pero probablemente sin automatización.
+
+Significa: Teléfono manual, sin chatbot, sin recordatorios, sin seguimiento.
+
+Solución completa: Chatbot + CRM + Email marketing + Agendamiento online.
+
+Resultado: Transformación digital total.
+
+¿Interesa?
+
+[TU NOMBRE]"
+
+---
+
+CLÍNICA DENTAL LOZANO:
+"Hola,
+
+Tienen 2 sucursales + opciones de financiación (gran ventaja).
+
+Pero probablemente no muestran eso digitalmente.
+
+Pacientes no saben que existe financiación → se van a otro lado.
+
+Solución: Web que MUESTRE planes de financiación + Chatbot que explique.
+
+Resultado: Más conversión por aprovechar tu ventaja competitiva.
+
+¿Podemos hablar?
+
+[TU NOMBRE]"
+
+---
+
+HOSPITAL PRIVADO UNIVERSITARIO:
+"Hola,
+
+Tienen presencia institucional completa.
+
+Pero servicios de odontología probablemente NO están optimizados digitalmente.
+
+Solución: Chatbot especializado en odontología + CRM pediátrico (si trabajan con niños).
+
+Resultado: Diferenciación en servicios odontológicos del hospital.
+
+¿Exploramos?
+
+[TU NOMBRE]"
+
+========================================================================================
+PASO 2: AGREGAR GOOGLE APPS SCRIPT
+========================================================================================
+
+1. En tu Google Sheet, ve a **Extensiones** → **Apps Script**
+2. Se abre una pestaña nueva de Google Apps Script
+3. Borra el código que viene por defecto
+4. Copia TODO el código de: GOOGLE-APPS-SCRIPT-ENVIO-EMAILS.txt (archivo siguiente)
+5. Click en **Guardar**
+6. Click en **Ejecutar**
+7. La primera vez pedirá permisos → Autoriza
+
+========================================================================================
+PASO 3: CONFIGURAR EL SCRIPT
+========================================================================================
+
+En el código, reemplaza ESTOS valores:
+
+Línea 3: const TU_NOMBRE = "[TU NOMBRE REAL]";
+Línea 4: const TU_TELEFONO = "[TU TELÉFONO]";
+Línea 5: const TU_EMAIL = "[TU EMAIL]";
+Línea 6: const EMAIL_DESDE = "[argentia.ai@gmail.com]"; // Tu Gmail conectado
+
+EJEMPLO:
+const TU_NOMBRE = "Juan García";
+const TU_TELEFONO = "+54 9 351 123-4567";
+const TU_EMAIL = "juan@email.com";
+const EMAIL_DESDE = "argentia.ai@gmail.com";
+
+========================================================================================
+PASO 4: EJECUTAR EL SISTEMA
+========================================================================================
+
+**OPCIÓN A: Envío Manual**
+
+1. En Google Sheet, vuelve a **Extensiones** → **Apps Script**
+2. Selecciona la función: **"enviarEmailsAutomaticamente"**
+3. Click en **Ejecutar** ▶️
+4. El script envía todos los emails y actualiza columna "Estado" a "Enviado"
+5. Automáticamente agrega fecha y hora en "Fecha Envío"
+
+**OPCIÓN B: Envío Automático Cada Día**
+
+1. En Google Apps Script, ve a **Activadores** ⏱️ (lado izquierdo)
+2. Click en **"+ Crear activador"**
+3. Configura:
+   - Función: **"enviarEmailsAutomaticamente"**
+   - Evento: **"Cada día"** (u otro intervalo)
+   - Hora: **10:00 AM** (cuando quieras)
+4. Click **Guardar**
+
+Ahora cada día a las 10am, el script envía automáticamente todos los emails pendientes.
+
+========================================================================================
+PASO 5: TRACKEAR RESPUESTAS
+========================================================================================
+
+**RESPUESTAS AUTOMÁTICAS:**
+
+El script checkea automáticamente cada hora si hay respuestas. Cuando un prospect responde:
+
+1. Sheet automáticamente actualiza **Columna G (Estado)** a "Respondió"
+2. **Columna I (Respuesta)** se llena con un resumen de la respuesta
+3. Tú verás en tiempo real quién respondió
+
+**MANUAL:**
+
+Si quieres actualizar manualmente:
+- Columna G: Escribe "Respondió" o "No respondió"
+- Columna I: Escribe la respuesta o nota
+
+========================================================================================
+PASO 6: MONITOREAR EL SISTEMA
+========================================================================================
+
+**Cada día puedes ver:**
+
+✅ Estado de cada email (Enviado / Respondió / No respondió)
+✅ Fecha y hora exacta de envío
+✅ Quién respondió
+✅ Qué contestó
+
+**Estadísticas útiles:**
+
+- Total enviados: =COUNTA(G2:G13)
+- Total respondidos: =COUNTIF(G2:G13,"Respondió")
+- Tasa de respuesta: =COUNTIF(G2:G13,"Respondió")/COUNTA(G2:G13)*100
+
+Coloca estas fórmulas en celdas separadas para ver tus métricas.
+
+========================================================================================
+LISTO. SISTEMA COMPLETAMENTE AUTOMATIZADO
+========================================================================================
+
+✅ Leads en Google Sheet
+✅ Emails personalizados por clínica
+✅ Script envía automáticamente desde Gmail
+✅ Tracking automático de respuestas
+✅ Tú solo monitoreas y respodes
+
+TODO sin tocar HubSpot.
+TODO desde Gmail (conectado) y Google Sheets.
+TODO automatizado.
+
+Siguiente paso: Crear el Apps Script (archivo: GOOGLE-APPS-SCRIPT-ENVIO-EMAILS.txt)
+
+========================================================================================

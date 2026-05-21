@@ -1,0 +1,325 @@
+========================================================================================
+📋 GUÍA PASO A PASO - SISTEMA AUTOMATIZADO GOOGLE SHEETS + GMAIL
+========================================================================================
+
+OBJETIVO:
+Crear un sistema que envíe emails automáticamente a 12 clínicas dentales desde tu Gmail,
+sin tocar HubSpot, sin hacer nada manualmente.
+
+TIEMPO TOTAL: 15-20 minutos para configurar, luego todo automático.
+
+========================================================================================
+PARTE 1: CREAR Y CONFIGURAR GOOGLE SHEET (5 min)
+========================================================================================
+
+**PASO 1: Crear nuevo Google Sheet**
+
+1. Ve a **sheets.google.com**
+2. Click en el icono **"+" (Crear nuevo)** → **"Hoja de cálculo"**
+3. Te abre una hoja nueva
+4. Arriba a la izquierda, renombra como: "Prospecting Clínicas Dentales"
+5. Click en el nombre para confirmar
+
+**PASO 2: Crear encabezados (Fila 1)**
+
+En la primera fila, escribe estos encabezados (A-I):
+
+A1: Nombre Clínica
+B1: Email Contacto
+C1: Teléfono
+D1: Especialidad
+E1: Oportunidad IA
+F1: Email Personalizado
+G1: Estado
+H1: Fecha Envío
+I1: Respuesta
+
+**PASO 3: Agregar datos de las 12 clínicas**
+
+En el archivo: **SISTEMA-AUTOMATIZADO-GOOGLE-SHEETS-GMAIL.txt**
+
+Sección "COPIAR TODOS ESTOS DATOS"
+
+Copia TODOS los datos (Fila 2 a 13) con:
+- Nombre Clínica
+- Email
+- Teléfono
+- Especialidad
+- Oportunidad IA
+
+Pega en tu Google Sheet (empezando en A2).
+
+**PASO 4: Agregar Emails Personalizados (Columna F)**
+
+En el mismo archivo, sección "EMAILS PERSONALIZADOS POR CLÍNICA"
+
+Copia CADA EMAIL y pégalo en su fila correspondiente:
+
+Fila 2 (Dentis): [Copia el email de DENTIS]
+Fila 3 (Docta Dent): [Copia el email de DOCTA DENT]
+Fila 4 (PCM): [Copia el email de PCM]
+... y así sucesivamente para las 12.
+
+**Tu Google Sheet ahora tiene:**
+✅ 12 clínicas con todos sus datos
+✅ Emails personalizados para cada una
+✅ Columnas para tracking (Estado, Fecha, Respuesta)
+✅ Listo para conectar el script
+
+========================================================================================
+PARTE 2: CREAR Y CONFIGURAR GOOGLE APPS SCRIPT (10 min)
+========================================================================================
+
+**PASO 5: Abre Google Apps Script**
+
+1. En tu Google Sheet, click en **"Extensiones"** (menú arriba)
+2. Click en **"Apps Script"**
+3. Se abre una pestaña nueva
+
+**PASO 6: Limpia el código por defecto**
+
+1. En la pestaña de Apps Script, verás código que viene
+2. Selecciona TODO el código (Ctrl+A)
+3. Borra (Delete)
+
+**PASO 7: Copia el CÓDIGO completo**
+
+1. Ve al archivo: **GOOGLE-APPS-SCRIPT-ENVIO-EMAILS.txt**
+2. Sección: "CÓDIGO COMPLETO (Copia TODO esto)"
+3. Copia TODA la sección (desde "// ===== CONFIGURACIÓN =====" hasta el final)
+4. Pega en Google Apps Script
+5. Click en **"Guardar"** (Ctrl+S)
+
+**PASO 8: Configura tus datos personales**
+
+En el código que acabas de pegar, busca estas 4 líneas (están al principio):
+
+Línea 3: const TU_NOMBRE = "Juan García";
+Línea 4: const TU_TELEFONO = "+54 9 351 123-4567";
+Línea 5: const TU_EMAIL = "juan@email.com";
+Línea 6: const EMAIL_DESDE = "argentia.ai@gmail.com";
+
+REEMPLAZA con TUS datos:
+
+const TU_NOMBRE = "TU NOMBRE REAL";
+const TU_TELEFONO = "TU TELÉFONO WHATSAPP";
+const TU_EMAIL = "TU EMAIL";
+const EMAIL_DESDE = "argentia.ai@gmail.com"; // Este NO cambies, es tu Gmail conectado
+
+EJEMPLO:
+const TU_NOMBRE = "María González";
+const TU_TELEFONO = "+54 9 351 555-6666";
+const TU_EMAIL = "maria@email.com";
+const EMAIL_DESDE = "argentia.ai@gmail.com";
+
+**PASO 9: Guarda el código**
+
+Click en **"Guardar"** (Ctrl+S)
+
+========================================================================================
+PARTE 3: EJECUTAR EL SISTEMA POR PRIMERA VEZ (3 min)
+========================================================================================
+
+**PASO 10: Ejecuta manualmente para probar**
+
+1. En Google Apps Script, en el menú desplegable superior, busca:
+   **"enviarEmailsAutomaticamente"**
+2. Click en el botón **▶️ Ejecutar** (arriba)
+3. Aparecerá un diálogo pidiendo permisos
+
+**PASO 11: Autoriza permisos**
+
+El sistema pide permisos para:
+- Leer el Google Sheet
+- Enviar emails desde Gmail
+- Acceder a tu Gmail
+
+1. Click en **"Revisar permisos"**
+2. Selecciona tu cuenta Gmail (argentia.ai@gmail.com)
+3. Lee las advertencias de seguridad
+4. Click en **"Permitir"** o **"Continuar"**
+5. Debería decir ✅ "Ejecución completada"
+
+**PASO 12: Verifica que se enviaron los emails**
+
+1. Vuelve a tu Google Sheet
+2. Mira la columna **G (Estado)**
+3. Debería decir "Enviado" en las filas 2-13
+4. Columna **H (Fecha Envío)** debería tener fecha/hora
+
+**✅ EMAILS ENVIADOS!**
+
+Ahora ve a tu Gmail y busca "Salida" para ver los emails que enviaste.
+
+========================================================================================
+PARTE 4: AUTOMATIZAR (OPCIONAL - para que se repita automáticamente)
+========================================================================================
+
+Si quieres que los emails se envíen AUTOMÁTICAMENTE cada día sin hacer nada:
+
+**PASO 13: Crear activador automático**
+
+1. En Google Apps Script, en el menú desplegable superior (donde seleccionaste "enviarEmailsAutomaticamente")
+2. Cambia a: **"crearActivadorDiario"**
+3. Click en **▶️ Ejecutar**
+4. Autoriza (mismos permisos)
+
+**PASO 14: Verifica el activador**
+
+1. En Google Apps Script, click en el icono **⏱️ Activadores** (lado izquierdo)
+2. Debería aparecer una fila que dice:
+   - Función: enviarEmailsAutomaticamente
+   - Evento: A las 10:00 AM, cada día
+3. ✅ ACTIVADOR CREADO
+
+Ahora cada día a las 10:00 AM, se envían automáticamente todos los emails pendientes.
+
+========================================================================================
+PARTE 5: TRACKEAR RESPUESTAS AUTOMÁTICAMENTE (OPCIONAL)
+========================================================================================
+
+Si quieres que el sistema VERIFIQUE AUTOMÁTICAMENTE si alguien respondió:
+
+**PASO 15: Crear verificador de respuestas**
+
+1. En Google Apps Script, en el menú desplegable:
+   **"crearActivadorVerificacionRespuestas"**
+2. Click en **▶️ Ejecutar**
+3. Autoriza
+
+**PASO 16: Verifica**
+
+1. Click en **⏱️ Activadores** (lado izquierdo)
+2. Ahora debería haber 2 activadores:
+   - enviarEmailsAutomaticamente (cada día a las 10am)
+   - verificarRespuestas (cada hora)
+
+AHORA: Cada hora, el sistema chequea automáticamente si alguien respondió.
+
+Cuando alguien responde, el sheet automáticamente:
+- Columna G: Se actualiza a "Respondió"
+- Columna I: Se llena con la respuesta
+
+========================================================================================
+RESUMEN: LO QUE HICISTE EN 20 MINUTOS
+========================================================================================
+
+✅ Creaste Google Sheet con 12 clínicas dentales
+✅ Agregaste emails personalizados para cada una
+✅ Configuraste Google Apps Script
+✅ Enviaste 12 emails automáticamente
+✅ Creaste activadores para:
+   - Envío automático cada día a las 10am
+   - Verificación automática de respuestas cada hora
+✅ Todo desde Gmail (sin HubSpot)
+
+AHORA:
+- Cada día a las 10am: Se envían automáticamente emails pendientes
+- Cada hora: Se verifica automáticamente si hay respuestas
+- Tú solo monitoreas el Google Sheet y respondes
+
+========================================================================================
+MONITORING Y SEGUIMIENTO
+========================================================================================
+
+**Cada día puedes ver en tu Google Sheet:**
+
+Columna G (Estado): "Enviado" o "Respondió" o "No respondió"
+Columna H (Fecha Envío): Cuándo se envió exactamente
+Columna I (Respuesta): Qué respondió la clínica
+
+**Metricas útiles (en celdas separadas):**
+
+Total enviados:
+=COUNTA(G2:G13)
+
+Total respondieron:
+=COUNTIF(G2:G13,"Respondió")
+
+Tasa de respuesta %:
+=COUNTIF(G2:G13,"Respondió")/COUNTA(G2:G13)*100
+
+**Coloca estas fórmulas en filas al lado:**
+
+Celda K2: Total Enviados
+Celda L2: =COUNTA(G2:G13)
+
+Celda K3: Total Respondieron
+Celda L3: =COUNTIF(G2:G13,"Respondió")
+
+Celda K4: Tasa de Respuesta
+Celda L4: =COUNTIF(G2:G13,"Respondió")/COUNTA(G2:G13)*100&"%"
+
+Ahora verás en VIVO cuántos respondieron y tú tasa de respuesta.
+
+========================================================================================
+TROUBLESHOOTING
+========================================================================================
+
+❌ "No veo los emails en Estado"
+→ Espera 5-10 segundos después de ejecutar
+→ Refresca la página (F5)
+
+❌ "Dice 'Error enviando email'"
+→ Probablemente un email está mal escrito en columna B
+→ Verifica que sea: nombredominlo@domain.com
+
+❌ "No funciona el activador automático"
+→ La primera ejecución automática tarda hasta 15 minutos
+→ Chequea en 30 minutos
+
+❌ "Google pide autorización cada vez"
+→ Es normal la primera vez
+→ Después debería funcionar sin pedir
+
+❌ "Quiero pausar el sistema"
+→ En Google Apps Script, click en ⏱️ Activadores
+→ Click en los 3 puntos → Eliminar
+→ Los activadores se pausan
+
+❌ "Quiero agregar más clínicas"
+→ Agrega una nueva fila en el Google Sheet
+→ Llena: Nombre, Email, Teléfono, etc.
+→ Columna G déjala vacía
+→ Ejecuta nuevamente "enviarEmailsAutomaticamente"
+
+========================================================================================
+PRÓXIMOS PASOS
+========================================================================================
+
+**Cuando comienzan a responder:**
+
+1. Actualiza Columna G manualmente a "Respondió"
+2. Copia la respuesta en Columna I
+3. Responde al email directamente desde Gmail
+4. Coordina una llamada para presentar tu propuesta
+
+**Para mejores resultados:**
+
+- Primeros emails: Genera curiosidad e intriga
+- Segundos emails: Presenta el problema específico
+- Terceros emails: Muestra solución y ROI
+- Cuartos emails: Llamada a la acción con urgencia
+- Quintos emails: Propuesta formal
+
+**Tracking importante:**
+
+- Quién respondió
+- Quién no respondió (follow-up después de 2 semanas)
+- Quién mostró interés real
+- Quién está listo para llamada
+
+========================================================================================
+SISTEMA COMPLETAMENTE FUNCIONAL
+========================================================================================
+
+✅ 12 clínicas dentales prospectadas
+✅ Emails personalizados por clínica
+✅ Envío completamente automatizado desde Gmail
+✅ Tracking automático de respuestas
+✅ Sin HubSpot
+✅ Sin hacer nada manualmente después de 20 minutos
+
+ADELANTE CON EL PROSPECTING! 🚀
+
+========================================================================================
