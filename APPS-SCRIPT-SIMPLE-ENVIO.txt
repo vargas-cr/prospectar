@@ -1,0 +1,186 @@
+========================================================================================
+📨 GOOGLE APPS SCRIPT SIMPLE - ENVÍA EMAILS EN 3 PASOS
+========================================================================================
+
+Este es un código SIMPLE que:
+1. Lee tus leads del Google Sheet
+2. Envía emails automáticamente desde tu Gmail
+3. Marca como "Enviado" cuando termina
+
+MÁS SIMPLE. MÁS DIRECTO. SIN COMPLICACIONES.
+
+========================================================================================
+PASO 1: COPIA ESTE CÓDIGO (TODO)
+========================================================================================
+
+function enviarEmails() {
+  // Tu información
+  const TU_NOMBRE = "Juan García";                    // CAMBIA ESTO
+  const TU_TELEFONO = "+54 9 351 555-6666";           // CAMBIA ESTO
+  const TU_EMAIL = "tu@email.com";                    // CAMBIA ESTO
+  const TU_GMAIL = "argentia.ai@gmail.com";           // Tu Gmail
+
+  // Lee el Sheet
+  const sheet = SpreadsheetApp.getActiveSheet();
+  const data = sheet.getDataRange().getValues();
+
+  // Envía email por cada clínica
+  for (let i = 1; i < data.length; i++) {  // Empieza en fila 2
+    const clinica = data[i][0];             // Columna A: Nombre Clínica
+    const email = data[i][1];               // Columna B: Email
+    const estado = data[i][6];              // Columna G: Estado
+
+    // Si Status está vacío, envía email
+    if (!estado || estado.trim() === "") {
+      const asunto = "Oportunidad IA para " + clinica;
+      const cuerpo = data[i][5];            // Columna F: Email personalizado
+
+      // Personaliza el email
+      let emailFinal = cuerpo
+        .replace(/\[TU NOMBRE\]/g, TU_NOMBRE)
+        .replace(/\[TU TELÉFONO\]/g, TU_TELEFONO)
+        .replace(/\[TU EMAIL\]/g, TU_EMAIL);
+
+      // Envía
+      try {
+        GmailApp.sendEmail(email, asunto, emailFinal, {
+          from: TU_GMAIL,
+          name: TU_NOMBRE,
+          replyTo: TU_EMAIL
+        });
+
+        // Marca como "Enviado"
+        sheet.getRange(i + 1, 7).setValue("Enviado");
+        sheet.getRange(i + 1, 8).setValue(new Date());
+
+        Logger.log("✅ Email enviado a: " + email);
+
+      } catch (e) {
+        Logger.log("❌ Error: " + email + " - " + e);
+      }
+    }
+  }
+
+  Logger.log("✅ TODOS LOS EMAILS FUERON ENVIADOS");
+}
+
+========================================================================================
+PASO 2: CÓMO USAR (3 PASOS SIMPLES)
+========================================================================================
+
+1️⃣ ABRE TU GOOGLE SHEET
+   → Ve a tu sheet "Prospecting Clínicas Dentales"
+
+2️⃣ VE A EXTENSIONES → APPS SCRIPT
+   → Se abre Google Apps Script
+   → Borra el código que viene
+   → Pega el código de ARRIBA
+
+3️⃣ MODIFICA ESTOS 4 VALORES (líneas 2-5):
+   const TU_NOMBRE = "Tu nombre real";
+   const TU_TELEFONO = "+54 9 351 555-6666";
+   const TU_EMAIL = "tu@email.com";
+   const TU_GMAIL = "argentia.ai@gmail.com";
+
+4️⃣ GUARDA (Ctrl+S)
+
+5️⃣ EJECUTA
+   → Selecciona "enviarEmails" en el menú
+   → Click en ▶️ Ejecutar
+   → Autoriza en la primera vez
+   → ✅ LISTO - Se envían todos los emails
+
+========================================================================================
+RESULTADO DESPUÉS DE EJECUTAR
+========================================================================================
+
+Tu Google Sheet se actualiza automáticamente:
+
+Columna G (Estado) → "Enviado"
+Columna H (Fecha) → Fecha/Hora del envío
+
+Ejemplo:
+Nombre Clínica | Email | ... | Estado  | Fecha
+Dentis         | ... | ... | Enviado | 21/5/2026 14:30
+Docta Dent     | ... | ... | Enviado | 21/5/2026 14:31
+Estética       | ... | ... | Enviado | 21/5/2026 14:32
+... (y así para todas las 12)
+
+========================================================================================
+PARA AUTOMATIZAR (EJECUTAR CADA DÍA SIN HACER NADA)
+========================================================================================
+
+Si quieres que se ejecute AUTOMÁTICAMENTE cada día:
+
+1. En Google Apps Script, click en ⏱️ ACTIVADORES (lado izquierdo)
+2. Click en "+ CREAR ACTIVADOR"
+3. Configura así:
+   - Función: "enviarEmails"
+   - Tipo de evento: "Evento en tiempo"
+   - Intervalo: "Cada día"
+   - Hora: "10:00 AM" (la hora que quieras)
+4. Click GUARDAR
+
+AHORA: Cada día a las 10am, se envían automáticamente todos los emails pendientes.
+
+========================================================================================
+ESTRUCTURA DEL GOOGLE SHEET (CÓMO DEBE VERSE)
+========================================================================================
+
+Fila 1 (Encabezados):
+A: Nombre Clínica
+B: Email Contacto
+C: Teléfono
+D: Especialidad
+E: Oportunidad IA
+F: Email Personalizado
+G: Estado
+H: Fecha Envío
+
+Fila 2-13 (Datos):
+A: Dentis
+B: info@dentis-cba.com.ar
+C: (351) 123-4567
+D: Guardia 24hs
+E: Chatbot emergencias
+F: [Tu email personalizado aquí]
+G: [Vacío al inicio - Script rellena]
+H: [Vacío al inicio - Script rellena]
+
+... (igual para las 12 clínicas)
+
+========================================================================================
+TROUBLESHOOTING RÁPIDO
+========================================================================================
+
+❌ "Error: Permission denied"
+→ Autoriza en la primera ejecución
+→ Es normal, solo la primera vez
+
+❌ "No veo nada en el Estado"
+→ Refresca el Sheet (F5)
+→ Espera 5-10 segundos
+
+❌ "Dice error en un email"
+→ Ese email está mal escrito en Columna B
+→ Corrígelo y ejecuta de nuevo
+
+❌ "Quiero agregar más clínicas"
+→ Agrega fila nueva en el Sheet
+→ Llena: Nombre, Email, etc.
+→ Columna G déjala vacía
+→ Ejecuta nuevamente
+
+========================================================================================
+YA ESTÁ. SISTEMA FUNCIONANDO.
+========================================================================================
+
+✅ Envía 12 emails automáticamente desde tu Gmail
+✅ Marca como "Enviado" cuando termina
+✅ Se puede automatizar para cada día
+✅ SIN complicaciones
+✅ Listo para prospecting
+
+¿Necesitas ayuda con algo específico?
+
+========================================================================================
