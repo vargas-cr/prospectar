@@ -1,0 +1,273 @@
+========================================================================================
+✅ GUÍA DE VERIFICACIÓN: GMAIL Y GOOGLE DRIVE EN HUBSPOT
+========================================================================================
+
+No puedo acceder directamente a tu HubSpot, pero aquí te muestro EXACTAMENTE
+cómo verificar tú mismo si Gmail y Google Drive están conectados.
+
+========================================================================================
+VERIFICACIÓN 1: ¿ESTÁ CONECTADO GMAIL?
+========================================================================================
+
+PASO 1: Abre HubSpot
+URL: https://hubspot.com/login
+Email: argentia.ai@gmail.com
+Password: [tu contraseña]
+
+PASO 2: Ve a SETTINGS
+Arriba a la derecha → Click en tu avatar/nombre → "Settings"
+
+PASO 3: Busca EMAIL
+Menú izquierda → "Email"
+
+PASO 4: Busca "Connected inbox" o "Gmail"
+Deberías ver algo como:
+
+┌─────────────────────────────────────────────┐
+│ Connected inbox                             │
+│                                             │
+│ Gmail account: argentia.ai@gmail.com        │
+│ Status: ✓ Connected                         │
+│ Last synced: [hora]                         │
+│                                             │
+│ [Disconnect] [Reconnect]                    │
+└─────────────────────────────────────────────┘
+
+RESULTADO ESPERADO:
+✓ Ves tu email (argentia.ai@gmail.com)
+✓ Status dice "Connected"
+✓ Hay un checkmark verde
+
+SI VES ESTO → GMAIL ESTÁ CONECTADO ✓
+
+========================================================================================
+VERIFICACIÓN 2: ¿ESTÁ CONECTADO GOOGLE DRIVE? (Opcional)
+========================================================================================
+
+Google Drive es opcional pero útil para guardar reports.
+
+PASO 1: En SETTINGS, busca INTEGRATIONS
+Menú izquierda → "Integrations" o "Apps and integrations"
+
+PASO 2: Busca "Google Drive"
+Scroll down hasta encontrar "Google Drive"
+
+PASO 3: Verifica el estado
+Deberías ver algo como:
+
+┌─────────────────────────────────────────────┐
+│ Google Drive                                │
+│                                             │
+│ Status: ✓ Connected                         │
+│ Account: tu@gmail.com                       │
+│                                             │
+│ [Disconnect]                                │
+└─────────────────────────────────────────────┘
+
+SI VES ESTO → GOOGLE DRIVE ESTÁ CONECTADO ✓
+
+SI NO VES GOOGLE DRIVE CONECTADO → No es crítico, HubSpot funciona sin él.
+
+========================================================================================
+VERIFICACIÓN 3: ¿ESTÁN CONFIGURADOS LOS EMAILS?
+========================================================================================
+
+PASO 1: En Settings → Email
+Busca: "Email sending" o "Sender email"
+
+PASO 2: Verifica que tu email está seleccionado
+Deberías ver:
+
+┌─────────────────────────────────────────────┐
+│ Send emails as:                             │
+│                                             │
+│ argentia.ai@gmail.com ✓                     │
+│                                             │
+│ [Change sender]                             │
+└─────────────────────────────────────────────┘
+
+SI VES ESTO → LOS EMAILS ESTÁN LISTOS ✓
+
+========================================================================================
+VERIFICACIÓN 4: PRUEBA ENVIAR UN EMAIL DE TEST
+========================================================================================
+
+Esta es la mejor prueba de que TODO funciona.
+
+PASO 1: Ve a MARKETING → EMAIL
+Menú izquierdo → "Marketing" → "Email"
+
+PASO 2: Abre cualquier email (ej: "Email_1_Initial_Contact_Restaurant")
+Click en el nombre del email.
+
+PASO 3: Click en "Preview" o "Send test"
+Botón azul arriba a la derecha.
+
+PASO 4: Envía a ti mismo
+Se abre una ventana que pregunta:
+"Send test email to..."
+
+Llena con tu email: argentia.ai@gmail.com
+
+Click: "Send test email"
+
+Espera 1-2 minutos.
+
+PASO 5: Chequea tu GMAIL
+Abre: https://gmail.com
+
+Busca un email que diga:
+From: argentia.ai@gmail.com
+Subject: "Una idea para reducir tus reservas manuales..."
+
+SI RECIBES ESTE EMAIL → ¡TODO FUNCIONA PERFECTAMENTE! ✓
+
+========================================================================================
+VERIFICACIÓN 5: ¿ESTÁN LOS 25 RESTAURANTES IMPORTADOS?
+========================================================================================
+
+PASO 1: Ve a CONTACTS
+Menú izquierda → "Contacts" → "Contacts"
+
+PASO 2: Mira el total
+Arriba, deberías ver algo como:
+
+"25 contacts"
+
+o una barra que muestra: "25"
+
+PASO 3: Busca un restaurante específico
+Search box (arriba) → Busca "Don Julio"
+
+Deberías ver:
+- Don Julio Parrilla
+- Teléfono
+- Email (si tiene)
+
+SI VES LOS 25 RESTAURANTES → IMPORTACIÓN OK ✓
+
+========================================================================================
+VERIFICACIÓN 6: ¿ESTÁN LOS 5 WORKFLOWS ACTIVOS?
+========================================================================================
+
+PASO 1: Ve a AUTOMATION → WORKFLOWS
+Menú izquierda → "Automation" → "Workflows"
+
+PASO 2: Mira la lista
+Deberías ver 5 workflows:
+
+✓ Restaurant_Sequence_1_Initial_Contact (Status: ON o ✓)
+✓ Restaurant_Sequence_2_FollowUp_Day5 (Status: ON o ✓)
+✓ Restaurant_Sequence_3_ProposalValue_Day10 (Status: ON o ✓)
+✓ Restaurant_Sequence_4_Reactivation_Day15 (Status: ON o ✓)
+✓ Restaurant_Sequence_5_FinalProposal_Day20 (Status: ON o ✓)
+
+SI VES LOS 5 WORKFLOWS ACTIVOS → WORKFLOWS OK ✓
+
+========================================================================================
+CHECKLIST FINAL DE VERIFICACIÓN
+========================================================================================
+
+Antes de decir "TODO LISTO", verifica ESTO:
+
+GMAIL Y GOOGLE:
+☐ Gmail está conectado en Settings → Email → Connected inbox
+☐ Muestra status "Connected"
+☐ El email es argentia.ai@gmail.com
+
+EMAIL DE PRUEBA:
+☐ Enviaste un test email
+☐ Lo recibiste en tu Gmail (argentia.ai@gmail.com)
+☐ El email viene FROM: argentia.ai@gmail.com
+
+RESTAURANTES:
+☐ Tienes 25 contactos en Contacts
+☐ Al menos Don Julio aparece cuando buscas
+☐ Todos tienen email o teléfono
+
+WORKFLOWS:
+☐ Ves 5 workflows en Automation → Workflows
+☐ Los 5 están en estado "ON" (verde) o "Active" (checkmark)
+☐ Tienen los nombres correctos (Sequence_1, Sequence_2, etc.)
+
+EMAIL TEMPLATES:
+☐ Tienes 5 emails en Marketing → Email
+☐ Se llaman: Email_1, Email_2, Email_3, Email_4, Email_5
+
+SI TODOS LOS ☐ ESTÁN CHECKEADOS:
+
+→ TODO ESTÁ LISTO Y FUNCIONANDO ✓
+
+Los 25 restaurantes van a recibir automáticamente los 5 emails.
+
+========================================================================================
+¿QUÉ SIGNIFICA CADA STATUS?
+========================================================================================
+
+GMAIL:
+- ✓ Connected = Funciona. HubSpot puede enviar emails desde tu Gmail.
+- ✗ Not connected = No funciona. Los workflows no enviarán emails.
+- ! Warning = Hay un problema. Reconecta.
+
+WORKFLOWS:
+- ON (verde) = Está activo. Se disparan automáticamente.
+- OFF (gris) = Está pausado. No se disparan.
+- ! Warning = Hay un error. Revisa la configuración.
+
+GOOGLE DRIVE:
+- ✓ Connected = Funciona. Puedes guardar reports.
+- ✗ Not connected = No funciona. Pero no es crítico para los emails.
+
+========================================================================================
+TROUBLESHOOTING: SI ALGO NO ESTÁ CONECTADO
+========================================================================================
+
+PROBLEMA: "Gmail dice 'Not connected'"
+SOLUCIÓN:
+1. Ve a Settings → Email → Gmail
+2. Click: "Reconnect"
+3. Autoriza de nuevo con Google
+4. Verifica que status cambia a "Connected"
+
+PROBLEMA: "No veo los 5 workflows"
+SOLUCIÓN:
+1. Ve a Automation → Workflows
+2. Refresca la página (F5)
+3. Si aún no aparecen, créalos manualmente usando la guía CREAR-5-WORKFLOWS
+
+PROBLEMA: "El email de test no llegó"
+SOLUCIÓN:
+1. Verifica que Gmail está conectado (paso anterior)
+2. Revisa tu SPAM (a veces van allá)
+3. Intenta de nuevo (a veces tarda 2-3 min)
+4. Si sigue sin llegar, reconecta Gmail
+
+PROBLEMA: "¿Cómo sé si los workflows se dispararon?"
+RESPUESTA:
+1. Ve a Automation → Workflows
+2. Click en "Restaurant_Sequence_1_Initial_Contact"
+3. Busca "Enrollments" o "Activity"
+4. Deberías ver una lista de contactos que entraron en el workflow
+5. Si ves 25 contactos → El workflow se disparó para todos ✓
+
+========================================================================================
+RESUMEN RÁPIDO
+========================================================================================
+
+Para VERIFICAR que TODO está listo:
+
+1. HubSpot Settings → Email → Gmail = "Connected" ✓
+2. HubSpot Marketing → Email → Envía test email ✓
+3. Tu Gmail → Recibes el test email ✓
+4. HubSpot Contacts → Ves 25 restaurantes ✓
+5. HubSpot Automation → Ves 5 workflows "ON" ✓
+
+SI TODOS = ✓ → SISTEMA COMPLETO Y FUNCIONANDO
+
+========================================================================================
+¡LISTO PARA VERIFICAR!
+========================================================================================
+
+Abre HubSpot ahora mismo y verifica cada punto.
+
+Avísame si ves algún problema o si TODO está ✓ conectado.
