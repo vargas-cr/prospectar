@@ -5,7 +5,7 @@ from datetime import datetime
 
 # ===== TUS CREDENCIALES =====
 TU_EMAIL = "argentia.ai@gmail.com"
-TU_PASSWORD = "A/x6*angaco_cba"
+TU_PASSWORD = "Bo01cas2025+"
 TU_NOMBRE = "Cristian Vargas"
 
 # ===== CONFIGURACIÓN GMAIL =====
