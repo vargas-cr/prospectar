@@ -1,0 +1,223 @@
+========================================================================================
+📱 GUÍA RÁPIDA - WHATSAPP ZADARMA + PYTHON (20 minutos)
+========================================================================================
+
+OBJETIVO: Enviar mensajes WhatsApp automáticos a 12 clínicas dentales con Python.
+
+REQUISITOS:
+✅ API Key Zadarma: 1f2c9daf0db1307a1128
+✅ API Secret Zadarma: a53586ef23bcdd1e220e
+✅ Número en Zadarma (ya tienes)
+
+========================================================================================
+PASO 1: INSTALA PYTHON (5 min)
+========================================================================================
+
+**Windows:**
+1. Ve a python.org/downloads
+2. Descarga "Python 3.11" (la versión más nueva)
+3. Ejecuta el instalador
+4. ✅ IMPORTANTE: Marca la casilla "Add Python to PATH"
+5. Click "Install Now"
+6. Espera a que termine
+
+**Verificar:**
+1. Abre Cmd (Windows) o Terminal (Mac)
+2. Escribe: python --version
+3. Debería decir: Python 3.11 (o similar)
+
+========================================================================================
+PASO 2: INSTALA LAS LIBRERÍAS (3 min)
+========================================================================================
+
+1. Abre Terminal/Cmd
+2. Copia y pega ESTO completo:
+
+   pip install requests
+
+3. Espera a que termine (verás "Successfully installed")
+
+========================================================================================
+PASO 3: DESCARGA EL SCRIPT (2 min)
+========================================================================================
+
+1. Abre un editor de texto (Notepad es suficiente)
+2. Ve al archivo: PYTHON-WHATSAPP-ZADARMA.txt
+3. Copia el código entre las líneas:
+   ════════════════════════════
+   (desde "import requests" hasta el final)
+4. Pega en el editor de texto
+5. Reemplaza ESTAS 3 LÍNEAS con TUS DATOS:
+
+   ZADARMA_API_KEY = "1f2c9daf0db1307a1128"         ← (TU API KEY)
+   ZADARMA_API_SECRET = "a53586ef23bcdd1e220e"      ← (TU API SECRET)
+   ZADARMA_PHONE = "+54 9 351 XXXXXXX"              ← (TU NÚMERO EN ZADARMA)
+   TU_NOMBRE = "Tu nombre"                          ← (TU NOMBRE)
+   TU_TELEFONO = "+54 9 351 555-6666"              ← (TU TELÉFONO)
+   TU_EMAIL = "tu@email.com"                        ← (TU EMAIL)
+
+6. Guarda el archivo como: **"enviar_whatsapp.py"**
+7. Guarda en una carpeta fácil (ej: Desktop)
+
+========================================================================================
+PASO 4: CREA TU GOOGLE SHEET (3 min)
+========================================================================================
+
+1. Ve a **sheets.google.com**
+2. Click en **"+ Crear"** → **"Hoja de cálculo"**
+3. Renombra como: "WhatsApp Leads Clínicas"
+4. En Fila 1, escribe los encabezados:
+
+   A1: Nombre Clínica
+   B1: Teléfono
+   C1: Especialidad
+   D1: Mensaje WhatsApp
+   E1: Estado
+
+5. Ve al archivo: GOOGLE-SHEET-TEMPLATE-WHATSAPP.txt
+6. Copia TODOS los datos (Filas 2-13)
+7. Pega en tu Google Sheet (empezando en A2)
+8. En cada mensaje, reemplaza:
+   - [TU NOMBRE] → Tu nombre real
+   - [TU TELÉFONO] → Tu teléfono WhatsApp
+
+========================================================================================
+PASO 5: OBTÉN TU NÚMERO DE ZADARMA (1 min)
+========================================================================================
+
+1. Abre Zadarma
+2. Ve a **Mi Cuenta** → **Números**
+3. Busca tu número WhatsApp (algo como: +54 9 351 123-4567)
+4. Cópialo
+5. En el script Python, reemplaza esta línea:
+
+   ZADARMA_PHONE = "+54 9 351 XXXXXXX"
+
+   Por tu número real. EJEMPLO:
+
+   ZADARMA_PHONE = "+54 9 351 123-4567"
+
+6. Guarda el script
+
+========================================================================================
+PASO 6: DESCARGA TU GOOGLE SHEET COMO CSV (2 min)
+========================================================================================
+
+Necesitas descargar los datos en formato CSV para que Python los pueda leer.
+
+1. En tu Google Sheet, ve a: **Archivo** → **Descargar** → **Valores Separados por Comas (.csv)**
+2. Se descarga un archivo: "WhatsApp Leads Clínicas - Página1.csv"
+3. Renombra como: **"leads.csv"** (nombre más simple)
+4. Guarda en la MISMA CARPETA donde guardaste "enviar_whatsapp.py"
+
+Resultado: Debería haber dos archivos en la misma carpeta:
+- enviar_whatsapp.py
+- leads.csv
+
+========================================================================================
+PASO 7: EJECUTA EL SCRIPT (1 min)
+========================================================================================
+
+1. Abre Terminal/Cmd
+2. Navega a la carpeta donde están los archivos:
+
+   cd [ruta a tu carpeta]
+
+   EJEMPLO Windows:
+   cd C:\Users\TuNombre\Desktop
+
+   EJEMPLO Mac:
+   cd /Users/TuNombre/Desktop
+
+3. Ejecuta el script:
+
+   python enviar_whatsapp.py
+
+4. El programa te pedirá el Sheet ID (ignora, solo presiona ENTER)
+5. Te confirmará si quieres enviar → Escribe "sí"
+6. ✅ COMIENZA A ENVIAR
+
+========================================================================================
+RESULTADO FINAL
+========================================================================================
+
+Verás algo como esto:
+
+📱 Enviando a Dentis (+54 9 351 123-4567)...
+✅ Mensaje enviado a +54 9 351 123-4567
+
+📱 Enviando a Docta Dent (+54 9 351 234-5678)...
+✅ Mensaje enviado a +54 9 351 234-5678
+
+... (continúa para las 12 clínicas)
+
+==================================================
+✅ Enviados: 12
+❌ Fallidos: 0
+==================================================
+
+========================================================================================
+ACTUALIZAR ESTADO EN GOOGLE SHEET (Manual)
+========================================================================================
+
+Después de ejecutar, actualiza tu Google Sheet MANUALMENTE:
+
+1. Abre tu Sheet
+2. Para cada clínica donde se envió:
+   - Columna E (Estado): Escribe "Enviado"
+   - Columna F (Fecha): Escribe hoy
+
+O si quieres automatizar esto, usa el siguiente comando modificado en el script.
+
+========================================================================================
+TROUBLESHOOTING
+========================================================================================
+
+❌ "python: command not found"
+→ Python no está en PATH
+→ Instala de nuevo y marca "Add Python to PATH"
+
+❌ "ModuleNotFoundError: requests"
+→ No instalaste las librerías
+→ Vuelve a ejecutar: pip install requests
+
+❌ "No encuentra leads.csv"
+→ Olvidaste descargar el CSV del Sheet
+→ O está en otra carpeta
+
+❌ "Error de Zadarma"
+→ API Key o Secret incorrectos
+→ O no tienes crédito en Zadarma
+
+❌ "El teléfono no es válido"
+→ Asegúrate que esté en formato: +54 9 351 123-4567
+→ Sin espacios: +54 9351123456
+
+========================================================================================
+PRÓXIMOS PASOS
+========================================================================================
+
+Una vez enviados los primeros 12:
+
+1. **Monitorea respuestas** en WhatsApp
+2. **Actualiza el Estado** en el Sheet
+3. **Sigue con más clínicas** (expande a 20-30)
+4. **Crea una estrategia de follow-up:**
+   - Día 1: Primer mensaje
+   - Día 3: Mensaje con casos de éxito
+   - Día 5: Propuesta formal
+   - Día 7: Llamada telefónica
+
+========================================================================================
+LISTO. SISTEMA FUNCIONANDO.
+========================================================================================
+
+✅ Script Python que envía WhatsApp automáticamente
+✅ Lee leads de Google Sheet
+✅ Usa Zadarma API
+✅ GRATIS (sin suscripciones)
+✅ Personalizado por clínica
+
+¡A PROSPECTAR! 🚀
+
+========================================================================================

@@ -1,0 +1,104 @@
+========================================================================================
+📱 GOOGLE SHEET TEMPLATE - WHATSAPP ZADARMA
+========================================================================================
+
+Este template es para tu Google Sheet con teléfonos (no emails).
+
+========================================================================================
+ESTRUCTURA DEL SHEET
+========================================================================================
+
+Columna A: Nombre Clínica
+Columna B: Teléfono
+Columna C: Especialidad
+Columna D: Mensaje WhatsApp
+Columna E: Estado
+Columna F: Fecha Envío
+
+========================================================================================
+COPIA TODOS ESTOS DATOS EN TU GOOGLE SHEET
+========================================================================================
+
+Fila 1 (Encabezados):
+Nombre Clínica | Teléfono | Especialidad | Mensaje WhatsApp | Estado | Fecha Envío
+
+---
+
+Fila 2-13 (Datos - Clínicas Dentales):
+
+Dentis | +54 9 351 123-4567 | Guardia 24hs | Hola, vi que hacen guardia 24hs. ¿Saben cuántos pacientes pierden a las 2am sin chatbot? Tengo solución. Soy [TU NOMBRE] [TU TELÉFONO] | |
+
+Docta Dent | +54 9 351 234-5678 | Implantología | Hola, Docta Dent es líder en Nueva Córdoba pero tecnológicamente van 3-4 años atrás. Pacientes jóvenes buscan "agendar online". Tengo solución. [TU NOMBRE] [TU TELÉFONO] | |
+
+Clínica Dental PCM | +54 9 351 345-6789 | Radiología 3D | Hola, tienen radiología 3D de punta pero sin chatbot IA que lo comunique. Resultado: pacientes se van a otro lado. Puedo ayudarlos. [TU NOMBRE] [TU TELÉFONO] | |
+
+Estética Dental Córdoba | +54 9 351 456-7890 | Estética | Hola, su especialidad es visual pero su web no lo muestra. ¿Ven antes/después? ¿Simulador? Si no, pierden 9 pacientes/mes. Puedo solucionarlo. [TU NOMBRE] [TU TELÉFONO] | |
+
+Odontología Nueva Córdoba | +54 9 351 567-8901 | Multidisciplinaria | Hola, tienen múltiples especialistas pero están digitalmente desconectados. Resultado: derivaciones perdidas. CRM resuelve esto. [TU NOMBRE] [TU TELÉFONO] | |
+
+Prosmile Dental | +54 9 351 678-9012 | Implantes | Hola, implantes requieren seguimiento multi-fase. Sin CRM automatizado, todo es manual. Tengo solución. [TU NOMBRE] [TU TELÉFONO] | |
+
+Clínica Dental Si | +54 9 351 789-0123 | General | Hola, 30-40% de llamadas se pierden porque el teléfono está ocupado. Chatbot IA resuelve esto en 2 semanas. [TU NOMBRE] [TU TELÉFONO] | |
+
+Clínica Dental Aranda | +54 9 351 890-1234 | General | Hola, tienen tecnología moderna pero probablemente sin chatbot 24/7. Eso cuesta conversión. Puedo ayudarlos. [TU NOMBRE] [TU TELÉFONO] | |
+
+Clínica Orabell | +54 9 351 901-2345 | General | Hola, 35 años de experiencia es INCREÍBLE pero siguen con teléfono tradicional. Pacientes jóvenes buscan online. Modernizamos en 3 semanas. [TU NOMBRE] [TU TELÉFONO] | |
+
+Corporación Dental | +54 9 351 012-3456 | General | Hola, tienen web pero sin automatización. Resultado: manual, ineficiente. Transformación digital completa es posible. [TU NOMBRE] [TU TELÉFONO] | |
+
+Clínica Dental Lozano | +54 9 351 111-2222 | General | Hola, tienen 2 sucursales + financiación pero no lo muestran digitalmente. Pacientes no saben que existe. Solución rápida. [TU NOMBRE] [TU TELÉFONO] | |
+
+Hospital Privado Universitario | +54 9 351 222-3333 | Rehabilitación | Hola, presencia institucional buena pero servicios de odontología no están optimizados. Chatbot especializado diferencia. [TU NOMBRE] [TU TELÉFONO] | |
+
+========================================================================================
+CÓMO USAR ESTE TEMPLATE
+========================================================================================
+
+1. Ve a **sheets.google.com**
+2. Crea nuevo Sheet: "Prospecting WhatsApp Clínicas"
+3. En Fila 1, escribe los encabezados (Columnas A-F)
+4. Copia TODOS los datos de arriba (Filas 2-13)
+5. Personaliza la columna D con tu nombre y teléfono:
+   - Reemplaza: [TU NOMBRE] por tu nombre real
+   - Reemplaza: [TU TELÉFONO] por tu teléfono WhatsApp
+
+========================================================================================
+ALTERNATIVAS DE MENSAJES (Si quieres cambiar)
+========================================================================================
+
+Mensaje Corto (Soft):
+"Hola, soy [TU NOMBRE]. Ofrezco servicios de IA para clínicas. ¿Podemos hablar 15 minutos? [TU TELÉFONO]"
+
+---
+
+Mensaje Problema Oculto:
+"Hola, vi que hacen excelente labor. ¿Saben cuántos pacientes pierden sin agendamiento online? Solución rápida. [TU NOMBRE] [TU TELÉFONO]"
+
+---
+
+Mensaje Urgencia:
+"Hola, solo 3 clínicas en Córdoba ya usan IA. Capturan pacientes 24/7 automáticamente. ¿Quieres saber cómo? [TU NOMBRE]"
+
+---
+
+Mensaje Curiosidad:
+"Hola, ando analizando clínicas en Córdoba. La tuya salió como 'alto potencial' para IA. Una pregunta: ¿Cuánto tiempo les gustaría ahorrar? [TU NOMBRE] [TU TELÉFONO]"
+
+========================================================================================
+ESTRUCTURA FINAL DE TU GOOGLE SHEET
+========================================================================================
+
+Debería verse así:
+
+┌─────────────────────────────────────────────────────────────────┐
+│ A: Nombre Clínica | B: Teléfono | C: Especialidad | D: Mensaje |
+├─────────────────────────────────────────────────────────────────┤
+│ Dentis | +54 9 351 123-4567 | Guardia 24hs | Hola, vi que... |
+│ Docta Dent | +54 9 351 234-5678 | Implantología | Hola, Docta... |
+│ PCM | +54 9 351 345-6789 | Radiología 3D | Hola, tienen... |
+│ ... (9 filas más) | ... | ... | ... |
+└─────────────────────────────────────────────────────────────────┘
+
+Una vez que tengas esto, ejecutas el script Python y ¡LISTO!
+
+========================================================================================
