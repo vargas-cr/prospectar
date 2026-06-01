@@ -1,0 +1,208 @@
+========================================================================================
+📱 SCRIPT PYTHON SIMPLE - PRUEBA WHATSAPP (Solo 1 número)
+========================================================================================
+
+Este script envía UN mensaje a UN número solamente.
+Perfecto para probar que todo funciona.
+
+========================================================================================
+PASO 1: COPIA ESTE CÓDIGO COMPLETO
+========================================================================================
+
+import requests
+
+# TUS CREDENCIALES ZADARMA
+ZADARMA_API_KEY = "1f2c9daf0db1307a1128"
+ZADARMA_API_SECRET = "a53586ef23bcdd1e220e"
+
+# NÚMERO DONDE ENVIAR (la prueba)
+NUMERO_PRUEBA = "+5491160206752"
+
+# TU INFORMACIÓN
+TU_NOMBRE = "Juan García"                    # CAMBIA ESTO
+TU_TELEFONO = "+54 9 351 555-6666"          # CAMBIA ESTO
+
+# EL MENSAJE
+MENSAJE = f"""Hola, soy {TU_NOMBRE}.
+
+Ofrezco servicios de IA para clínicas dentales:
+✅ Chatbots para agendamiento 24/7
+✅ CRM para seguimiento de pacientes
+✅ Email marketing automático
+
+¿Podemos hablar 15 minutos?
+
+Teléfono: {TU_TELEFONO}"""
+
+# ENVÍA EL MENSAJE
+url = "https://api.zadarma.com/v1/sms/send"
+
+params = {
+    "api_key": ZADARMA_API_KEY,
+    "api_secret": ZADARMA_API_SECRET,
+    "to": NUMERO_PRUEBA,
+    "message": MENSAJE
+}
+
+print("📱 Enviando mensaje de prueba...")
+print(f"📞 Número: {NUMERO_PRUEBA}")
+print(f"💬 Mensaje:\n{MENSAJE}\n")
+
+try:
+    response = requests.post(url, data=params)
+    data = response.json()
+
+    if data.get("status") == 0:
+        print("✅ ¡MENSAJE ENVIADO EXITOSAMENTE!")
+        print(f"ID: {data.get('message_id')}")
+    else:
+        print(f"❌ Error: {data.get('message')}")
+
+except Exception as e:
+    print(f"❌ Error de conexión: {e}")
+
+========================================================================================
+PASO 2: CÓMO USAR
+========================================================================================
+
+1. Abre Notepad (o editor de texto)
+2. Copia TODO el código de arriba
+3. Pega en Notepad
+4. Reemplaza SOLO estas 2 líneas:
+
+   TU_NOMBRE = "Tu nombre real"
+   TU_TELEFONO = "+54 9 351 555-6666"
+
+   EJEMPLO:
+   TU_NOMBRE = "María González"
+   TU_TELEFONO = "+54 9 351 123-4567"
+
+5. Guarda como: "prueba_whatsapp.py"
+6. Guarda en una carpeta fácil (ej: Desktop)
+
+========================================================================================
+PASO 3: INSTALA LIBRERÍA (Si no la tienes)
+========================================================================================
+
+Abre Terminal/Cmd y ejecuta:
+
+   pip install requests
+
+Espera a que termine.
+
+========================================================================================
+PASO 4: EJECUTA EL SCRIPT
+========================================================================================
+
+1. Abre Terminal/Cmd
+2. Ve a la carpeta donde guardaste el archivo:
+
+   cd C:\Users\TuNombre\Desktop
+
+3. Ejecuta:
+
+   python prueba_whatsapp.py
+
+4. Espera 5-10 segundos
+
+========================================================================================
+RESULTADO ESPERADO
+========================================================================================
+
+Si funciona, verás:
+
+📱 Enviando mensaje de prueba...
+📞 Número: +5491160206752
+💬 Mensaje:
+Hola, soy María González.
+
+Ofrezco servicios de IA...
+
+✅ ¡MENSAJE ENVIADO EXITOSAMENTE!
+ID: 123456789
+
+========================================================================================
+Y EN TU WHATSAPP (en el teléfono +5491160206752)
+========================================================================================
+
+Recibirás el mensaje:
+
+"Hola, soy María González.
+
+Ofrezco servicios de IA para clínicas dentales:
+✅ Chatbots para agendamiento 24/7
+✅ CRM para seguimiento de pacientes
+✅ Email marketing automático
+
+¿Podemos hablar 15 minutos?
+
+Teléfono: +54 9 351 123-4567"
+
+========================================================================================
+TROUBLESHOOTING
+========================================================================================
+
+❌ "Error de conexión"
+→ Verifica que tengas internet
+→ Verifica que tengas crédito en Zadarma
+
+❌ "API Key inválida"
+→ Copia exactamente: 1f2c9daf0db1307a1128
+→ Sin espacios al inicio/final
+
+❌ "Número inválido"
+→ El número +5491160206752 debería ser válido
+→ Asegúrate de incluir el +54
+
+❌ "python: command not found"
+→ Instala Python de nuevo
+→ Marca "Add Python to PATH"
+
+========================================================================================
+PERSONALIZA EL MENSAJE
+========================================================================================
+
+Si quieres cambiar el mensaje, reemplaza todo lo que está en MENSAJE:
+
+OPCIÓN 1 (Corta):
+MENSAJE = f"""Hola, soy {TU_NOMBRE}.
+
+Ofrezco servicios de IA para clínicas dentales.
+¿Podemos hablar 15 minutos?
+
+{TU_TELEFONO}"""
+
+---
+
+OPCIÓN 2 (Problema):
+MENSAJE = f"""Hola, ¿saben cuántos pacientes pierden sin agendamiento online?
+
+Tengo solución: Chatbot IA que agenda 24/7.
+
+ROI: 3-5x en 3 meses.
+
+¿Hablamos? {TU_TELEFONO}"""
+
+---
+
+OPCIÓN 3 (Urgencia):
+MENSAJE = f"""Hola, solo 3 clínicas en Córdoba ya usan IA.
+
+Están captando pacientes automáticamente 24/7.
+
+¿Quieres saber cómo?
+
+{TU_NOMBRE} - {TU_TELEFONO}"""
+
+========================================================================================
+LISTO. PRUEBA COMPLETADA.
+========================================================================================
+
+Si el mensaje se envía exitosamente, significa que:
+✅ Tu API Zadarma funciona
+✅ Tu número está configurado
+✅ Todo está listo para enviar a los 12 clínicas dentales
+
+Siguiente paso: Ejecutar el script con los 12 leads (PYTHON-WHATSAPP-ZADARMA.txt)
+
+========================================================================================
