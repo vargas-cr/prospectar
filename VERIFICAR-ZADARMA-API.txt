@@ -1,0 +1,144 @@
+========================================================================================
+🔐 SCRIPT PARA VERIFICAR CONEXIÓN ZADARMA
+========================================================================================
+
+Este script verifica que tu API Key y Secret sean válidos.
+
+========================================================================================
+PASO 1: COPIA EL CÓDIGO
+========================================================================================
+
+import requests
+import json
+
+# TUS CREDENCIALES
+API_KEY = "1f2c9daf0db1307a1128"
+API_SECRET = "a53586ef23bcdd1e220e"
+
+print("🔐 VERIFICANDO CONEXIÓN ZADARMA...")
+print("="*50)
+
+# TEST 1: Verificar credenciales
+print("\n1️⃣ Verificando API Key y Secret...")
+
+url = "https://api.zadarma.com/v1/user/balance"
+
+params = {
+    "api_key": API_KEY,
+    "api_secret": API_SECRET
+}
+
+try:
+    response = requests.get(url, params=params)
+    data = response.json()
+
+    print(f"Status Code: {response.status_code}")
+    print(f"Respuesta: {json.dumps(data, indent=2)}")
+
+    if data.get("status") == 0:
+        balance = data.get("balance")
+        currency = data.get("currency")
+        print(f"\n✅ CREDENCIALES VÁLIDAS")
+        print(f"💰 Saldo: {balance} {currency}")
+    else:
+        print(f"\n❌ ERROR: {data.get('message')}")
+
+except Exception as e:
+    print(f"❌ Error de conexión: {e}")
+
+# TEST 2: Obtener información de números
+print("\n\n2️⃣ Obteniendo tus números registrados...")
+
+url = "https://api.zadarma.com/v1/devices"
+
+try:
+    response = requests.get(url, params=params)
+    data = response.json()
+
+    if data.get("status") == 0:
+        devices = data.get("devices", [])
+        print(f"✅ Encontrados {len(devices)} números:")
+
+        for device in devices:
+            print(f"\n   Número: {device.get('phone_number')}")
+            print(f"   Tipo: {device.get('type')}")
+            print(f"   Nombre: {device.get('name')}")
+            print(f"   Estado: {device.get('status')}")
+    else:
+        print(f"❌ ERROR: {data.get('message')}")
+
+except Exception as e:
+    print(f"❌ Error: {e}")
+
+# TEST 3: Verificar si WhatsApp está activado
+print("\n\n3️⃣ Verificando disponibilidad de canales...")
+
+url = "https://api.zadarma.com/v1/channels"
+
+try:
+    response = requests.get(url, params=params)
+    data = response.json()
+
+    if data.get("status") == 0:
+        channels = data.get("channels", [])
+        print(f"✅ Canales disponibles:")
+
+        for channel in channels:
+            print(f"\n   Canal: {channel.get('name')}")
+            print(f"   Estado: {channel.get('status')}")
+
+        # Busca WhatsApp
+        whatsapp = [c for c in channels if 'whatsapp' in c.get('name', '').lower()]
+        if whatsapp:
+            print(f"\n✅ WhatsApp ESTÁ DISPONIBLE")
+        else:
+            print(f"\n❌ WhatsApp NO ESTÁ en tus canales disponibles")
+    else:
+        print(f"❌ ERROR: {data.get('message')}")
+
+except Exception as e:
+    print(f"❌ Error: {e}")
+
+print("\n" + "="*50)
+print("✅ VERIFICACIÓN COMPLETADA")
+print("="*50)
+
+========================================================================================
+PASO 2: EJECUTA
+========================================================================================
+
+1. Copia el código arriba
+2. Guarda como: "verificar_zadarma.py"
+3. Abre Terminal
+4. Ejecuta:
+
+   python verificar_zadarma.py
+
+Verás:
+- ✅ Si tus credenciales son válidas
+- ✅ Tu saldo en Zadarma
+- ✅ Tus números registrados
+- ✅ Si WhatsApp está activado
+
+========================================================================================
+QUÉ SIGNIFICA CADA RESULTADO
+========================================================================================
+
+✅ "CREDENCIALES VÁLIDAS" + "Saldo: X USD"
+→ Tu API Key/Secret funcionan
+→ Tienes crédito
+→ El problema está en otro lado
+
+❌ "Error: Invalid credentials"
+→ Tu API Key o Secret están mal copiados
+→ Ve a Zadarma y verifica que sean exactos
+
+❌ "Error: Balance is zero"
+→ No tienes crédito
+→ Recarga dinero en Zadarma
+
+❌ "WhatsApp NO ESTÁ en tus canales"
+→ Necesitas activar WhatsApp en Zadarma
+→ Ve a "Canales" y actívalo
+
+========================================================================================
