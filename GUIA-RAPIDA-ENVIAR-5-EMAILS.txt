@@ -1,0 +1,115 @@
+========================================================================================
+⚡ GUÍA RÁPIDA - ENVIAR 5 EMAILS AHORA (10 minutos)
+========================================================================================
+
+OPCIÓN A: MANUAL (Copiar/pegar a Gmail)
+────────────────────────────────────────
+
+TIEMPO: 10 minutos
+
+1. Ve al archivo: 5-EMAILS-ELECTRICISTAS-PERSONALIZADOS.txt
+2. Lee el EMAIL 1 (Electricista La Boca)
+3. Abre Gmail.com → Redactar
+4. Copia el ASUNTO → pega en "Asunto"
+5. Copia el CUERPO → pega en el email
+6. Reemplaza [TU TELÉFONO] con tu teléfono real
+7. Click ENVIAR
+8. Repite para los 4 emails restantes
+
+✅ LISTO - 5 emails enviados
+
+---
+
+OPCIÓN B: AUTOMÁTICO (Script Python)
+────────────────────────────────────
+
+TIEMPO: 5 minutos configurar + 1 minuto ejecutar
+
+**PASO 1: Obtén Gmail App Password (3 min)**
+
+1. Ve a: myaccount.google.com
+2. Click en "Seguridad" (lado izquierdo)
+3. Busca: "Contraseña de aplicación"
+4. Genera para Gmail
+5. Copia la contraseña (16 caracteres)
+
+**PASO 2: Configura el script (2 min)**
+
+1. Abre Notepad
+2. Ve al archivo: SCRIPT-ENVIAR-5-ELECTRICISTAS.txt
+3. Copia TODO el código (desde "import smtplib" hasta el final)
+4. Pega en Notepad
+5. Reemplaza SOLO estas 4 líneas:
+
+   TU_EMAIL = "tu_email@gmail.com"
+   → Reemplaza por: tu_email@gmail.com
+
+   TU_PASSWORD = "tu_app_password"
+   → Reemplaza por: la contraseña de 16 caracteres
+
+   TU_NOMBRE = "Tu Nombre"
+   → Reemplaza por: tu nombre real
+
+   TU_TELEFONO = "+54 9 351 555-6666"
+   → Reemplaza por: tu teléfono
+
+6. Guarda como: "enviar.py" en Desktop
+
+**PASO 3: Ejecuta (1 min)**
+
+1. Abre Terminal/Cmd
+2. Ve a Desktop:
+   cd Desktop
+
+3. Ejecuta:
+   python enviar.py
+
+4. Espera ~30 segundos
+
+**RESULTADO:**
+```
+✅ Email enviado a Electricista La Boca
+✅ Email enviado a VIP Electricidad
+✅ Email enviado a Electricista Almagro 24hs
+✅ Email enviado a General Electric Service
+✅ Email enviado a AA Service Eléctrico
+
+===== RESULTADO =====
+✅ ENVIADOS: 5
+❌ FALLIDOS: 0
+```
+
+========================================================================================
+¿CUÁL OPCIÓN ELIGES?
+========================================================================================
+
+A) MANUAL (10 minutos) → Más control, sin instalaciones
+B) AUTOMÁTICO (6 minutos) → Más rápido, automático
+
+La mayoría elige B porque es 2x más rápido.
+
+========================================================================================
+DESPUÉS DE ENVIAR
+========================================================================================
+
+✅ Monitorea respuestas en los próximos 2-3 días
+✅ Responde RÁPIDO (mínimo 2 horas)
+✅ Sé profesional y directo
+✅ Agenda llamadas de 20 min para presentar propuesta
+
+Tasa de respuesta esperada: 20-30% (1-2 respuestas de 5)
+
+Si no responden después de 5 días → Follow-up por WhatsApp
+
+========================================================================================
+¿COMENZAMOS?
+========================================================================================
+
+¿Cuál método prefieres?
+
+A) Copiar/pegar manual
+B) Script Python automático
+
+Dime y te guío en el último paso.
+
+========================================================================================
