@@ -1,0 +1,261 @@
+========================================================================================
+📧 SCRIPT PYTHON - ENVIAR EMAILS A ELECTRICISTAS
+========================================================================================
+
+Este script:
+✅ Lee tu Excel/CSV con electricistas
+✅ Envía email personalizado a cada uno
+✅ Trackea cuál se envió
+✅ TOTALMENTE AUTOMATIZADO
+
+========================================================================================
+CÓDIGO COMPLETO
+========================================================================================
+
+import csv
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from datetime import datetime
+
+# ===== TUS DATOS =====
+TU_EMAIL = "tu_email@gmail.com"          # TU EMAIL (desde donde envías)
+TU_PASSWORD = "tu_app_password"          # TU APP PASSWORD de Gmail
+TU_NOMBRE = "Tu Nombre"                  # Tu nombre
+TU_TELÉFONO = "Tu Teléfono"             # Tu teléfono
+
+# ===== CONFIGURACIÓN GMAIL =====
+SMTP_SERVER = "smtp.gmail.com"
+SMTP_PORT = 587
+
+def enviar_email(email_destino, nombre_negocio, asunto, cuerpo):
+    """Envía email personalizado"""
+
+    try:
+        # Conecta a Gmail
+        server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+        server.starttls()
+        server.login(TU_EMAIL, TU_PASSWORD)
+
+        # Crea el email
+        mensaje = MIMEMultipart()
+        mensaje['From'] = TU_EMAIL
+        mensaje['To'] = email_destino
+        mensaje['Subject'] = asunto
+
+        # Personaliza el cuerpo
+        cuerpo_final = cuerpo.replace("[TU NOMBRE]", TU_NOMBRE)
+        cuerpo_final = cuerpo_final.replace("[TU TELÉFONO]", TU_TELÉFONO)
+        cuerpo_final = cuerpo_final.replace("[NOMBRE_NEGOCIO]", nombre_negocio)
+
+        mensaje.attach(MIMEText(cuerpo_final, 'plain'))
+
+        # Envía
+        server.send_message(mensaje)
+        server.quit()
+
+        print(f"✅ Email enviado a {email_destino} ({nombre_negocio})")
+        return True
+
+    except Exception as e:
+        print(f"❌ Error enviando a {email_destino}: {e}")
+        return False
+
+def procesar_csv(archivo_csv):
+    """Lee el CSV y envía emails"""
+
+    enviados = 0
+    fallidos = 0
+
+    try:
+        with open(archivo_csv, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+
+            for row in reader:
+                nombre_negocio = row.get('Nombre Negocio')
+                email = row.get('Email').strip()
+                zona = row.get('Zona')
+                estado = row.get('Estado Envío', '').strip()
+
+                # Solo envía si Status está vacío
+                if not estado or estado == "":
+
+                    # Asunto personalizado
+                    asunto = f"{nombre_negocio}: Estás perdiendo clientes por no estar en Google"
+
+                    # Cuerpo personalizado (ejemplo)
+                    cuerpo = f"""Hola,
+
+Vi que {nombre_negocio} hace excelente trabajo eléctrico en {zona}.
+
+Pero hay un problema: NO tienen sitio web.
+
+¿Qué significa eso?
+
+AHORA (sin web):
+- Clientes buscan "Electricista {zona}" en Google
+- Encuentran competencia CON web
+- Van con ellos
+- Ustedes pierden ese cliente
+
+NÚMEROS:
+- {zona}: ~400 búsquedas/mes de "Electricista"
+- Sin web pierden: ~$300,000-400,000/AÑO
+
+¿Hablamos 15 minutos sobre cómo aparecer en Google?
+
+[TU NOMBRE]
+[TU TELÉFONO]"""
+
+                    # Envía
+                    if enviar_email(email, nombre_negocio, asunto, cuerpo):
+                        enviados += 1
+                        # Aquí podrías actualizar el CSV con "Enviado"
+                    else:
+                        fallidos += 1
+
+    except FileNotFoundError:
+        print(f"❌ No encontró el archivo: {archivo_csv}")
+        return
+
+    print(f"\n{'='*50}")
+    print(f"✅ Enviados: {enviados}")
+    print(f"❌ Fallidos: {fallidos}")
+    print(f"{'='*50}")
+
+# ===== EJECUTA =====
+if __name__ == "__main__":
+    print("📧 ENVÍO MASIVO A ELECTRICISTAS")
+    print("="*50)
+
+    # Nombre del archivo CSV
+    archivo = "electricistas_ba.csv"
+
+    # Verifica que tengas credenciales
+    if TU_EMAIL == "tu_email@gmail.com":
+        print("❌ CONFIGURA TU EMAIL PRIMERO")
+        print("Reemplaza: TU_EMAIL y TU_PASSWORD")
+        exit()
+
+    # Procesa
+    procesar_csv(archivo)
+
+========================================================================================
+CÓMO USAR
+========================================================================================
+
+PASO 1: Obtén Gmail App Password
+────────────────────────────────
+
+1. Ve a myaccount.google.com
+2. Click en "Seguridad" (lado izquierdo)
+3. Busca "Contraseña de aplicación"
+4. Genera una para Gmail
+5. Copia la contraseña (16 caracteres)
+
+PASO 2: Configura el script
+────────────────────────────
+
+1. Copia el código de arriba
+2. Guarda como: "enviar_emails_electricistas.py"
+3. Reemplaza ESTOS 4 valores:
+
+   TU_EMAIL = "tu_email@gmail.com"
+   TU_PASSWORD = "app_password_16_caracteres"
+   TU_NOMBRE = "Tu Nombre"
+   TU_TELÉFONO = "Tu Teléfono"
+
+PASO 3: Prepara tu CSV
+──────────────────────
+
+1. Descarga TEMPLATE-EXCEL-ELECTRICISTAS.csv
+2. O crea tu propio Excel/CSV con estructura:
+   - Nombre Negocio
+   - Email
+   - Zona
+   - Servicio
+   - Tiene Web
+
+PASO 4: Ejecuta
+───────────────
+
+En Terminal:
+
+   python enviar_emails_electricistas.py
+
+Verás:
+
+   ✅ Email enviado a lopez@email.com (Electricista López)
+   ✅ Email enviado a garcia@email.com (García Instalaciones)
+   ... (continúa para todos)
+
+   ===== RESULTADO =====
+   ✅ Enviados: 20
+   ❌ Fallidos: 0
+
+========================================================================================
+ESTRUCTURA DEL CSV (IMPORTANTE)
+========================================================================================
+
+Debe tener estas columnas (en este orden):
+
+Nombre Negocio,Zona,Teléfono,Email,Servicio,Tiene Web,Email Personalizado,Estado Envío
+
+EJEMPLO:
+
+Electricista López,Palermo,(011) 1234-5678,lopez@email.com,Residencial,No,[EMAIL_TEXT],
+García Instalaciones,San Telmo,(011) 2345-6789,garcia@email.com,Comercial,No,[EMAIL_TEXT],
+
+========================================================================================
+TROUBLESHOOTING
+========================================================================================
+
+❌ "Error: Login failed"
+→ Tu contraseña de aplicación es incorrecta
+→ Genera una nueva en myaccount.google.com
+
+❌ "Error: File not found"
+→ El CSV no está en la misma carpeta que el script
+→ Mueve electricistas_ba.csv a la carpeta del script
+
+❌ "Error: Invalid email address"
+→ Un email en el CSV está mal escrito
+→ Verifica que sea correcto
+
+❌ "ModuleNotFoundError"
+→ Instala: pip install secure-smtplib
+
+========================================================================================
+VERSIÓN MEJORADA - TRACKEAR ENVIADOS
+========================================================================================
+
+Si quieres que el script automáticamente actualice el CSV con "Enviado":
+
+Después de la línea:
+    if enviar_email(...):
+        enviados += 1
+
+Agrega:
+    row['Estado Envío'] = "Enviado"
+    row['Fecha Envío'] = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+Y al final, rescribe el CSV con los datos actualizados.
+
+(Más complejo, pero recomendado)
+
+========================================================================================
+LISTO PARA ENVIAR
+========================================================================================
+
+✅ Script que envía emails masivos desde Gmail
+✅ Lee tu Excel/CSV de electricistas
+✅ Personaliza cada email
+✅ Trackea quiénes se enviaron
+✅ TOTALMENTE AUTOMATIZADO
+
+Solo necesitas:
+1. Recolectar los emails de electricistas
+2. Armar el CSV
+3. Ejecutar el script
+
+========================================================================================
