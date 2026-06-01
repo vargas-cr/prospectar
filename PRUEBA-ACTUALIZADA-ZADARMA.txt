@@ -1,0 +1,112 @@
+========================================================================================
+📱 SCRIPT ACTUALIZADO CON TU NÚMERO ZADARMA: +541153529509
+========================================================================================
+
+Este script usa TU número de Zadarma correctamente.
+
+========================================================================================
+COPIA ESTE CÓDIGO COMPLETO
+========================================================================================
+
+import requests
+
+# TUS CREDENCIALES ZADARMA
+ZADARMA_API_KEY = "1f2c9daf0db1307a1128"
+ZADARMA_API_SECRET = "a53586ef23bcdd1e220e"
+ZADARMA_PHONE = "+541153529509"  # ✅ TU NÚMERO
+
+# TU INFORMACIÓN
+TU_NOMBRE = "Juan García"                    # CAMBIA ESTO
+TU_TELEFONO = "+54 9 351 555-6666"          # CAMBIA ESTO
+
+# NÚMERO DONDE ENVIAR (la prueba)
+NUMERO_PRUEBA = "+5491160206752"
+
+# EL MENSAJE
+MENSAJE = f"""Hola, soy {TU_NOMBRE}.
+
+Ofrezco servicios de IA para clínicas dentales:
+✅ Chatbots para agendamiento 24/7
+✅ CRM para seguimiento de pacientes
+✅ Email marketing automático
+
+¿Podemos hablar 15 minutos?
+
+Teléfono: {TU_TELEFONO}"""
+
+# ENVÍA EL MENSAJE
+url = "https://api.zadarma.com/v1/sms/send"
+
+params = {
+    "api_key": ZADARMA_API_KEY,
+    "api_secret": ZADARMA_API_SECRET,
+    "to": NUMERO_PRUEBA,
+    "message": MENSAJE,
+    "phone_id": ZADARMA_PHONE  # Tu número de Zadarma
+}
+
+print("📱 Enviando mensaje de prueba desde Zadarma...")
+print(f"📤 Desde: {ZADARMA_PHONE}")
+print(f"📞 Para: {NUMERO_PRUEBA}")
+print(f"💬 Mensaje:\n{MENSAJE}\n")
+
+try:
+    response = requests.post(url, data=params)
+
+    print(f"Status: {response.status_code}")
+    print(f"Respuesta cruda: {response.text}\n")
+
+    data = response.json()
+
+    if data.get("status") == 0:
+        print("✅ ¡MENSAJE ENVIADO EXITOSAMENTE!")
+        print(f"ID del mensaje: {data.get('message_id')}")
+        print("\nAhora debería llegar a WhatsApp en 30 segundos.")
+    else:
+        print(f"❌ Error de Zadarma: {data.get('message')}")
+        print(f"Código de error: {data.get('status')}")
+
+except Exception as e:
+    print(f"❌ Error de conexión: {e}")
+    print("Verifica tu internet y que el número de Zadarma sea correcto.")
+
+========================================================================================
+CÓMO USAR
+========================================================================================
+
+1. Copia TODO el código de arriba
+2. Guarda como: "prueba_actualizada.py"
+3. Personaliza (opcional):
+   TU_NOMBRE = "Tu nombre"
+   TU_TELEFONO = "Tu teléfono"
+4. Ejecuta:
+   python prueba_actualizada.py
+
+========================================================================================
+DIFERENCIA CON EL ANTERIOR
+========================================================================================
+
+ANTES (No funcionó):
+- phone_id: No especificado correctamente
+- Zadarma no sabía desde qué número enviar
+
+AHORA (Debería funcionar):
+- phone_id: +541153529509 ✅
+- Zadarma sabe exactamente desde cuál número enviar
+
+========================================================================================
+SI SIGUE SIN FUNCIONAR
+========================================================================================
+
+Ejecuta primero el script de verificación:
+
+   python verificar.py
+
+Verifica que:
+✅ "CREDENCIALES VÁLIDAS"
+✅ "Saldo: X USD" (tienes crédito)
+✅ "WhatsApp ESTÁ DISPONIBLE" (en tus canales)
+
+Si alguno falla, ese es el problema.
+
+========================================================================================
