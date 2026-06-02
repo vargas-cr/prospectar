@@ -1,0 +1,175 @@
+========================================================================================
+📍 CÓMO BUSCAR ELECTRICISTAS SIN WEB EN GOOGLE MAPS
+========================================================================================
+
+OBJETIVO: Encontrar 20-30 electricistas en Capital Federal que NO tengan página web
+
+========================================================================================
+PASO 1: PREPARAR LA BÚSQUEDA
+========================================================================================
+
+1. Abre Google Maps: https://www.google.com/maps
+2. En la barra de búsqueda, escribe: "electricistas Capital Federal Buenos Aires"
+3. Presiona ENTER
+
+========================================================================================
+PASO 2: VERIFICAR QUIÉN NO TIENE WEB
+========================================================================================
+
+Para cada electricista que aparezca en los resultados:
+
+1. Haz CLICK en el nombre del electricista
+2. Se abre un panel a la derecha con su información
+3. BUSCA la palabra "Sitio web" en el panel
+
+   ✅ SI VES "Sitio web" → DESCARTA (tiene página web)
+   ❌ SI NO VES "Sitio web" → ¡ESTE ES TU TARGET!
+
+EJEMPLO:
+Panel abierto muestra:
+- Nombre: Electricista La Boca
+- Teléfono: (011) 4301-8349
+- Dirección: [dirección]
+- ⭐ 4.5 estrellas (reseñas)
+- [NO hay "Sitio web"] ← ¡ESTE ES!
+
+========================================================================================
+PASO 3: COPIAR INFORMACIÓN
+========================================================================================
+
+Para CADA electricista SIN WEB que encuentres, copia estos datos:
+
+1. NOMBRE: Nombre del negocio
+   Ejemplo: "Electricista La Boca"
+
+2. ZONA: Barrio/zona donde está ubicado
+   Ejemplo: "La Boca"
+
+3. TELÉFONO: Número principal
+   Ejemplo: "(011) 4301-8349"
+
+4. EMAIL: Busca en el panel o en la sección "Contacto"
+   Si no aparece → puedes escribir "No encontrado" de momento
+
+5. TIENE_WEB: Escribe "No" (porque ya verificaste que no tiene)
+
+6. CONTACTO_VERIFICADO: Escribe "Sí" si el teléfono aparece en Google Maps
+
+7. NOTAS: Información útil
+   Ejemplo: "24hs, atiende emergencias, buenas reseñas (4.8 estrellas)"
+
+8. ESTADO_EMAIL: Escribe "Pendiente" de momento
+
+9. ESTADO_PROSPECTING: Escribe "Pendiente" de momento
+
+========================================================================================
+PASO 4: REGISTRAR EN EL CSV
+========================================================================================
+
+Tienes el archivo: ELECTRICISTAS-CAPITAL-FEDERAL-PROSPECTING.csv
+
+Abrirlo con:
+- Excel (Windows)
+- Numbers (Mac)
+- Google Sheets (online)
+- Notepad si lo quieres editar manualmente
+
+Las primeras 2 filas ya tienen ejemplos. Completa desde la fila 3 en adelante.
+
+COLUMNAS:
+nombre,zona,telefono,email,tiene_web,contacto_verificado,notas,estado_email,estado_prospecting
+
+EJEMPLO COMPLETO:
+"Electricista La Boca","La Boca","(011) 4301-8349","electricidadlgs@yahoo.com.ar","No","Sí","24hs, excelente servicio","Pendiente","Pendiente"
+
+========================================================================================
+PASO 5: BUSCAR POR ZONAS
+========================================================================================
+
+Haz la búsqueda en estas ZONAS DE CAPITAL FEDERAL:
+
+ZONA NORTE:
+☐ Belgrano
+☐ Colegiales
+☐ Recoleta
+☐ Núñez
+☐ Palermo
+☐ Villa Ortúzar
+
+ZONA CENTRO:
+☐ Constitución
+☐ Monserrat
+☐ San Nicolás
+☐ San Telmo
+☐ La Boca
+☐ Microcentro
+
+ZONA OESTE:
+☐ Caballito
+☐ Flores
+☐ Flores Sur
+☐ Boedo
+☐ Parque Chacabuco
+☐ Almagro
+
+ZONA SUR:
+☐ Balvanera
+☐ Barracas
+☐ Lanús
+
+Busca en cada zona: "electricistas [NOMBRE ZONA] Buenos Aires"
+
+========================================================================================
+PASO 6: CRÍTERIOS ADICIONALES
+========================================================================================
+
+PRIORIZA electricistas que:
+✅ Tengan TELÉFONO verificado en Google Maps
+✅ Tengan BUENAS RESEÑAS (4+ estrellas = activos)
+✅ NO tengan página web
+✅ Especifiquen que atienden "instalaciones", "reparaciones", "emergencias"
+
+EVITA:
+❌ Negocios cerrados (dice "Cerrado permanentemente")
+❌ Sin teléfono de contacto
+❌ Con muy pocas reseñas (menos de 5 = puede no ser activo)
+
+========================================================================================
+PASO 7: ENVÍO DE EMAILS
+========================================================================================
+
+Una vez que llenes 20-25 electricistas:
+
+1. Abre el archivo CSV
+2. Verifica que los teléfonos sean correctos
+3. Para los que no tengas email, puedes:
+   a) Llamar al teléfono y preguntar (más confiable)
+   b) Dejarlos en blanco y contactar por teléfono directo
+
+Cuando esté completo, me avisas y:
+- Crearemos emails personalizados
+- Configuraremos el script para enviarlos automáticamente
+
+========================================================================================
+TIPS PARA HACERLO MÁS RÁPIDO
+========================================================================================
+
+1. Abre Google Maps en PC/Mac (no en móvil)
+2. Abre EXCEL o Google Sheets en otra ventana (lado a lado)
+3. Ve copiando información mientras buscas
+4. Busca por zona, no todo junto
+
+TIEMPO ESTIMADO: 30-45 minutos para encontrar 20-25 electricistas sin web
+
+========================================================================================
+¿NECESITAS AYUDA?
+========================================================================================
+
+Si encuentras un electricista pero:
+- No sabe si tiene web → Verifica: escribe su nombre en Google (sin Maps)
+- No encuentra email → Anota teléfono y llama después
+- Duda si está activo → Mira las reseñas (si tiene 100+ reviews = está activo)
+
+¡ADELANTE! 🚀
+
+========================================================================================
