@@ -5,7 +5,7 @@ import time
 
 # ===== TUS CREDENCIALES =====
 TU_EMAIL = "argentia.ai@gmail.com"
-TU_PASSWORD = "Bo01cas2025+"
+TU_PASSWORD = "hcdmhtojksilixyc"
 TU_NOMBRE = "Cristian Vargas"
 TU_TELEFONO = "+54 9 351 555-6666"  # CAMBIAR por tu teléfono real
 
