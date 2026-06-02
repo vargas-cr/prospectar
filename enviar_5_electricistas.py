@@ -7,7 +7,7 @@ import time
 TU_EMAIL = "argentia.ai@gmail.com"
 TU_PASSWORD = "hcdmhtojksilixyc"
 TU_NOMBRE = "Cristian Vargas"
-TU_TELEFONO = "+54 9 351 555-6666"  # CAMBIAR por tu teléfono real
+TU_TELEFONO = "+54 9 1160206752"
 
 # ===== CONFIGURACIÓN GMAIL =====
 SMTP_SERVER = "smtp.gmail.com"
